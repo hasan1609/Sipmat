@@ -18,8 +18,6 @@ class AparKadaluarsaAdapter(
 
     //database
     private var dialog: Dialog? = null
-
-
     interface Dialog {
         fun onClick(position: Int, note : AparModel)
     }
