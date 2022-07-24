@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:paddingTop="30dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:layout_height="match_parent"
+        tools:context=".admin.pencahayaan.hasil.HasilPencahayaanActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Hasil pencahayaan"
+                android:textSize="30dp"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="20dp"
+                android:text="TW"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:inputType=""
+                android:id="@+id/spntw"
+                android:text="Scan kode pencahayaan"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:entries="@array/triwulan"
+                android:background="@drawable/imginput" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="20dp"
+                android:text="Tahun"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:id="@+id/edttahun"
+                android:textSize="16dp"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:background="@drawable/imginput" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cari"
+                    android:id="@+id/btncari"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    app:cornerRadius="10dp"
+                    android:backgroundTint="@color/black" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="SYNCHHRONE"
+                    android:visibility="gone"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    app:cornerRadius="10dp"
+                    android:id="@+id/btnsinkron"
+                    android:backgroundTint="@color/black" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:id="@+id/rvhasilpencahayaan" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:id="@+id/lnttd"
+                android:layout_marginTop="20dp"
+                android:visibility="gone"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginTop="20dp"
+                    android:text="Jabatan"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="16dp" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:inputType=""
+                    android:id="@+id/edtjabatan"
+                    android:text="-"
+                    android:textSize="16dp"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:background="@drawable/imginput" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginTop="20dp"
+                    android:text="TTD"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="16dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tanda tangan"
+                    android:layout_gravity="center"
+                    android:textAllCaps="false"
+                    android:backgroundTint="@color/green"
+                    app:cornerRadius="10dp" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginTop="20dp"
+                    android:text="Nama"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="16dp" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:inputType=""
+                    android:id="@+id/edtnama"
+                    android:text="-"
+                    android:textSize="16dp"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:background="@drawable/imginput" />
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SYNCHRONE"
+                    android:layout_gravity="center"
+                    android:textAllCaps="false"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="@color/black"
+                    app:cornerRadius="10dp"
+                    android:layout_marginBottom="50dp" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+</layout>

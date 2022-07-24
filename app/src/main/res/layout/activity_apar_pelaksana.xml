@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+        tools:context=".pelaksana.aparpelaksana.AparPelaksanaActivity">
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tab_pesanan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:tabIndicatorColor="#FFF"
+                app:tabIndicatorHeight="3dp"
+                app:tabTextColor="@color/white"
+                android:background="@color/black"
+                app:tabMode="fixed" />
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/view_pesanan"
+                android:layout_below="@id/tab_pesanan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+                />
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:padding="30dp"
+    tools:context=".admin.apar.TambahScheduleActivity">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Shcedule APAR"
+        android:textSize="30dp"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginTop="20dp"
+        android:text="TW"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="16dp" />
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:inputType=""
+        android:id="@+id/spntw"
+        android:text="Scan kode apar"
+        android:textSize="16dp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:background="@drawable/imginput"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginTop="20dp"
+        android:text="Tahun"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="16dp" />
+    <com.google.android.material.textfield.TextInputEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:inputType="number"
+        android:id="@+id/edttahun"
+        android:textSize="16dp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:background="@drawable/imginput"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginTop="20dp"
+        android:text="Tanggal Pengecekan"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="16dp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:inputType=""
+        android:id="@+id/txt_tanggalcek"
+        android:text="-"
+        android:textSize="16dp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:background="@drawable/imginput"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginTop="20dp"
+        android:text="Pilih APAR"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="16dp" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:id="@+id/rc_cb_apar"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tambah"
+        android:id="@+id/btntambah"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        app:cornerRadius="10dp"
+        android:backgroundTint="@color/black"/>
+
+</LinearLayout>

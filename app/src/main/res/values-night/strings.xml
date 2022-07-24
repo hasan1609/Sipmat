@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title_arsip">Arsip</string>
+    <string name="title_pelaksana">Pelaksana</string>
+    <string name="title_pm">PM</string>
+    <string-array name="cekapar">
+        <item>Baik</item>
+        <item>Kurang baik</item>
+        <item>Rusak</item>
+        <item>Tidak ada</item>
+    </string-array>
+
+    <string-array name="yesno">
+        <item>Ya</item>
+        <item>Tidak</item>
+    </string-array>
+
+    <string-array name="openclose">
+        <item>Open</item>
+        <item>Close</item>
+    </string-array>
+
+</resources>

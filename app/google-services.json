@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "21590762533",
+    "project_id": "sipmat-3190d",
+    "storage_bucket": "sipmat-3190d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:21590762533:android:38e6ee118d0b0170d38bcc",
+        "android_client_info": {
+          "package_name": "com.sipmat.sipmat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "21590762533-mr64j16lbv1ot5s0vjgdm4l07artdn8f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sipmat.sipmat",
+            "certificate_hash": "944ca5e30557abf0413e3dc55cbf4234df8d8724"
+          }
+        },
+        {
+          "client_id": "21590762533-3f3c0n1o6g4b89kuohv3i7fh3hsu9bg7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTHNbRo08IaqV4KaKdLF0iBBU7_x156u0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "21590762533-3f3c0n1o6g4b89kuohv3i7fh3hsu9bg7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

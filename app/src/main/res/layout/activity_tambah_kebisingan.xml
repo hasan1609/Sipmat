@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="30dp"
+        tools:context=".admin.kebisingan.item.TambahKebisinganActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="kebisingan Baru"
+                android:textColor="@color/black"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ly_kodekebisingan"
+                android:orientation="vertical">
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:visibility="gone"
+                    android:id="@+id/scanqr"
+                    android:backgroundTint="@color/black"
+                    android:text="SCAN QR CODE" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginTop="20dp"
+                    android:text="Kode kebisingan"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:inputType=""
+                    android:text="Scan kode kebisingan"
+                    android:textSize="16dp"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:id="@+id/txtkodekebisingan"
+                    android:background="@drawable/imginput" />
+
+            </LinearLayout>
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="20dp"
+                android:text="Lokasi Penempatan"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:inputType=""
+                android:hint="Ketik"
+                android:id="@+id/edtlokasi"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:background="@drawable/imginput" />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:text="Submit"
+                android:id="@+id/btnsubmit"
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:backgroundTint="@color/black" />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:text="Edit"
+                android:id="@+id/btnedit"
+                android:layout_marginTop="20dp"
+                android:visibility="gone"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/black" />
+
+        </LinearLayout>
+
+    </ScrollView>
+</layout>

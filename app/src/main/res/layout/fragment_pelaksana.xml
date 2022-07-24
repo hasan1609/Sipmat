@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".admin.ui.PELAKSANA.PelaksanaFragment">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginTop="50dp"
+            android:textSize="16dp"
+            android:layout_gravity="center"
+            android:fontFamily="sans-serif-black"
+            android:layout_height="wrap_content"
+            android:text="Tambahkan pelaksana baru"
+            />
+
+        <EditText
+            android:layout_width="250dp"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:id="@+id/edtid"
+            android:textSize="16dp"
+            android:hint="Masukkan ID"
+            />
+
+        <EditText
+            android:layout_width="250dp"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:id="@+id/edtnama"
+            android:textSize="16dp"
+            android:hint="Masukkan Nama"
+            />
+
+        <EditText
+            android:layout_width="250dp"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:id="@+id/edtpassword"
+            android:textSize="16dp"
+            android:hint="Masukkan Password"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create"
+            android:id="@+id/btncreate"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:id="@+id/rvuser"
+            />
+
+
+    </LinearLayout>
+</layout>

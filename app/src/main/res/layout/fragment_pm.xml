@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".admin.ui.PM.PMFragment">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/txtapar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#00BCD4"
+                android:backgroundTint="#00BCD4"
+                android:gravity="center_horizontal"
+                android:text="APAR"
+                android:textColor="#3F51B5"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/txtapat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#00BCD4"
+                android:backgroundTint="#00BCD4"
+                android:gravity="center_horizontal"
+                android:text="APAT"
+                android:textColor="#3F51B5"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/txthydrant"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#00BCD4"
+                android:backgroundTint="#00BCD4"
+                android:gravity="center_horizontal"
+                android:text="HYDRANT		"
+                android:textColor="#3F51B5"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/txtkebisingan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#00BCD4"
+                android:backgroundTint="#00BCD4"
+                android:gravity="center_horizontal"
+                android:text="KEBISINGAN		"
+                android:textColor="#3F51B5"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/txtpencahayaan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#00BCD4"
+                android:backgroundTint="#00BCD4"
+                android:gravity="center_horizontal"
+                android:text="PENCAHAYAAN"
+                android:textColor="#3F51B5"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/txtseawater"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#00BCD4"
+                android:backgroundTint="#00BCD4"
+                android:gravity="center_horizontal"
+                android:text="FIREFIGHTING SEA WATER		"
+                android:textColor="#3F51B5"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/txtffblok1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#00BCD4"
+                android:backgroundTint="#00BCD4"
+                android:gravity="center_horizontal"
+                android:text="FIREFIGHTING BLOK 1"
+                android:textColor="#3F51B5"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/txtfirefightingblok2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#00BCD4"
+                android:backgroundTint="#00BCD4"
+                android:gravity="center_horizontal"
+                android:text="FIREFIGHTING BLOK 2"
+                android:textColor="#3F51B5"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/txtedgblok1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#00BCD4"
+                android:backgroundTint="#00BCD4"
+                android:gravity="center_horizontal"
+                android:text="EDG BLOK 1		"
+                android:textColor="#3F51B5"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/txtedgblok2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#00BCD4"
+                android:backgroundTint="#00BCD4"
+                android:gravity="center_horizontal"
+                android:text="EDG BLOK 2"
+                android:textColor="#3F51B5"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/txtedgblok3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#00BCD4"
+                android:backgroundTint="#00BCD4"
+                android:gravity="center_horizontal"
+                android:text="EDG BLOK 3"
+                android:textColor="#3F51B5"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/txtmobildamkar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#00BCD4"
+                android:backgroundTint="#00BCD4"
+                android:gravity="center_horizontal"
+                android:text="MOBIL DAMKAR		"
+                android:textColor="#3F51B5"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/txtmobilambulance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#00BCD4"
+                android:backgroundTint="#00BCD4"
+                android:gravity="center_horizontal"
+                android:text="MOBIL AMBULANCE"
+                android:textColor="#3F51B5"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
