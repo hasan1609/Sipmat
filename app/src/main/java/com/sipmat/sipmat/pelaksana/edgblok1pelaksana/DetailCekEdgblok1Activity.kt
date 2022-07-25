@@ -4,6 +4,10 @@ import android.app.ProgressDialog
 import android.graphics.Bitmap
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
+import android.widget.Spinner
 import androidx.databinding.DataBindingUtil
 import com.github.gcacace.signaturepad.views.SignaturePad
 import com.google.gson.Gson
@@ -22,6 +26,7 @@ import okhttp3.MediaType
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
 import org.jetbrains.anko.AnkoLogger
+import org.jetbrains.anko.find
 import org.jetbrains.anko.info
 import org.jetbrains.anko.toast
 import retrofit2.Call
@@ -41,6 +46,286 @@ class DetailCekEdgblok1Activity : AppCompatActivity(), AnkoLogger {
     var ttd_k3: MultipartBody.Part? = null
     var signaturePadSupervisor: MultipartBody.Part? = null
     var signaturePadOperator: MultipartBody.Part? = null
+    var gb_sebelum: String? = null
+    fun gb_sebelum() {
+        val datakelamin = arrayOf("Open", "Close")
+        val spinner = find<Spinner>(R.id.txtp_gb_sbs)
+        if (spinner != null) {
+            val adapter = ArrayAdapter(
+                this,
+                android.R.layout.simple_spinner_item, datakelamin
+            )
+            spinner.adapter = adapter
+
+            spinner.onItemSelectedListener = object :
+                AdapterView.OnItemSelectedListener {
+                override fun onItemSelected(
+                    parent: AdapterView<*>,
+                    view: View, position: Int, id: Long
+                ) {
+                    gb_sebelum = datakelamin[position]
+                }
+
+                override fun onNothingSelected(parent: AdapterView<*>) {
+                    // write code to perform some action
+                }
+            }
+
+        }
+
+    }
+    var gb_sesudah: String? = null
+    fun gb_sesudah() {
+        val datakelamin = arrayOf("Open", "Close")
+        val spinner = find<Spinner>(R.id.txtsp_gb_sds)
+        if (spinner != null) {
+            val adapter = ArrayAdapter(
+                this,
+                android.R.layout.simple_spinner_item, datakelamin
+            )
+            spinner.adapter = adapter
+
+            spinner.onItemSelectedListener = object :
+                AdapterView.OnItemSelectedListener {
+                override fun onItemSelected(
+                    parent: AdapterView<*>,
+                    view: View, position: Int, id: Long
+                ) {
+                    gb_sesudah = datakelamin[position]
+                }
+
+                override fun onNothingSelected(parent: AdapterView<*>) {
+                    // write code to perform some action
+                }
+            }
+
+        }
+
+    }
+    var lube_oil_sebelum: String? = null
+    fun lube_oil_sebelum() {
+        val datakelamin = arrayOf("Low", "Normal", "Full")
+        val spinner = find<Spinner>(R.id.txtp_lo_sbs)
+        if (spinner != null) {
+            val adapter = ArrayAdapter(
+                this,
+                android.R.layout.simple_spinner_item, datakelamin
+            )
+            spinner.adapter = adapter
+
+            spinner.onItemSelectedListener = object :
+                AdapterView.OnItemSelectedListener {
+                override fun onItemSelected(
+                    parent: AdapterView<*>,
+                    view: View, position: Int, id: Long
+                ) {
+                    lube_oil_sebelum = datakelamin[position]
+                }
+
+                override fun onNothingSelected(parent: AdapterView<*>) {
+                    // write code to perform some action
+                }
+            }
+
+        }
+
+    }
+    var lube_oil_sesudah: String? = null
+    fun lube_oil_sesudah() {
+        val datakelamin = arrayOf("Low", "Normal", "Full")
+        val spinner = find<Spinner>(R.id.txtsp_lo_sds)
+        if (spinner != null) {
+            val adapter = ArrayAdapter(
+                this,
+                android.R.layout.simple_spinner_item, datakelamin
+            )
+            spinner.adapter = adapter
+
+            spinner.onItemSelectedListener = object :
+                AdapterView.OnItemSelectedListener {
+                override fun onItemSelected(
+                    parent: AdapterView<*>,
+                    view: View, position: Int, id: Long
+                ) {
+                    lube_oil_sesudah = datakelamin[position]
+                }
+
+                override fun onNothingSelected(parent: AdapterView<*>) {
+                    // write code to perform some action
+                }
+            }
+
+        }
+
+    }
+    var accu_level_sebelum: String? = null
+    fun accu_level_sebelum() {
+        val datakelamin = arrayOf("Low", "Normal", "Full")
+        val spinner = find<Spinner>(R.id.txtp_al_sbs)
+        if (spinner != null) {
+            val adapter = ArrayAdapter(
+                this,
+                android.R.layout.simple_spinner_item, datakelamin
+            )
+            spinner.adapter = adapter
+
+            spinner.onItemSelectedListener = object :
+                AdapterView.OnItemSelectedListener {
+                override fun onItemSelected(
+                    parent: AdapterView<*>,
+                    view: View, position: Int, id: Long
+                ) {
+                    accu_level_sebelum = datakelamin[position]
+                }
+
+                override fun onNothingSelected(parent: AdapterView<*>) {
+                    // write code to perform some action
+                }
+            }
+
+        }
+
+    }
+    var accu_level_sesudah: String? = null
+    fun accu_level_sesudah() {
+        val datakelamin = arrayOf("Low", "Normal", "Full")
+        val spinner = find<Spinner>(R.id.txtsp_al_sds)
+        if (spinner != null) {
+            val adapter = ArrayAdapter(
+                this,
+                android.R.layout.simple_spinner_item, datakelamin
+            )
+            spinner.adapter = adapter
+
+            spinner.onItemSelectedListener = object :
+                AdapterView.OnItemSelectedListener {
+                override fun onItemSelected(
+                    parent: AdapterView<*>,
+                    view: View, position: Int, id: Long
+                ) {
+                    accu_level_sesudah = datakelamin[position]
+                }
+
+                override fun onNothingSelected(parent: AdapterView<*>) {
+                    // write code to perform some action
+                }
+            }
+
+        }
+
+    }
+    var radiator_sebelum: String? = null
+    fun radiator_sebelum() {
+        val datakelamin = arrayOf("Low", "Normal", "Full")
+        val spinner = find<Spinner>(R.id.txtp_rl_sbs)
+        if (spinner != null) {
+            val adapter = ArrayAdapter(
+                this,
+                android.R.layout.simple_spinner_item, datakelamin
+            )
+            spinner.adapter = adapter
+
+            spinner.onItemSelectedListener = object :
+                AdapterView.OnItemSelectedListener {
+                override fun onItemSelected(
+                    parent: AdapterView<*>,
+                    view: View, position: Int, id: Long
+                ) {
+                    radiator_sebelum = datakelamin[position]
+                }
+
+                override fun onNothingSelected(parent: AdapterView<*>) {
+                    // write code to perform some action
+                }
+            }
+
+        }
+
+    }
+    var radiator_sesudah: String? = null
+    fun radiator_sesudah() {
+        val datakelamin = arrayOf("Low", "Normal", "Full")
+        val spinner = find<Spinner>(R.id.txtsp_rl_sds)
+        if (spinner != null) {
+            val adapter = ArrayAdapter(
+                this,
+                android.R.layout.simple_spinner_item, datakelamin
+            )
+            spinner.adapter = adapter
+
+            spinner.onItemSelectedListener = object :
+                AdapterView.OnItemSelectedListener {
+                override fun onItemSelected(
+                    parent: AdapterView<*>,
+                    view: View, position: Int, id: Long
+                ) {
+                    radiator_sesudah = datakelamin[position]
+                }
+
+                override fun onNothingSelected(parent: AdapterView<*>) {
+                    // write code to perform some action
+                }
+            }
+
+        }
+
+    }
+    var fuel_oil_sebelum: String? = null
+    fun fuel_oil_sebelum() {
+        val datakelamin = arrayOf("Low", "Normal", "Full")
+        val spinner = find<Spinner>(R.id.txtp_fol_sbs)
+        if (spinner != null) {
+            val adapter = ArrayAdapter(
+                this,
+                android.R.layout.simple_spinner_item, datakelamin
+            )
+            spinner.adapter = adapter
+
+            spinner.onItemSelectedListener = object :
+                AdapterView.OnItemSelectedListener {
+                override fun onItemSelected(
+                    parent: AdapterView<*>,
+                    view: View, position: Int, id: Long
+                ) {
+                    fuel_oil_sebelum = datakelamin[position]
+                }
+
+                override fun onNothingSelected(parent: AdapterView<*>) {
+                    // write code to perform some action
+                }
+            }
+
+        }
+
+    }
+    var fuel_oil_sesudah: String? = null
+    fun fuel_oil_sesudah() {
+        val datakelamin = arrayOf("Low", "Normal", "Full")
+        val spinner = find<Spinner>(R.id.txtsp_fol_sds)
+        if (spinner != null) {
+            val adapter = ArrayAdapter(
+                this,
+                android.R.layout.simple_spinner_item, datakelamin
+            )
+            spinner.adapter = adapter
+
+            spinner.onItemSelectedListener = object :
+                AdapterView.OnItemSelectedListener {
+                override fun onItemSelected(
+                    parent: AdapterView<*>,
+                    view: View, position: Int, id: Long
+                ) {
+                    fuel_oil_sesudah = datakelamin[position]
+                }
+
+                override fun onNothingSelected(parent: AdapterView<*>) {
+                    // write code to perform some action
+                }
+            }
+
+        }
+
+    }
 
     companion object {
         var edgblok1: EdgBlokModel? = null
@@ -54,6 +339,16 @@ class DetailCekEdgblok1Activity : AppCompatActivity(), AnkoLogger {
         binding.lifecycleOwner = this
         sessionManager = SessionManager(this)
         progressDialog = ProgressDialog(this)
+        gb_sebelum()
+        gb_sesudah()
+        lube_oil_sebelum()
+        lube_oil_sesudah()
+        accu_level_sebelum()
+        accu_level_sesudah()
+        radiator_sebelum()
+        radiator_sesudah()
+        fuel_oil_sebelum()
+        fuel_oil_sesudah()
         val gson = Gson()
         edgblok1 =
             gson.fromJson(
@@ -269,15 +564,13 @@ class DetailCekEdgblok1Activity : AppCompatActivity(), AnkoLogger {
                 txtspMlfSds
             )
 //            gen break
-            val txtpGbSbs = binding.txtpGbSbs.text.toString().trim()
-            val txtspGbSds = binding.txtspGbSds.text.toString().trim()
             val body_txtpGbSbs: RequestBody = RequestBody.create(
                 MediaType.parse("text/plain"),
-                txtpGbSbs
+                gb_sebelum
             )
             val body_txtspGbSds: RequestBody = RequestBody.create(
                 MediaType.parse("text/plain"),
-                txtspGbSds
+                gb_sesudah
             )
 //            gen vol
             val txtpGvSbs = binding.txtpGvSbs.text.toString().trim()
@@ -357,48 +650,40 @@ class DetailCekEdgblok1Activity : AppCompatActivity(), AnkoLogger {
                 txtspHSds
             )
 //            lube oil
-            val txtpLoSbs = binding.txtpLoSbs.text.toString().trim()
-            val txtspLoSds = binding.txtspLoSds.text.toString().trim()
             val body_txtpLoSbs: RequestBody = RequestBody.create(
                 MediaType.parse("text/plain"),
-                txtpLoSbs
+                lube_oil_sebelum
             )
             val body_txtspLoSds: RequestBody = RequestBody.create(
                 MediaType.parse("text/plain"),
-                txtspLoSds
+                lube_oil_sesudah
             )
 //            accu lev
-            val txtpAlSbs = binding.txtpAlSbs.text.toString().trim()
-            val txtspAlSds = binding.txtspAlSds.text.toString().trim()
             val body_txtpAlSbs: RequestBody = RequestBody.create(
                 MediaType.parse("text/plain"),
-                txtpAlSbs
+                accu_level_sebelum
             )
             val body_txtspAlSds: RequestBody = RequestBody.create(
                 MediaType.parse("text/plain"),
-                txtspAlSds
+                accu_level_sesudah
             )
 //            radiator lev
-            val txtpRlSbs = binding.txtpRlSbs.text.toString().trim()
-            val txtspRlSds = binding.txtspRlSds.text.toString().trim()
             val body_txtpRlSbs: RequestBody = RequestBody.create(
                 MediaType.parse("text/plain"),
-                txtpRlSbs
+                radiator_sebelum
             )
             val body_txtspRlSds: RequestBody = RequestBody.create(
                 MediaType.parse("text/plain"),
-                txtspRlSds
+                radiator_sesudah
             )
 //            fuel oil level
-            val txtpFolSbs = binding.txtpFolSbs.text.toString().trim()
-            val txtspFolSds = binding.txtspFolSds.text.toString().trim()
             val body_txtpFolSbs: RequestBody = RequestBody.create(
                 MediaType.parse("text/plain"),
-                txtpFolSbs
+                fuel_oil_sebelum
             )
             val body_txtspFolSds: RequestBody = RequestBody.create(
                 MediaType.parse("text/plain"),
-                txtspFolSds
+                fuel_oil_sesudah
             )
 
             val catatan = binding.txtcatatan.text.toString().trim()
@@ -439,8 +724,6 @@ class DetailCekEdgblok1Activity : AppCompatActivity(), AnkoLogger {
                 txtpMlvSds.isNotEmpty() &&
                 txtpMlfSbs.isNotEmpty() &&
                 txtspMlfSds.isNotEmpty() &&
-                txtpGbSbs.isNotEmpty() &&
-                txtspGbSds.isNotEmpty() &&
                 txtpGvSbs.isNotEmpty() &&
                 txtspGvSds.isNotEmpty() &&
                 txtpGfSbs.isNotEmpty() &&
@@ -453,14 +736,6 @@ class DetailCekEdgblok1Activity : AppCompatActivity(), AnkoLogger {
                 txtspBcvSds.isNotEmpty() &&
                 txtpHSbs.isNotEmpty() &&
                 txtspHSds.isNotEmpty() &&
-                txtpLoSbs.isNotEmpty() &&
-                txtspLoSds.isNotEmpty() &&
-                txtpAlSbs.isNotEmpty() &&
-                txtspAlSds.isNotEmpty() &&
-                txtpRlSbs.isNotEmpty() &&
-                txtspRlSds.isNotEmpty() &&
-                txtpFolSbs.isNotEmpty() &&
-                txtspFolSds.isNotEmpty() &&
                 catatan.isNotEmpty() &&
                 namak3.isNotEmpty() &&
                 namaoperator.isNotEmpty() &&

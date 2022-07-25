@@ -3,7 +3,9 @@ package com.sipmat.sipmat.webservice
 import com.sipmat.sipmat.model.*
 import com.sipmat.sipmat.model.apar.CekAparModel
 import com.sipmat.sipmat.model.apat.*
+import com.sipmat.sipmat.model.damkar.DamkarResponse
 import com.sipmat.sipmat.model.edgblok1.EdgBlokResponse
+import com.sipmat.sipmat.model.edgblok2.EdgBlok2Response
 import com.sipmat.sipmat.model.ffblok.FFBlokResponse
 import com.sipmat.sipmat.model.ffblok2.FFBlok2Response
 import com.sipmat.sipmat.model.hydrant.*
@@ -947,7 +949,7 @@ interface ApiService {
     fun get_edgblok2(
         @Query("tw") tw: String,
         @Query("tahun") tahun: String
-    ): Call<FFBlok2Response>
+    ): Call<EdgBlok2Response>
 
     //Hapus SeaWater
     @FormUrlEncoded
@@ -985,10 +987,10 @@ interface ApiService {
     fun gethasil_edgblok2(
         @Query("tw") tw: String,
         @Query("tahun") tahun: String
-    ): Call<FFBlokResponse>
+    ): Call<EdgBlok2Response>
 
     @GET("edgblok2_pelaksana")
-    fun edgblok2_pelaksana(): Call<FFBlokResponse>
+    fun edgblok2_pelaksana(): Call<EdgBlok2Response>
 
     @Multipart
     @POST("update_edgblok2")
@@ -1024,6 +1026,8 @@ interface ApiService {
         @Part("p_generator_voltage_sesudah_start") p_generator_voltage_sesudah_start: RequestBody,
         @Part("p_generator_frequency_sebelum_start") p_generator_frequency_sebelum_start: RequestBody,
         @Part("p_generator_frequency_sesudah_start") p_generator_frequency_sesudah_start: RequestBody,
+        @Part("p_generator_current_sebelum_start") p_generator_current_sebelum_start: RequestBody,
+        @Part("p_generator_current_sesudah_start") p_generator_current_sesudah_start: RequestBody,
         @Part("p_load_sebelum_start") p_load_current_sebelum_start: RequestBody,
         @Part("p_load_sesudah_start") p_load_current_sesudah_start: RequestBody,
         @Part("p_battery_charge_voltase_sebelum_start") p_battery_charge_voltase_sebelum_start: RequestBody,
@@ -1039,19 +1043,19 @@ interface ApiService {
 
         @Part("catatan") catatan: RequestBody,
         @Part("k3_nama") k3_nama: RequestBody,
-        @Part ("k3_ttd") k3_ttd: MultipartBody.Part?,
+        @Part k3_ttd: MultipartBody.Part?,
         @Part("operator_nama") operator_nama: RequestBody,
-        @Part ("operator_ttd") operator_ttd: RequestBody,
+        @Part operator_ttd: MultipartBody.Part?,
         @Part("supervisor_nama") supervisor_nama: RequestBody,
-        @Part ("supervisor_ttd") supervisor_ttd: RequestBody
-    ): Call<FFBlok2Response>
+        @Part supervisor_ttd: MultipartBody.Part?
+    ): Call<PostDataResponse>
     //==========================END Schedule EDGBLOK2 =======================
     //==========================Schedule DAMKAR =======================
     @GET("damkar")
     fun get_damkar(
         @Query("tw") tw: String,
         @Query("tahun") tahun: String
-    ): Call<FFBlok2Response>
+    ): Call<DamkarResponse>
 
     //Hapus SeaWater
     @FormUrlEncoded
@@ -1089,10 +1093,10 @@ interface ApiService {
     fun gethasil_damkar(
         @Query("tw") tw: String,
         @Query("tahun") tahun: String
-    ): Call<FFBlokResponse>
+    ): Call<DamkarResponse>
 
     @GET("damkar_pelaksana")
-    fun damkar_pelaksana(): Call<FFBlokResponse>
+    fun damkar_pelaksana(): Call<DamkarResponse>
 
     @Multipart
     @POST("update_damkar")
@@ -1128,7 +1132,7 @@ interface ApiService {
         @Field("sirine") sirine: String,
         @Field("catatan") catatan: String,
 
-        ): Call<FFBlok2Response>
+        ): Call<PostDataResponse>
     //==========================END Schedule EDGBLOK2 =======================
 }
 

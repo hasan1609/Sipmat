@@ -19,6 +19,45 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
             <activity
+                android:name=".pelaksana.damkarpelaksana.CekDamkarActivity"
+                android:exported="false" />
+            <activity
+                android:name=".pelaksana.damkarpelaksana.DetailCekDamkarActivity"
+                android:exported="false" />
+            <activity
+                android:name=".admin.damkar.schedule.ScheduleDamkarActivity"
+                android:exported="false" />
+            <activity
+                android:name=".admin.damkar.schedule.TambahScheduleDamkarActivity"
+                android:exported="false" />
+            <activity
+                android:name=".admin.damkar.hasil.HasilDamkarActivity"
+                android:exported="false" />
+            <activity
+                android:name=".admin.damkar.MenuDamkarActivity"
+                android:exported="false" />
+            <activity
+                android:name=".admin.edgblok2.schedule.CekEdgblok2AdminActivity"
+                android:exported="false" />
+            <activity
+                android:name=".pelaksana.edgblok2pelaksana.DetailCekEdgblok2Activity"
+                android:exported="false" />
+            <activity
+                android:name=".pelaksana.edgblok2pelaksana.CekEdgblok2Activity"
+                android:exported="false" />
+            <activity
+                android:name=".admin.edgblok2.hasil.HasilEdgblok2Activity"
+                android:exported="false" />
+            <activity
+                android:name=".admin.edgblok2.schedule.TambahScheduleEdgblok2Activity"
+                android:exported="false" />
+            <activity
+                android:name=".admin.edgblok2.schedule.ScheduleEdgBlok2Activity"
+                android:exported="false" />
+            <activity
+                android:name=".admin.edgblok2.MenuEdgblok2Activity"
+                android:exported="false" />
+            <activity
                 android:name=".pelaksana.edgblok1pelaksana.DetailCekEdgblok1Activity"
                 android:exported="false" />
             <activity

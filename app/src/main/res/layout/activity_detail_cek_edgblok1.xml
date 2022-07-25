@@ -978,7 +978,7 @@
                                 android:layout_weight="1"
                                 android:editable="false"
                                 android:gravity="center"
-                                android:text="V"
+                                android:text="Open / Close"
                                 android:textColor="@color/black"
                                 android:textSize="14dp" />
 
@@ -998,7 +998,7 @@
                                 android:textColor="@color/black"
                                 android:textSize="14dp" />
 
-                            <com.google.android.material.textfield.TextInputEditText
+                            <Spinner
                                 android:id="@+id/txtp_gb_sbs"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
@@ -1024,7 +1024,7 @@
                                 android:textColor="@color/black"
                                 android:textSize="14dp" />
 
-                            <com.google.android.material.textfield.TextInputEditText
+                            <Spinner
                                 android:id="@+id/txtsp_gb_sds"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
@@ -1773,7 +1773,7 @@
                             android:textColor="@color/black"
                             android:textSize="14dp" />
 
-                        <com.google.android.material.textfield.TextInputEditText
+                        <Spinner
                             android:id="@+id/txtp_lo_sbs"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
@@ -1799,16 +1799,16 @@
                             android:textColor="@color/black"
                             android:textSize="14dp" />
 
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/txtsp_lo_sds"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="5dp"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
                     </LinearLayout>
+                    <Spinner
+                        android:id="@+id/txtsp_lo_sds"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="14dp" />
                 </LinearLayout>
                 <!--                accu level-->
                 <LinearLayout
@@ -1868,7 +1868,7 @@
                             android:textColor="@color/black"
                             android:textSize="14dp" />
 
-                        <com.google.android.material.textfield.TextInputEditText
+                        <Spinner
                             android:id="@+id/txtp_al_sbs"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
@@ -1894,7 +1894,7 @@
                             android:textColor="@color/black"
                             android:textSize="14dp" />
 
-                        <com.google.android.material.textfield.TextInputEditText
+                        <Spinner
                             android:id="@+id/txtsp_al_sds"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
@@ -1963,7 +1963,7 @@
                             android:textColor="@color/black"
                             android:textSize="14dp" />
 
-                        <com.google.android.material.textfield.TextInputEditText
+                        <Spinner
                             android:id="@+id/txtp_rl_sbs"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
@@ -1989,7 +1989,7 @@
                             android:textColor="@color/black"
                             android:textSize="14dp" />
 
-                        <com.google.android.material.textfield.TextInputEditText
+                        <Spinner
                             android:id="@+id/txtsp_rl_sds"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
@@ -2058,7 +2058,7 @@
                             android:textColor="@color/black"
                             android:textSize="14dp" />
 
-                        <com.google.android.material.textfield.TextInputEditText
+                        <Spinner
                             android:id="@+id/txtp_fol_sbs"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
@@ -2084,7 +2084,7 @@
                             android:textColor="@color/black"
                             android:textSize="14dp" />
 
-                        <com.google.android.material.textfield.TextInputEditText
+                        <Spinner
                             android:id="@+id/txtsp_fol_sds"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"

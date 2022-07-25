@@ -10,7 +10,8 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".pelaksana.seawaterpelaksana.DetailCekSeawaterActivity">
+        tools:context=".admin.edgblok2.schedule.CekEdgblok2AdminActivity">
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -22,17 +23,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Cek Sea Water"
+                android:text="Cek EDG BLOK 2"
                 android:textColor="@color/black"
                 android:textSize="30dp"
                 android:textStyle="bold" />
-<!--            header yop-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#FFEB3B"
                 android:orientation="vertical">
-
                 <TextView
                     android:id="@+id/txtshift"
                     android:layout_width="wrap_content"
@@ -40,7 +39,6 @@
                     android:text="Shift : "
                     android:textColor="@color/black"
                     android:textSize="14dp" />
-
                 <TextView
                     android:id="@+id/txltgl_pemeriksa"
                     android:layout_width="wrap_content"
@@ -49,29 +47,21 @@
                     android:text="Tgl Pemeriksa : "
                     android:textColor="@color/black"
                     android:textSize="14dp" />
-
-
             </LinearLayout>
             <View
                 android:layout_width="match_parent"
                 android:layout_height="3dp"
                 android:layout_marginTop="5dp"
                 android:background="@color/black" />
-            <!--            MOTOR DRIVE-->
+
+            <!--                        Parameter-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:background="#FFD290"
                 android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="A. MOTOR DRIVEN"
-                    android:textColor="@color/black"
-                    android:textStyle="bold" />
-<!--                waktu pencatatan-->
+                <!--                1 waktu pencatatan-->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -102,8 +92,8 @@
                             android:textColor="@color/black"
                             android:textSize="14dp" />
 
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/txtmd_wp_sbs"
+                        <TextView
+                            android:id="@+id/txtp_wpp_sbs"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_marginTop="5dp"
@@ -128,8 +118,8 @@
                             android:textColor="@color/black"
                             android:textSize="14dp" />
 
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/txtmd_wp_sds"
+                        <TextView
+                            android:id="@+id/txtp_wp_sds"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_marginTop="5dp"
@@ -141,7 +131,7 @@
                     </LinearLayout>
 
                 </LinearLayout>
-<!--                discharge press-->
+                <!--                2 oil preasure-->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -153,7 +143,7 @@
                         android:layout_marginLeft="15dp"
                         android:layout_marginTop="5dp"
                         android:gravity="center|start"
-                        android:text="2. Discharge Press"
+                        android:text="2. Oil Pressure"
                         android:textColor="@color/black"
                         android:textSize="14dp"
                         android:textStyle="bold" />
@@ -162,54 +152,24 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
-
                         <TextView
                             android:layout_width="130dp"
                             android:layout_height="match_parent"
                             android:layout_marginLeft="30dp"
                             android:layout_marginTop="5dp"
                             android:gravity="center|start"
-                            android:text="a. Perform"
+                            android:text="a. Satuan"
                             android:textColor="@color/black"
                             android:textSize="14dp" />
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="5dp"
-                            android:layout_weight="1"
-                            android:editable="false"
-                            android:gravity="center"
-                            android:text="175"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
 
                         <TextView
-                            android:layout_width="130dp"
-                            android:layout_height="match_parent"
-                            android:layout_marginLeft="30dp"
-                            android:layout_marginTop="5dp"
-                            android:gravity="center|start"
-                            android:text="b. Satuan"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/txtmd_dp_perform"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_marginTop="5dp"
                             android:layout_weight="1"
                             android:editable="false"
                             android:gravity="center"
-                            android:text="Kg/Cm²"
+                            android:text="Bar"
                             android:textColor="@color/black"
                             android:textSize="14dp" />
 
@@ -225,12 +185,12 @@
                             android:layout_height="match_parent"
                             android:layout_marginTop="5dp"
                             android:gravity="center"
-                            android:text="c. Sebelum Start"
+                            android:text="b. Sebelum Start"
                             android:textColor="@color/black"
                             android:textSize="14dp" />
 
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/txtmd_dp_sbs"
+                        <TextView
+                            android:id="@+id/txtp_op_sbs"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_marginTop="5dp"
@@ -251,12 +211,12 @@
                             android:layout_height="match_parent"
                             android:layout_marginTop="5dp"
                             android:gravity="center"
-                            android:text="b. Sesudah Start"
+                            android:text="c. Sesudah Start"
                             android:textColor="@color/black"
                             android:textSize="14dp" />
 
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/txtmddpp_sds"
+                        <TextView
+                            android:id="@+id/txtsp_op_sds"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_marginTop="5dp"
@@ -269,7 +229,7 @@
 
 
                 </LinearLayout>
-                <!--                fuel level-->
+                <!--                3 fuel preasure-->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -281,7 +241,7 @@
                         android:layout_marginLeft="15dp"
                         android:layout_marginTop="5dp"
                         android:gravity="center|start"
-                        android:text="3. Fuel Level"
+                        android:text="3. Fuel Pressure"
                         android:textColor="@color/black"
                         android:textSize="14dp"
                         android:textStyle="bold" />
@@ -290,54 +250,24 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
-
                         <TextView
                             android:layout_width="130dp"
                             android:layout_height="match_parent"
                             android:layout_marginLeft="30dp"
                             android:layout_marginTop="5dp"
                             android:gravity="center|start"
-                            android:text="a. Perform"
+                            android:text="a. Satuan"
                             android:textColor="@color/black"
                             android:textSize="14dp" />
-
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="5dp"
-                            android:layout_weight="1"
-                            android:editable="false"
-                            android:gravity="center"
-                            android:text="N"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
 
                         <TextView
-                            android:layout_width="130dp"
-                            android:layout_height="match_parent"
-                            android:layout_marginLeft="30dp"
-                            android:layout_marginTop="5dp"
-                            android:gravity="center|start"
-                            android:text="b. Satuan"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                        <com.google.android.material.textfield.TextInputEditText
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_marginTop="5dp"
                             android:layout_weight="1"
                             android:editable="false"
                             android:gravity="center"
-                            android:text="-²"
+                            android:text="Bar"
                             android:textColor="@color/black"
                             android:textSize="14dp" />
 
@@ -353,12 +283,12 @@
                             android:layout_height="match_parent"
                             android:layout_marginTop="5dp"
                             android:gravity="center"
-                            android:text="c. Sebelum Start"
+                            android:text="b. Sebelum Start"
                             android:textColor="@color/black"
                             android:textSize="14dp" />
 
-                        <Spinner
-                            android:id="@+id/spnmd_fl_sbs"
+                        <TextView
+                            android:id="@+id/txtp_fp_sbs"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_marginTop="5dp"
@@ -379,12 +309,12 @@
                             android:layout_height="match_parent"
                             android:layout_marginTop="5dp"
                             android:gravity="center"
-                            android:text="b. Sesudah Start"
+                            android:text="c. Sesudah Start"
                             android:textColor="@color/black"
                             android:textSize="14dp" />
 
-                        <Spinner
-                            android:id="@+id/spnmd_fl_sds"
+                        <TextView
+                            android:id="@+id/txtp_fp_sds"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_marginTop="5dp"
@@ -397,27 +327,10 @@
 
 
                 </LinearLayout>
-
-            </LinearLayout>
-            <!--            DIESEL ENGINE-->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:background="#FFD290"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="B. DIESEL ENGINE"
-                    android:textColor="@color/black"
-                    android:textStyle="bold" />
-
+                <!--                4 fuel temprature-->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-
                     android:orientation="vertical">
 
                     <TextView
@@ -426,7 +339,7 @@
                         android:layout_marginLeft="15dp"
                         android:layout_marginTop="5dp"
                         android:gravity="center|start"
-                        android:text="1. Waktu Pencatatan"
+                        android:text="4. Fuel Temperature"
                         android:textColor="@color/black"
                         android:textSize="14dp"
                         android:textStyle="bold" />
@@ -435,124 +348,24 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="160dp"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="5dp"
-                            android:gravity="center"
-                            android:text="a. Sebelum Start"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/txtde_wp_sbs"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="5dp"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="160dp"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="5dp"
-                            android:gravity="center"
-                            android:text="b. Sesudah Start"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/txtde_wp_sds"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="5dp"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginTop="5dp"
-                        android:gravity="center|start"
-                        android:text="2. Engine Operating Hours"
-                        android:textColor="@color/black"
-                        android:textSize="14dp"
-                        android:textStyle="bold" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
                         <TextView
                             android:layout_width="130dp"
                             android:layout_height="match_parent"
                             android:layout_marginLeft="30dp"
                             android:layout_marginTop="5dp"
                             android:gravity="center|start"
-                            android:text="a. Perform"
+                            android:text="a. Satuan"
                             android:textColor="@color/black"
                             android:textSize="14dp" />
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="5dp"
-                            android:layout_weight="1"
-                            android:editable="false"
-                            android:gravity="center"
-                            android:text="-"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
 
                         <TextView
-                            android:layout_width="130dp"
-                            android:layout_height="match_parent"
-                            android:layout_marginLeft="30dp"
-                            android:layout_marginTop="5dp"
-                            android:gravity="center|start"
-                            android:text="b. Satuan"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                        <com.google.android.material.textfield.TextInputEditText
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_marginTop="5dp"
                             android:layout_weight="1"
                             android:editable="false"
                             android:gravity="center"
-                            android:text="Hours"
+                            android:text="℃"
                             android:textColor="@color/black"
                             android:textSize="14dp" />
 
@@ -568,12 +381,12 @@
                             android:layout_height="match_parent"
                             android:layout_marginTop="5dp"
                             android:gravity="center"
-                            android:text="c. Sebelum Start"
+                            android:text="b. Sebelum Start"
                             android:textColor="@color/black"
                             android:textSize="14dp" />
 
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/txtde_engine_operating_hours_sebelum_start"
+                        <TextView
+                            android:id="@+id/txtp_ft_sbs"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_marginTop="5dp"
@@ -594,12 +407,12 @@
                             android:layout_height="match_parent"
                             android:layout_marginTop="5dp"
                             android:gravity="center"
-                            android:text="b. Sesudah Start"
+                            android:text="c. Sesudah Start"
                             android:textColor="@color/black"
                             android:textSize="14dp" />
 
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/txtde_engine_operating_hours_sesudah_start"
+                        <TextView
+                            android:id="@+id/txtp_ft_sds"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_marginTop="5dp"
@@ -612,11 +425,9 @@
 
 
                 </LinearLayout>
-
-                <!--                Battery Voltage-->
+                <!--                5 coolant preasure-->
                 <LinearLayout
                     android:layout_width="match_parent"
-
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
@@ -626,7 +437,7 @@
                         android:layout_marginLeft="15dp"
                         android:layout_marginTop="5dp"
                         android:gravity="center|start"
-                        android:text="3. Battery Voltage"
+                        android:text="5. Coolant Pressure"
                         android:textColor="@color/black"
                         android:textSize="14dp"
                         android:textStyle="bold" />
@@ -635,53 +446,24 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
-
                         <TextView
                             android:layout_width="130dp"
                             android:layout_height="match_parent"
                             android:layout_marginLeft="30dp"
                             android:layout_marginTop="5dp"
                             android:gravity="center|start"
-                            android:text="a. Perform"
+                            android:text="a. Satuan"
                             android:textColor="@color/black"
                             android:textSize="14dp" />
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="5dp"
-                            android:layout_weight="1"
-                            android:editable="false"
-                            android:gravity="center"
-                            android:text="26"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
 
                         <TextView
-                            android:layout_width="130dp"
-                            android:layout_height="match_parent"
-                            android:layout_marginLeft="30dp"
-                            android:layout_marginTop="5dp"
-                            android:gravity="center|start"
-                            android:text="b. Satuan"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                        <com.google.android.material.textfield.TextInputEditText
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_marginTop="5dp"
                             android:layout_weight="1"
                             android:editable="false"
                             android:gravity="center"
-                            android:text="V"
+                            android:text="Bar"
                             android:textColor="@color/black"
                             android:textSize="14dp" />
 
@@ -697,12 +479,12 @@
                             android:layout_height="match_parent"
                             android:layout_marginTop="5dp"
                             android:gravity="center"
-                            android:text="c. Sebelum Start"
+                            android:text="b. Sebelum Start"
                             android:textColor="@color/black"
                             android:textSize="14dp" />
 
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/txtde_battery_voltage_sebelum_start"
+                        <TextView
+                            android:id="@+id/txtp_cp_sbs"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_marginTop="5dp"
@@ -723,12 +505,12 @@
                             android:layout_height="match_parent"
                             android:layout_marginTop="5dp"
                             android:gravity="center"
-                            android:text="b. Sesudah Start"
+                            android:text="c. Sesudah Start"
                             android:textColor="@color/black"
                             android:textSize="14dp" />
 
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/txtde_battery_voltage_sesudah_start"
+                        <TextView
+                            android:id="@+id/txtp_cp_sds"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_marginTop="5dp"
@@ -741,11 +523,10 @@
 
 
                 </LinearLayout>
-                <!--                Battery Ampere-->
+                <!--                6 coolant temprature-->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-
                     android:orientation="vertical">
 
                     <TextView
@@ -754,7 +535,7 @@
                         android:layout_marginLeft="15dp"
                         android:layout_marginTop="5dp"
                         android:gravity="center|start"
-                        android:text="4. Battery Ampere"
+                        android:text="6. Coolant Temperature"
                         android:textColor="@color/black"
                         android:textSize="14dp"
                         android:textStyle="bold" />
@@ -763,53 +544,24 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
-
                         <TextView
                             android:layout_width="130dp"
                             android:layout_height="match_parent"
                             android:layout_marginLeft="30dp"
                             android:layout_marginTop="5dp"
                             android:gravity="center|start"
-                            android:text="a. Perform"
+                            android:text="a. Satuan"
                             android:textColor="@color/black"
                             android:textSize="14dp" />
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="5dp"
-                            android:layout_weight="1"
-                            android:editable="false"
-                            android:gravity="center"
-                            android:text="4"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
 
                         <TextView
-                            android:layout_width="130dp"
-                            android:layout_height="match_parent"
-                            android:layout_marginLeft="30dp"
-                            android:layout_marginTop="5dp"
-                            android:gravity="center|start"
-                            android:text="b. Satuan"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                        <com.google.android.material.textfield.TextInputEditText
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_marginTop="5dp"
                             android:layout_weight="1"
                             android:editable="false"
                             android:gravity="center"
-                            android:text="A"
+                            android:text="℃"
                             android:textColor="@color/black"
                             android:textSize="14dp" />
 
@@ -825,12 +577,12 @@
                             android:layout_height="match_parent"
                             android:layout_marginTop="5dp"
                             android:gravity="center"
-                            android:text="c. Sebelum Start"
+                            android:text="b. Sebelum Start"
                             android:textColor="@color/black"
                             android:textSize="14dp" />
 
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/txtde_battery_ampere_sebelum_start"
+                        <TextView
+                            android:id="@+id/txtp_ct_sbs"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_marginTop="5dp"
@@ -851,12 +603,12 @@
                             android:layout_height="match_parent"
                             android:layout_marginTop="5dp"
                             android:gravity="center"
-                            android:text="b. Sesudah Start"
+                            android:text="c. Sesudah Start"
                             android:textColor="@color/black"
                             android:textSize="14dp" />
 
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/txtde_battery_ampere_sesudah_start"
+                        <TextView
+                            android:id="@+id/txtp_ct_sds"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_marginTop="5dp"
@@ -869,782 +621,7 @@
 
 
                 </LinearLayout>
-
-                <!--Battery Level-->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginTop="5dp"
-                        android:gravity="center|start"
-                        android:text="5. Battery Level"
-                        android:textColor="@color/black"
-                        android:textSize="14dp"
-                        android:textStyle="bold" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="130dp"
-                            android:layout_height="match_parent"
-                            android:layout_marginLeft="30dp"
-                            android:layout_marginTop="5dp"
-                            android:gravity="center|start"
-                            android:text="a. Perform"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="5dp"
-                            android:layout_weight="1"
-                            android:editable="false"
-                            android:gravity="center"
-                            android:text="N"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="130dp"
-                            android:layout_height="match_parent"
-                            android:layout_marginLeft="30dp"
-                            android:layout_marginTop="5dp"
-                            android:gravity="center|start"
-                            android:text="b. Satuan"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="5dp"
-                            android:layout_weight="1"
-                            android:editable="false"
-                            android:gravity="center"
-                            android:text="-"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="160dp"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="5dp"
-                            android:gravity="center"
-                            android:text="c. Sebelum Start"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                        <Spinner
-                            android:id="@+id/spnde_battery_level_sebelum_start"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="5dp"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="160dp"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="5dp"
-                            android:gravity="center"
-                            android:text="b. Sesudah Start"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                        <Spinner
-                            android:id="@+id/spnde_battery_level_sesudah_start"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="5dp"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                    </LinearLayout>
-
-
-                </LinearLayout>
-
-                <!--Fuel Level-->
-                <LinearLayout
-                    android:layout_width="match_parent"
-
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginTop="5dp"
-                        android:gravity="center|start"
-                        android:text="6. Fuel Level"
-                        android:textColor="@color/black"
-                        android:textSize="14dp"
-                        android:textStyle="bold" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="130dp"
-                            android:layout_height="match_parent"
-                            android:layout_marginLeft="30dp"
-                            android:layout_marginTop="5dp"
-                            android:gravity="center|start"
-                            android:text="a. Perform"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="5dp"
-                            android:layout_weight="1"
-                            android:editable="false"
-                            android:gravity="center"
-                            android:text="N"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="130dp"
-                            android:layout_height="match_parent"
-                            android:layout_marginLeft="30dp"
-                            android:layout_marginTop="5dp"
-                            android:gravity="center|start"
-                            android:text="b. Satuan"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="5dp"
-                            android:layout_weight="1"
-                            android:editable="false"
-                            android:gravity="center"
-                            android:text="-"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="160dp"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="5dp"
-                            android:gravity="center"
-                            android:text="c. Sebelum Start"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                        <Spinner
-                            android:id="@+id/spnde_fuel_level_sebelum_start"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="5dp"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="160dp"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="5dp"
-                            android:gravity="center"
-                            android:text="b. Sesudah Start"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                        <Spinner
-                            android:id="@+id/spnde_fuel_level_sesudah_start"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="5dp"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                    </LinearLayout>
-
-
-                </LinearLayout>
-
-                <!--Crankcase Level-->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginTop="5dp"
-                        android:gravity="center|start"
-                        android:text="7. Crankcase Oil Level"
-                        android:textColor="@color/black"
-                        android:textSize="14dp"
-                        android:textStyle="bold" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="130dp"
-                            android:layout_height="match_parent"
-                            android:layout_marginLeft="30dp"
-                            android:layout_marginTop="5dp"
-                            android:gravity="center|start"
-                            android:text="a. Perform"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="5dp"
-                            android:layout_weight="1"
-                            android:editable="false"
-                            android:gravity="center"
-                            android:text="N"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="130dp"
-                            android:layout_height="match_parent"
-                            android:layout_marginLeft="30dp"
-                            android:layout_marginTop="5dp"
-                            android:gravity="center|start"
-                            android:text="b. Satuan"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="5dp"
-                            android:layout_weight="1"
-                            android:editable="false"
-                            android:gravity="center"
-                            android:text="-"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="160dp"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="5dp"
-                            android:gravity="center"
-                            android:text="c. Sebelum Start"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                        <Spinner
-                            android:id="@+id/spnde_crankcase_sebelum_start"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="5dp"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="160dp"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="5dp"
-                            android:gravity="center"
-                            android:text="b. Sesudah Start"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                        <Spinner
-                            android:id="@+id/spnde_crankcase_sesudah_start"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="5dp"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                    </LinearLayout>
-
-
-                </LinearLayout>
-
-                <!--Engine COolant Tank-->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginTop="5dp"
-                        android:gravity="center|start"
-                        android:text="8. Engine Coolant Tank"
-                        android:textColor="@color/black"
-                        android:textSize="14dp"
-                        android:textStyle="bold" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="130dp"
-                            android:layout_height="match_parent"
-                            android:layout_marginLeft="30dp"
-                            android:layout_marginTop="5dp"
-                            android:gravity="center|start"
-                            android:text="a. Perform"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="5dp"
-                            android:layout_weight="1"
-                            android:editable="false"
-                            android:gravity="center"
-                            android:text="N"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="130dp"
-                            android:layout_height="match_parent"
-                            android:layout_marginLeft="30dp"
-                            android:layout_marginTop="5dp"
-                            android:gravity="center|start"
-                            android:text="b. Satuan"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="5dp"
-                            android:layout_weight="1"
-                            android:editable="false"
-                            android:gravity="center"
-                            android:text="-"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="160dp"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="5dp"
-                            android:gravity="center"
-                            android:text="c. Sebelum Start"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                        <Spinner
-                            android:id="@+id/spnde_engine_coolant_tank_sebelum_start"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="5dp"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="160dp"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="5dp"
-                            android:gravity="center"
-                            android:text="b. Sesudah Start"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                        <Spinner
-                            android:id="@+id/spnde_engine_coolant_tank_sesudah_start"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="5dp"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                    </LinearLayout>
-
-
-                </LinearLayout>
-
-                <!--Cooling Water Inlet Valve-->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginTop="5dp"
-                        android:gravity="center|start"
-                        android:text="9. Cooling Water Inlet Valve"
-                        android:textColor="@color/black"
-                        android:textSize="14dp"
-                        android:textStyle="bold" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="130dp"
-                            android:layout_height="match_parent"
-                            android:layout_marginLeft="30dp"
-                            android:layout_marginTop="5dp"
-                            android:gravity="center|start"
-                            android:text="a. Perform"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="5dp"
-                            android:layout_weight="1"
-                            android:editable="false"
-                            android:gravity="center"
-                            android:text="Open"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="130dp"
-                            android:layout_height="match_parent"
-                            android:layout_marginLeft="30dp"
-                            android:layout_marginTop="5dp"
-                            android:gravity="center|start"
-                            android:text="b. Satuan"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="5dp"
-                            android:layout_weight="1"
-                            android:editable="false"
-                            android:gravity="center"
-                            android:text="-"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="160dp"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="5dp"
-                            android:gravity="center"
-                            android:text="c. Sebelum Start"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                        <Spinner
-                            android:id="@+id/spnde_cooling_water_inlet_valve_sebelum_start"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="5dp"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="160dp"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="5dp"
-                            android:gravity="center"
-                            android:text="b. Sesudah Start"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                        <Spinner
-                            android:id="@+id/spnde_cooling_water_inlet_valve_sesudah_start"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="5dp"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                    </LinearLayout>
-
-
-                </LinearLayout>
-
-                <!--Oil Pressue-->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginTop="5dp"
-                        android:gravity="center|start"
-                        android:text="10. Oil Pressure"
-                        android:textColor="@color/black"
-                        android:textSize="14dp"
-                        android:textStyle="bold" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="130dp"
-                            android:layout_height="match_parent"
-                            android:layout_marginLeft="30dp"
-                            android:layout_marginTop="5dp"
-                            android:gravity="center|start"
-                            android:text="a. Perform"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="5dp"
-                            android:layout_weight="1"
-                            android:editable="false"
-                            android:gravity="center"
-                            android:text="55"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="130dp"
-                            android:layout_height="match_parent"
-                            android:layout_marginLeft="30dp"
-                            android:layout_marginTop="5dp"
-                            android:gravity="center|start"
-                            android:text="b. Satuan"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="5dp"
-                            android:layout_weight="1"
-                            android:editable="false"
-                            android:gravity="center"
-                            android:text="Psi"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="160dp"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="5dp"
-                            android:gravity="center"
-                            android:text="c. Sebelum Start"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/txtde_oil_pressure_sebelum_start"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="5dp"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="160dp"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="5dp"
-                            android:gravity="center"
-                            android:text="b. Sesudah Start"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/txtde_oil_pressure_sesudah_start"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="5dp"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                    </LinearLayout>
-
-
-                </LinearLayout>
-
-                <!--Cooling Water-->
+                <!--                7 speed-->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -1656,7 +633,7 @@
                         android:layout_marginLeft="15dp"
                         android:layout_marginTop="5dp"
                         android:gravity="center|start"
-                        android:text="11. Cooling Water Pressure After Regulator"
+                        android:text="7. Speed"
                         android:textColor="@color/black"
                         android:textSize="14dp"
                         android:textStyle="bold" />
@@ -1665,304 +642,17 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
-
                         <TextView
                             android:layout_width="130dp"
                             android:layout_height="match_parent"
                             android:layout_marginLeft="30dp"
                             android:layout_marginTop="5dp"
                             android:gravity="center|start"
-                            android:text="a. Perform"
+                            android:text="a. Satuan"
                             android:textColor="@color/black"
                             android:textSize="14dp" />
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="5dp"
-                            android:layout_weight="1"
-                            android:editable="false"
-                            android:gravity="center"
-                            android:text="4"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
 
                         <TextView
-                            android:layout_width="130dp"
-                            android:layout_height="match_parent"
-                            android:layout_marginLeft="30dp"
-                            android:layout_marginTop="5dp"
-                            android:gravity="center|start"
-                            android:text="b. Satuan"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="5dp"
-                            android:layout_weight="1"
-                            android:editable="false"
-                            android:gravity="center"
-                            android:text="barg"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="160dp"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="5dp"
-                            android:gravity="center"
-                            android:text="c. Sebelum Start"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/de_cooling_water_pressure_after_regulator_sebelum_start"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="5dp"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="160dp"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="5dp"
-                            android:gravity="center"
-                            android:text="b. Sesudah Start"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/de_cooling_water_pressure_after_regulator_sesudah_start"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="5dp"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                    </LinearLayout>
-
-
-                </LinearLayout>
-
-                <!--Coolant Temperatur-->
-                <LinearLayout
-                    android:layout_width="match_parent"
-
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginTop="5dp"
-                        android:gravity="center|start"
-                        android:text="12. Coolant Temperatur"
-                        android:textColor="@color/black"
-                        android:textSize="14dp"
-                        android:textStyle="bold" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="130dp"
-                            android:layout_height="match_parent"
-                            android:layout_marginLeft="30dp"
-                            android:layout_marginTop="5dp"
-                            android:gravity="center|start"
-                            android:text="a. Perform"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="5dp"
-                            android:layout_weight="1"
-                            android:editable="false"
-                            android:gravity="center"
-                            android:text="175-195 "
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="130dp"
-                            android:layout_height="match_parent"
-                            android:layout_marginLeft="30dp"
-                            android:layout_marginTop="5dp"
-                            android:gravity="center|start"
-                            android:text="b. Satuan"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="5dp"
-                            android:layout_weight="1"
-                            android:editable="false"
-                            android:gravity="center"
-                            android:text="degF"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="160dp"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="5dp"
-                            android:gravity="center"
-                            android:text="c. Sebelum Start"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/txtde_coolant_temperature_sebelum_start"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="5dp"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="160dp"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="5dp"
-                            android:gravity="center"
-                            android:text="b. Sesudah Start"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/txtde_coolant_temperature_sesudah_start"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="5dp"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                    </LinearLayout>
-
-
-                </LinearLayout>
-
-                <!--Speed-->
-                <LinearLayout
-                    android:layout_width="match_parent"
-
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginTop="5dp"
-                        android:gravity="center|start"
-                        android:text="13. Speed"
-                        android:textColor="@color/black"
-                        android:textSize="14dp"
-                        android:textStyle="bold" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="130dp"
-                            android:layout_height="match_parent"
-                            android:layout_marginLeft="30dp"
-                            android:layout_marginTop="5dp"
-                            android:gravity="center|start"
-                            android:text="a. Perform"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="5dp"
-                            android:layout_weight="1"
-                            android:editable="false"
-                            android:gravity="center"
-                            android:text="2100"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="130dp"
-                            android:layout_height="match_parent"
-                            android:layout_marginLeft="30dp"
-                            android:layout_marginTop="5dp"
-                            android:gravity="center|start"
-                            android:text="b. Satuan"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                        <com.google.android.material.textfield.TextInputEditText
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_marginTop="5dp"
@@ -1985,12 +675,12 @@
                             android:layout_height="match_parent"
                             android:layout_marginTop="5dp"
                             android:gravity="center"
-                            android:text="c. Sebelum Start"
+                            android:text="b. Sebelum Start"
                             android:textColor="@color/black"
                             android:textSize="14dp" />
 
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/txtde_speed_sebelum_start"
+                        <TextView
+                            android:id="@+id/txtp_s_sbs"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_marginTop="5dp"
@@ -2011,12 +701,12 @@
                             android:layout_height="match_parent"
                             android:layout_marginTop="5dp"
                             android:gravity="center"
-                            android:text="b. Sesudah Start"
+                            android:text="c. Sesudah Start"
                             android:textColor="@color/black"
                             android:textSize="14dp" />
 
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/txtde_speed_sesudah_start"
+                        <TextView
+                            android:id="@+id/txtsp_s_sds"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_marginTop="5dp"
@@ -2026,140 +716,8 @@
                             android:textSize="14dp" />
 
                     </LinearLayout>
-
-
                 </LinearLayout>
-
-                <!--Suction Press	-->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginTop="5dp"
-                        android:gravity="center|start"
-                        android:text="14. Suction Press	"
-                        android:textColor="@color/black"
-                        android:textSize="14dp"
-                        android:textStyle="bold" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="130dp"
-                            android:layout_height="match_parent"
-                            android:layout_marginLeft="30dp"
-                            android:layout_marginTop="5dp"
-                            android:gravity="center|start"
-                            android:text="a. Perform"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="5dp"
-                            android:layout_weight="1"
-                            android:editable="false"
-                            android:gravity="center"
-                            android:text="-"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="130dp"
-                            android:layout_height="match_parent"
-                            android:layout_marginLeft="30dp"
-                            android:layout_marginTop="5dp"
-                            android:gravity="center|start"
-                            android:text="b. Satuan"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="5dp"
-                            android:layout_weight="1"
-                            android:editable="false"
-                            android:gravity="center"
-                            android:text=""
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="160dp"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="5dp"
-                            android:gravity="center"
-                            android:text="c. Sebelum Start"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/txtde_suction_press_sebelum_start"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="5dp"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="160dp"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="5dp"
-                            android:gravity="center"
-                            android:text="b. Sesudah Start"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/txtde_suction_press_sesudah_start"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="5dp"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                    </LinearLayout>
-
-
-                </LinearLayout>
-
-                <!--Discharge Press-->
+                <!--                8 inlent-->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -2171,7 +729,7 @@
                         android:layout_marginLeft="15dp"
                         android:layout_marginTop="5dp"
                         android:gravity="center|start"
-                        android:text="15. Discharge Press	"
+                        android:text="8. Inlent Temperature"
                         android:textColor="@color/black"
                         android:textSize="14dp"
                         android:textStyle="bold" />
@@ -2180,53 +738,24 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
-
                         <TextView
                             android:layout_width="130dp"
                             android:layout_height="match_parent"
                             android:layout_marginLeft="30dp"
                             android:layout_marginTop="5dp"
                             android:gravity="center|start"
-                            android:text="a. Perform"
+                            android:text="a. Satuan"
                             android:textColor="@color/black"
                             android:textSize="14dp" />
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="5dp"
-                            android:layout_weight="1"
-                            android:editable="false"
-                            android:gravity="center"
-                            android:text="175"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
 
                         <TextView
-                            android:layout_width="130dp"
-                            android:layout_height="match_parent"
-                            android:layout_marginLeft="30dp"
-                            android:layout_marginTop="5dp"
-                            android:gravity="center|start"
-                            android:text="b. Satuan"
-                            android:textColor="@color/black"
-                            android:textSize="14dp" />
-
-                        <com.google.android.material.textfield.TextInputEditText
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_marginTop="5dp"
                             android:layout_weight="1"
                             android:editable="false"
                             android:gravity="center"
-                            android:text="Psi"
+                            android:text="℃"
                             android:textColor="@color/black"
                             android:textSize="14dp" />
 
@@ -2242,12 +771,12 @@
                             android:layout_height="match_parent"
                             android:layout_marginTop="5dp"
                             android:gravity="center"
-                            android:text="c. Sebelum Start"
+                            android:text="b. Sebelum Start"
                             android:textColor="@color/black"
                             android:textSize="14dp" />
 
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/txtde_discharge_press_sebelum_start"
+                        <TextView
+                            android:id="@+id/txtp_it_sbs"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_marginTop="5dp"
@@ -2268,12 +797,596 @@
                             android:layout_height="match_parent"
                             android:layout_marginTop="5dp"
                             android:gravity="center"
-                            android:text="b. Sesudah Start"
+                            android:text="c. Sesudah Start"
                             android:textColor="@color/black"
                             android:textSize="14dp" />
 
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/txtde_discharge_press_sesudah_start"
+                        <TextView
+                            android:id="@+id/txtsp_it_sds"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+                <!--                9 Turbo-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center|start"
+                        android:text="9. Turbo Pressure"
+                        android:textColor="@color/black"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="130dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center|start"
+                            android:text="a. Satuan"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="1"
+                            android:editable="false"
+                            android:gravity="center"
+                            android:text="Bar"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="160dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="b. Sebelum Start"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:id="@+id/txtp_tp_sbs"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="160dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="c. Sesudah Start"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:id="@+id/txtsp_tp_sds"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+                <!--                10 generator-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center|start"
+                        android:text="10. GENERATOR"
+                        android:textColor="@color/black"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+                    <!--                            generator braker-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="130dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="5dp"
+                            android:text="1. Breaker"
+                            android:textStyle="bold"
+                            android:gravity="center|start"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="130dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="35dp"
+                                android:layout_marginTop="5dp"
+                                android:gravity="center|start"
+                                android:text="a. Satuan"
+                                android:textColor="@color/black"
+                                android:textSize="14dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="1"
+                                android:editable="false"
+                                android:gravity="center"
+                                android:text="Open / Close"
+                                android:textColor="@color/black"
+                                android:textSize="14dp" />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="160dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginTop="5dp"
+                                android:gravity="center"
+                                android:text="b. Sebelum Start"
+                                android:textColor="@color/black"
+                                android:textSize="14dp" />
+
+                            <TextView
+                                android:id="@+id/txtp_gb_sbs"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:textColor="@color/black"
+                                android:textSize="14dp" />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="160dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginTop="5dp"
+                                android:gravity="center"
+                                android:text="c. Sesudah Start"
+                                android:textColor="@color/black"
+                                android:textSize="14dp" />
+
+                            <TextView
+                                android:id="@+id/txtsp_gb_sds"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:textColor="@color/black"
+                                android:textSize="14dp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                    <!--                            generator voltage-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="130dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="5dp"
+                            android:text="2. Voltage"
+                            android:textStyle="bold"
+                            android:gravity="center|start"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="130dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="35dp"
+                                android:layout_marginTop="5dp"
+                                android:gravity="center|start"
+                                android:text="a. Satuan"
+                                android:textColor="@color/black"
+                                android:textSize="14dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="1"
+                                android:editable="false"
+                                android:gravity="center"
+                                android:text="HZ"
+                                android:textColor="@color/black"
+                                android:textSize="14dp" />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="160dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginTop="5dp"
+                                android:gravity="center"
+                                android:text="b. Sebelum Start"
+                                android:textColor="@color/black"
+                                android:textSize="14dp" />
+
+                            <TextView
+                                android:id="@+id/txtp_gv_sbs"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:textColor="@color/black"
+                                android:textSize="14dp" />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="160dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginTop="5dp"
+                                android:gravity="center"
+                                android:text="c. Sesudah Start"
+                                android:textColor="@color/black"
+                                android:textSize="14dp" />
+
+                            <TextView
+                                android:id="@+id/txtsp_gv_sds"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:textColor="@color/black"
+                                android:textSize="14dp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                    <!--                            generator frequency-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="130dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="5dp"
+                            android:text="3. Frequency"
+                            android:textStyle="bold"
+                            android:gravity="center|start"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="130dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="35dp"
+                                android:layout_marginTop="5dp"
+                                android:gravity="center|start"
+                                android:text="a. Satuan"
+                                android:textColor="@color/black"
+                                android:textSize="14dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="1"
+                                android:editable="false"
+                                android:gravity="center"
+                                android:text="V"
+                                android:textColor="@color/black"
+                                android:textSize="14dp" />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="160dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginTop="5dp"
+                                android:gravity="center"
+                                android:text="b. Sebelum Start"
+                                android:textColor="@color/black"
+                                android:textSize="14dp" />
+
+                            <TextView
+                                android:id="@+id/txtp_gf_sbs"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:textColor="@color/black"
+                                android:textSize="14dp" />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="160dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginTop="5dp"
+                                android:gravity="center"
+                                android:text="c. Sesudah Start"
+                                android:textColor="@color/black"
+                                android:textSize="14dp" />
+
+                            <TextView
+                                android:id="@+id/txtsp_gf_sds"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:textColor="@color/black"
+                                android:textSize="14dp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                    <!--                            generator Current-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="130dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="5dp"
+                            android:text="4. Current"
+                            android:textStyle="bold"
+                            android:gravity="center|start"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="130dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="35dp"
+                                android:layout_marginTop="5dp"
+                                android:gravity="center|start"
+                                android:text="a. Satuan"
+                                android:textColor="@color/black"
+                                android:textSize="14dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="1"
+                                android:editable="false"
+                                android:gravity="center"
+                                android:text="A"
+                                android:textColor="@color/black"
+                                android:textSize="14dp" />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="160dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginTop="5dp"
+                                android:gravity="center"
+                                android:text="b. Sebelum Start"
+                                android:textColor="@color/black"
+                                android:textSize="14dp" />
+
+                            <TextView
+                                android:id="@+id/txtp_gc_sbs"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:textColor="@color/black"
+                                android:textSize="14dp" />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="160dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginTop="5dp"
+                                android:gravity="center"
+                                android:text="c. Sesudah Start"
+                                android:textColor="@color/black"
+                                android:textSize="14dp" />
+
+                            <TextView
+                                android:id="@+id/txtsp_gc_sds"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:textColor="@color/black"
+                                android:textSize="14dp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                <!--                11 load-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center|start"
+                        android:text="11. Load"
+                        android:textColor="@color/black"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="130dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center|start"
+                            android:text="a. Satuan"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="1"
+                            android:editable="false"
+                            android:gravity="center"
+                            android:text="KW"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="160dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="b. Sebelum Start"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:id="@+id/txtp_l_sbs"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="160dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="c. Sesudah Start"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:id="@+id/txtsp_l_sds"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_marginTop="5dp"
@@ -2286,11 +1399,492 @@
 
 
                 </LinearLayout>
+                <!--                12 baterai charge-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center|start"
+                        android:text="12. Battery Charge Voltage"
+                        android:textColor="@color/black"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="130dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center|start"
+                            android:text="a. Satuan"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="1"
+                            android:editable="false"
+                            android:gravity="center"
+                            android:text="V"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="160dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="b. Sebelum Start"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:id="@+id/txtp_bcv_sbs"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="160dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="c. Sesudah Start"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:id="@+id/txtsp_bcv_sds"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+                <!--                13 lube oil lever-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center|start"
+                        android:text="13. Lube Oil"
+                        android:textColor="@color/black"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="130dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center|start"
+                            android:text="a. Satuan"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="1"
+                            android:editable="false"
+                            android:gravity="center"
+                            android:text="N"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="160dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="b. Sebelum Start"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+
+                        <TextView                            android:id="@+id/txtp_lo_sbs"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="160dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="c. Sesudah Start"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+
+                        <TextView                            android:id="@+id/txtsp_lo_sds"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+                    </LinearLayout>
+                </LinearLayout>
+                <!--                14 accu level-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center|start"
+                        android:text="14. Accu Level"
+                        android:textColor="@color/black"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="130dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center|start"
+                            android:text="a. Satuan"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="1"
+                            android:editable="false"
+                            android:gravity="center"
+                            android:text="N"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="160dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="b. Sebelum Start"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:id="@+id/txtp_al_sbs"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="160dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="c. Sesudah Start"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:id="@+id/txtsp_al_sds"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+                    </LinearLayout>
+                </LinearLayout>
+                <!--                15 radiator level-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center|start"
+                        android:text="15. Radiator Level"
+                        android:textColor="@color/black"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="130dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center|start"
+                            android:text="a. Satuan"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="1"
+                            android:editable="false"
+                            android:gravity="center"
+                            android:text="N"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="160dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="b. Sebelum Start"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+
+                        <TextView                            android:id="@+id/txtp_rl_sbs"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="160dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="c. Sesudah Start"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+
+                        <TextView                            android:id="@+id/txtsp_rl_sds"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+                    </LinearLayout>
+                </LinearLayout>
+                <!--                16 Fuel oil level-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center|start"
+                        android:text="16. Fuel Oil Level"
+                        android:textColor="@color/black"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="130dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center|start"
+                            android:text="a. Satuan"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="1"
+                            android:editable="false"
+                            android:gravity="center"
+                            android:text="N"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="160dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="b. Sebelum Start"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:id="@+id/txtp_fol_sbs"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="160dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="c. Sesudah Start"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:id="@+id/txtsp_fol_sds"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+
+
+
 
 
             </LinearLayout>
-
-
+            <!--            catatan-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -2305,7 +1899,7 @@
                     android:textColor="@color/black"
                     android:textStyle="bold" />
 
-                <com.google.android.material.textfield.TextInputEditText
+                <TextView
                     android:id="@+id/txtcatatan"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -2315,8 +1909,6 @@
                     android:textColor="@color/black"
                     android:textSize="14dp" />
             </LinearLayout>
-
-
             <View
                 android:layout_width="match_parent"
                 android:layout_height="3dp"
@@ -2371,7 +1963,7 @@
                             android:textColor="@color/black"
                             android:textSize="14dp" />
 
-                        <com.google.android.material.textfield.TextInputEditText
+                        <TextView
                             android:id="@+id/txtnamak3"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -2391,8 +1983,7 @@
                             android:textSize="14dp" />
 
 
-                        <com.github.gcacace.signaturepad.views.SignaturePad xmlns:android="http://schemas.android.com/apk/res/android"
-                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                        <ImageView
                             android:id="@+id/signature_pad_k3"
                             android:layout_width="match_parent"
                             android:layout_height="200dp"
@@ -2432,7 +2023,7 @@
                             android:textColor="@color/black"
                             android:textSize="14dp" />
 
-                        <com.google.android.material.textfield.TextInputEditText
+                        <TextView
                             android:id="@+id/txtnamaoperator"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -2452,8 +2043,7 @@
                             android:textSize="14dp" />
 
 
-                        <com.github.gcacace.signaturepad.views.SignaturePad xmlns:android="http://schemas.android.com/apk/res/android"
-                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                        <ImageView
                             android:id="@+id/signature_pad_operator"
                             android:layout_width="match_parent"
                             android:layout_height="200dp"
@@ -2493,7 +2083,7 @@
                             android:textColor="@color/black"
                             android:textSize="14dp" />
 
-                        <com.google.android.material.textfield.TextInputEditText
+                        <TextView
                             android:id="@+id/txtnamasupervisor"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -2513,8 +2103,7 @@
                             android:textSize="14dp" />
 
 
-                        <com.github.gcacace.signaturepad.views.SignaturePad xmlns:android="http://schemas.android.com/apk/res/android"
-                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                        <ImageView
                             android:id="@+id/signature_pad_supervisor"
                             android:layout_width="match_parent"
                             android:layout_height="200dp"
@@ -2528,18 +2117,48 @@
 
             </LinearLayout>
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnsubmit"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:text="submit"
-                app:backgroundTint="@color/black" />
+                android:gravity="center"
+                android:orientation="horizontal">
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Aprrove"
+                    android:textColor="@color/white"
+                    android:id="@+id/btn_approve"
+                    android:layout_marginTop="20dp"
+                    app:backgroundTint="@color/black"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Return"
+                    android:visibility="gone"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/btn_return"
+                    android:layout_marginTop="20dp"
+                    app:backgroundTint="@color/black"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Cetak PDF"
+                    android:visibility="gone"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/btncetakpdf"
+                    android:layout_marginTop="20dp"
+                    app:backgroundTint="@color/black"/>
+
+
+            </LinearLayout>
 
 
         </LinearLayout>
-
 
     </ScrollView>
 </layout>
