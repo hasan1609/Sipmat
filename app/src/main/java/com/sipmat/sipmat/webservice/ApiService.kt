@@ -6,12 +6,14 @@ import com.sipmat.sipmat.model.apat.*
 import com.sipmat.sipmat.model.damkar.DamkarResponse
 import com.sipmat.sipmat.model.edgblok1.EdgBlokResponse
 import com.sipmat.sipmat.model.edgblok2.EdgBlok2Response
+import com.sipmat.sipmat.model.edgblok3.EdgBlok3Response
 import com.sipmat.sipmat.model.ffblok.FFBlokResponse
 import com.sipmat.sipmat.model.ffblok2.FFBlok2Response
 import com.sipmat.sipmat.model.hydrant.*
 import com.sipmat.sipmat.model.kebisingan.*
 import com.sipmat.sipmat.model.pencahayaan.*
 import com.sipmat.sipmat.model.postdata.PostScheduleApar
+import com.sipmat.sipmat.model.postdata.UpdateDamkar
 import com.sipmat.sipmat.model.postdata.UpdateScheduleApat
 import com.sipmat.sipmat.model.postdata.UpdateScheduleHydrant
 import com.sipmat.sipmat.model.seawater.HasilSeaWaterResponse
@@ -1050,6 +1052,122 @@ interface ApiService {
         @Part supervisor_ttd: MultipartBody.Part?
     ): Call<PostDataResponse>
     //==========================END Schedule EDGBLOK2 =======================
+    //==========================Schedule EDGBLOK3 =======================
+    @GET("edgblok3")
+    fun get_edgblok3(
+        @Query("tw") tw: String,
+        @Query("tahun") tahun: String
+    ): Call<EdgBlok3Response>
+
+    //Hapus SeaWater
+    @FormUrlEncoded
+    @POST("hapus_edgblok3")
+    fun hapus_edgblok3(
+        @Field("id") id: Int
+    ): Call<PostDataResponse>
+    //tambah schedule
+    @FormUrlEncoded
+    @POST("schedule_edgblok3")
+    fun schedule_edgblok3(
+        @Field("hari") hari: String,
+        @Field("tw") tw: String,
+        @Field("tahun") tahun: String
+    ): Call<PostDataResponse>
+
+    @FormUrlEncoded
+    @POST("return_edgblok3")
+    fun return_edgblok3(
+        @Field("id") id: Int
+    ): Call<PostDataResponse>
+
+    @FormUrlEncoded
+    @POST("acc_edgblok3")
+    fun acc_edgblok3(
+        @Field("id") id: Int
+    ): Call<PostDataResponse>
+
+    @FormUrlEncoded
+    @POST("edgblok3_pdf")
+    fun edgblok3_pdf(
+        @Field("id") id: Int): Call<PostDataResponse>
+
+    @GET("edgblok3")
+    fun gethasil_edgblok3(
+        @Query("tw") tw: String,
+        @Query("tahun") tahun: String
+    ): Call<EdgBlok3Response>
+
+    @GET("edgblok3_pelaksana")
+    fun edgblok3_pelaksana(): Call<EdgBlok3Response>
+
+    @Multipart
+    @POST("update_edgblok3")
+    fun update_edgblok3(
+        @Part("id") id: RequestBody,
+        @Part("tw") tw: RequestBody,
+        @Part("tahun") tahun: RequestBody,
+        @Part("tanggal_pemeriksa") tanggal_pemeriksa: RequestBody,
+        @Part("shift") shift: RequestBody,
+        @Part("is_status") is_status: RequestBody,
+
+        @Part("oil_press_sebelum_start") oil_press_sebelum_start: RequestBody,
+        @Part("oil_press_sesudah_start") oil_press_sesudah_start: RequestBody,
+        @Part("oil_temp_sebelum_start") oil_temp_sebelum_start: RequestBody,
+        @Part("oil_temp_sesudah_start") oil_temp_sesudah_start: RequestBody,
+        @Part("water_cool_temp_sebelum_start") water_cool_temp_sebelum_start: RequestBody,
+        @Part("water_cool_temp_sesudah_start") water_cool_temp_sesudah_start: RequestBody,
+        @Part("speed_sebelum_start") speed_sebelum_start: RequestBody,
+        @Part("speed_sesudah_start") speed_sesudah_start: RequestBody,
+        @Part("hour_meter_sebelum_start") hour_meter_sebelum_start: RequestBody,
+        @Part("hour_meter_sesudah_start") hour_meter_sesudah_start: RequestBody,
+        @Part("ml_voltage_sebelum_start") ml_voltage_sebelum_start: RequestBody,
+        @Part("ml_voltage_sesudah_start") ml_voltage_sesudah_start: RequestBody,
+        @Part("ml_freq_sebelum_start") ml_freq_sebelum_start: RequestBody,
+        @Part("ml_freq_sesudah_start") ml_freq_sesudah_start: RequestBody,
+        @Part("gen_break_sebelum_start") gen_break_sebelum_start: RequestBody,
+        @Part("gen_break_sesudah_start") gen_break_sesudah_start: RequestBody,
+        @Part("gen_vol_sebelum_start") gen_vol_sebelum_start: RequestBody,
+        @Part("gen_vol_sesudah_start") gen_vol_sesudah_start: RequestBody,
+        @Part("gen_freq_sebelum_start") gen_freq_sebelum_start: RequestBody,
+        @Part("gen_freq_sesudah_start") gen_freq_sesudah_start: RequestBody,
+        @Part("load_cur_sebelum_start") load_cur_sebelum_start: RequestBody,
+        @Part("load_cur_sesudah_start") load_cur_sesudah_start: RequestBody,
+        @Part("daya_sebelum_start") daya_sebelum_start: RequestBody,
+        @Part("daya_sesudah_start") daya_sesudah_start: RequestBody,
+        @Part("cos_sebelum_start") cos_sebelum_start: RequestBody,
+        @Part("cos_sesudah_start") cos_sesudah_start: RequestBody,
+        @Part("bat_charge_vol_sebelum_start") bat_charge_vol_sebelum_start: RequestBody,
+        @Part("bat_charge_vol_sesudah_start") bat_charge_vol_sesudah_start: RequestBody,
+        @Part("hour_sebelum_start") hour_sebelum_start: RequestBody,
+        @Part("hour_sesudah_start") hour_sesudah_start: RequestBody,
+        @Part("lube_oil_sebelum_start") lube_oil_sebelum_start: RequestBody,
+        @Part("lube_oil_sesudah_start") lube_oil_sesudah_start: RequestBody,
+        @Part("accu_sebelum_start") accu_sebelum_start: RequestBody,
+        @Part("accu_sesudah_start") accu_sesudah_start: RequestBody,
+        @Part("radiator_sebelum_start") radiator_sebelum_start: RequestBody,
+        @Part("radiator_sesudah_start") radiator_sesudah_start: RequestBody,
+        @Part("fuel_oil_sebelum_start") fuel_oil_sebelum_start: RequestBody,
+        @Part("fuel_oil_sesudah_start") fuel_oil_sesudah_start: RequestBody,
+        @Part("temp_bearing_gen_sebelum_start") temp_bearing_gen_sebelum_start: RequestBody,
+        @Part("temp_bearing_gen_sesudah_start") temp_bearing_gen_sesudah_start: RequestBody,
+        @Part("tamp_winding_u_sebelum_start") tamp_winding_u_sebelum_start: RequestBody,
+        @Part("tamp_winding_u_sesudah_start") tamp_winding_u_sesudah_start: RequestBody,
+        @Part("temp_winding_v_sebelum_start") temp_winding_v_sebelum_start: RequestBody,
+        @Part("temp_winding_v_sesudah_start") temp_winding_v_sesudah_start: RequestBody,
+        @Part("temp_winding_w_sebelum_start") temp_winding_w_sebelum_start: RequestBody,
+        @Part("temp_winding_w_sesudah_start") temp_winding_w_sesudah_start: RequestBody,
+        @Part("belt_radiator_fan_sebelum_start") belt_radiator_fan_sebelum_start: RequestBody,
+        @Part("belt_radiator_fan_sesudah_start") belt_radiator_fan_sesudah_start: RequestBody,
+
+        @Part("catatan") catatan: RequestBody,
+        @Part("k3_nama") k3_nama: RequestBody,
+        @Part k3_ttd: MultipartBody.Part?,
+        @Part("operator_nama") operator_nama: RequestBody,
+        @Part operator_ttd: MultipartBody.Part?,
+        @Part("supervisor_nama") supervisor_nama: RequestBody,
+        @Part supervisor_ttd: MultipartBody.Part?
+    ): Call<PostDataResponse>
+    //==========================END Schedule EDGBLOK2 =======================
     //==========================Schedule DAMKAR =======================
     @GET("damkar")
     fun get_damkar(
@@ -1098,11 +1216,15 @@ interface ApiService {
     @GET("damkar_pelaksana")
     fun damkar_pelaksana(): Call<DamkarResponse>
 
-    @Multipart
+    @Headers("Content-Type: application/json")
+    @POST("update_damkar")
+    fun update_damkarku(@Body post: UpdateDamkar): Call<PostDataResponse>
+
+    @FormUrlEncoded
     @POST("update_damkar")
     fun update_damkar(
         @Field("id") id: Int,
-        @Field("tw") tw: String,
+        @Field("tw") tw: String?,
         @Field("tahun") tahun: String,
         @Field("tanggal_pemeriksa") tanggal_pemeriksa: RequestBody,
         @Field("shift") shift: String,

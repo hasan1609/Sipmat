@@ -19,6 +19,27 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
             <activity
+                android:name=".pelaksana.edgblok3pelaksana.CekEdgblok3Activity"
+                android:exported="false" />
+            <activity
+                android:name=".pelaksana.edgblok3pelaksana.DetailCekEdgblok3Activity"
+                android:exported="false" />
+            <activity
+                android:name=".admin.edgblok3.MenuEdgblok3Activity"
+                android:exported="false" />
+            <activity
+                android:name=".admin.edgblok3.schedule.CekEdgblok3AdminActivity"
+                android:exported="false" />
+            <activity
+                android:name=".admin.edgblok3.schedule.TambahScheduleEdgblok3Activity"
+                android:exported="false" />
+            <activity
+                android:name=".admin.edgblok3.schedule.ScheduleEdgBlok3Activity"
+                android:exported="false" />
+            <activity
+                android:name=".admin.edgblok3.hasil.HasilEdgblok3Activity"
+                android:exported="false" />
+            <activity
                 android:name=".pelaksana.damkarpelaksana.CekDamkarActivity"
                 android:exported="false" />
             <activity

@@ -13,6 +13,7 @@ import com.sipmat.sipmat.databinding.FragmentHomeBinding
 import com.sipmat.sipmat.pelaksana.damkarpelaksana.CekDamkarActivity
 import com.sipmat.sipmat.pelaksana.edgblok1pelaksana.CekEdgblok1Activity
 import com.sipmat.sipmat.pelaksana.edgblok2pelaksana.CekEdgblok2Activity
+import com.sipmat.sipmat.pelaksana.edgblok3pelaksana.CekEdgblok3Activity
 import com.sipmat.sipmat.pelaksana.ffblok2pelaksana.CekFFblok2Activity
 import com.sipmat.sipmat.pelaksana.ffblokpelaksana.CekFFblokActivity
 import com.sipmat.sipmat.pelaksana.hydrantpelaksana.CekHydrantActivity
@@ -71,6 +72,9 @@ class HomeFragment : Fragment() {
         }
         binding.txtedgblok2.setOnClickListener {
             startActivity<CekEdgblok2Activity>()
+        }
+        binding.txtedgblok3.setOnClickListener {
+            startActivity<CekEdgblok3Activity>()
         }
         binding.txtmobildamkar.setOnClickListener {
             startActivity<CekDamkarActivity>()

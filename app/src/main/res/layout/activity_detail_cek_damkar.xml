@@ -134,6 +134,7 @@
                         android:layout_weight="1"
                         android:gravity="center"
                         android:textColor="@color/black"
+                        android:entries="@array/damkar1"
                         android:textSize="14dp" />
 
                 </LinearLayout>
@@ -156,6 +157,7 @@
                         android:id="@+id/txtlar"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
+                        android:entries="@array/damkar1"
                         android:layout_marginTop="5dp"
                         android:layout_weight="1"
                         android:gravity="center"
@@ -182,6 +184,7 @@
                         android:id="@+id/txttm"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
+                        android:entries="@array/damkar1"
                         android:layout_marginTop="5dp"
                         android:layout_weight="1"
                         android:gravity="center"
@@ -212,6 +215,7 @@
                         android:layout_weight="1"
                         android:gravity="center"
                         android:textColor="@color/black"
+                        android:entries="@array/damkar1"
                         android:textSize="14dp" />
 
                 </LinearLayout>
@@ -236,6 +240,7 @@
                         android:layout_height="match_parent"
                         android:layout_marginTop="5dp"
                         android:layout_weight="1"
+                        android:entries="@array/damkar1"
                         android:gravity="center"
                         android:textColor="@color/black"
                         android:textSize="14dp" />
@@ -263,6 +268,7 @@
                         android:layout_marginTop="5dp"
                         android:layout_weight="1"
                         android:gravity="center"
+                        android:entries="@array/damkar1"
                         android:textColor="@color/black"
                         android:textSize="14dp" />
 
@@ -285,6 +291,7 @@
                     <Spinner
                         android:id="@+id/txtsm"
                         android:layout_width="wrap_content"
+                        android:entries="@array/damkar1"
                         android:layout_height="match_parent"
                         android:layout_marginTop="5dp"
                         android:layout_weight="1"
@@ -315,6 +322,7 @@
                         android:layout_marginTop="5dp"
                         android:layout_weight="1"
                         android:gravity="center"
+                        android:entries="@array/damkar2"
                         android:textColor="@color/black"
                         android:textSize="14dp" />
 
@@ -342,6 +350,7 @@
                         android:layout_weight="1"
                         android:gravity="center"
                         android:textColor="@color/black"
+                        android:entries="@array/damkar2"
                         android:textSize="14dp" />
 
                 </LinearLayout>
@@ -367,6 +376,7 @@
                         android:layout_marginTop="5dp"
                         android:layout_weight="1"
                         android:gravity="center"
+                        android:entries="@array/damkar2"
                         android:textColor="@color/black"
                         android:textSize="14dp" />
 
@@ -393,6 +403,7 @@
                         android:layout_marginTop="5dp"
                         android:layout_weight="1"
                         android:gravity="center"
+                        android:entries="@array/damkar2"
                         android:textColor="@color/black"
                         android:textSize="14dp" />
 
@@ -419,6 +430,7 @@
                         android:layout_marginTop="5dp"
                         android:layout_weight="1"
                         android:gravity="center"
+                        android:entries="@array/damkar2"
                         android:textColor="@color/black"
                         android:textSize="14dp" />
 
@@ -445,6 +457,7 @@
                         android:layout_marginTop="5dp"
                         android:layout_weight="1"
                         android:gravity="center"
+                        android:entries="@array/damkar2"
                         android:textColor="@color/black"
                         android:textSize="14dp" />
 
@@ -471,6 +484,7 @@
                         android:layout_marginTop="5dp"
                         android:layout_weight="1"
                         android:gravity="center"
+                        android:entries="@array/damkar2"
                         android:textColor="@color/black"
                         android:textSize="14dp" />
 
@@ -491,6 +505,7 @@
                         android:textSize="14dp" />
 
                     <Spinner
+                        android:entries="@array/damkar2"
                         android:id="@+id/txtlh"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
@@ -523,6 +538,7 @@
                     android:layout_marginTop="5dp"
                     android:layout_weight="1"
                     android:gravity="center"
+                    android:entries="@array/damkar2"
                     android:textColor="@color/black"
                     android:textSize="14dp" />
 
@@ -547,6 +563,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginTop="5dp"
+                    android:entries="@array/damkar2"
                     android:layout_weight="1"
                     android:gravity="center"
                     android:textColor="@color/black"
@@ -573,6 +590,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginTop="5dp"
+                    android:entries="@array/damkar2"
                     android:layout_weight="1"
                     android:gravity="center"
                     android:textColor="@color/black"
@@ -600,6 +618,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginTop="5dp"
                     android:layout_weight="1"
+                    android:entries="@array/damkar2"
                     android:gravity="center"
                     android:textColor="@color/black"
                     android:textSize="14dp" />
@@ -625,6 +644,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginTop="5dp"
+                    android:entries="@array/damkar2"
                     android:layout_weight="1"
                     android:gravity="center"
                     android:textColor="@color/black"
@@ -652,6 +672,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginTop="5dp"
                     android:layout_weight="1"
+                    android:entries="@array/damkar2"
                     android:gravity="center"
                     android:textColor="@color/black"
                     android:textSize="14dp" />
@@ -679,6 +700,7 @@
                     android:layout_marginTop="5dp"
                     android:layout_weight="1"
                     android:gravity="center"
+                    android:entries="@array/damkar2"
                     android:textColor="@color/black"
                     android:textSize="14dp" />
 
