@@ -12,13 +12,13 @@
         android:orientation="vertical"
         android:layout_height="match_parent"
         android:padding="20dp"
-        tools:context=".pelaksana.edgblok3pelaksana.CekEdgblok3Activity">
+        tools:context=".pelaksana.ambulancepelakasana.CekAmbulanceActivity">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Schedule EDG Blok 3"
+            android:text="Schedule Ambulance"
             android:textColor="@color/black"
             android:textSize="30dp"
             android:textStyle="bold" />

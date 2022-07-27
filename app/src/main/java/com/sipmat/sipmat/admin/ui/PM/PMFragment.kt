@@ -8,6 +8,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import com.sipmat.sipmat.admin.apar.AparActivity
 import com.sipmat.sipmat.R
+import com.sipmat.sipmat.admin.ambulance.MenuAmbulanceActivity
 import com.sipmat.sipmat.admin.apat.ApatActivity
 import com.sipmat.sipmat.admin.damkar.MenuDamkarActivity
 import com.sipmat.sipmat.admin.edgblok1.MenuEdgBlok1Activity
@@ -56,7 +57,6 @@ class PMFragment : Fragment() {
             startActivity<MenuPencahayaanActivity>()
         }
 
-
         binding.txtseawater.setOnClickListener {
             startActivity<MenuSeaWaterActivity>()
         }
@@ -80,6 +80,9 @@ class PMFragment : Fragment() {
         }
         binding.txtmobildamkar.setOnClickListener {
             startActivity<MenuDamkarActivity>()
+        }
+        binding.txtmobilambulance.setOnClickListener {
+            startActivity<MenuAmbulanceActivity>()
         }
 
         //copy3

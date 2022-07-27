@@ -19,6 +19,27 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
             <activity
+                android:name=".pelaksana.ambulancepelakasana.CekAmbulanceActivity"
+                android:exported="false" />
+            <activity
+                android:name=".pelaksana.ambulancepelakasana.DetailCekAmbulanceActivity"
+                android:exported="false" />
+            <activity
+                android:name=".admin.ambulance.schedule.CekAmbulanceAdminActivity"
+                android:exported="false" />
+            <activity
+                android:name=".admin.ambulance.schedule.ScheduleAmbulanceActivity"
+                android:exported="false" />
+            <activity
+                android:name=".admin.ambulance.schedule.TambahScheduleAmbulanceActivity"
+                android:exported="false" />
+            <activity
+                android:name=".admin.ambulance.hasil.HasilAmbulanceActivity"
+                android:exported="false" />
+            <activity
+                android:name=".admin.ambulance.MenuAmbulanceActivity"
+                android:exported="false" />
+            <activity
                 android:name=".pelaksana.edgblok3pelaksana.CekEdgblok3Activity"
                 android:exported="false" />
             <activity
@@ -50,6 +71,9 @@
                 android:exported="false" />
             <activity
                 android:name=".admin.damkar.schedule.TambahScheduleDamkarActivity"
+                android:exported="false" />
+            <activity
+                android:name=".admin.damkar.schedule.CekDamkarAdminActivity"
                 android:exported="false" />
             <activity
                 android:name=".admin.damkar.hasil.HasilDamkarActivity"
@@ -290,6 +314,9 @@
                 android:exported="false" />
             <activity
                 android:name=".pelaksana.aparpelaksana.QrCoderCekAparActivity"
+                android:exported="false" />
+            <activity
+                android:name=".pelaksana.aparpelaksana.QrCoderCekAparKadaluarsaActivity"
                 android:exported="false" />
             <activity
                 android:name=".pelaksana.aparpelaksana.CekAparActivity"

@@ -1,6 +1,7 @@
 package com.sipmat.sipmat.webservice
 
 import com.sipmat.sipmat.model.*
+import com.sipmat.sipmat.model.ambulance.AmbulanceResponse
 import com.sipmat.sipmat.model.apar.CekAparModel
 import com.sipmat.sipmat.model.apat.*
 import com.sipmat.sipmat.model.damkar.DamkarResponse
@@ -12,10 +13,7 @@ import com.sipmat.sipmat.model.ffblok2.FFBlok2Response
 import com.sipmat.sipmat.model.hydrant.*
 import com.sipmat.sipmat.model.kebisingan.*
 import com.sipmat.sipmat.model.pencahayaan.*
-import com.sipmat.sipmat.model.postdata.PostScheduleApar
-import com.sipmat.sipmat.model.postdata.UpdateDamkar
-import com.sipmat.sipmat.model.postdata.UpdateScheduleApat
-import com.sipmat.sipmat.model.postdata.UpdateScheduleHydrant
+import com.sipmat.sipmat.model.postdata.*
 import com.sipmat.sipmat.model.seawater.HasilSeaWaterResponse
 import com.sipmat.sipmat.model.seawater.PostSeaWaterSchedule
 import com.sipmat.sipmat.model.seawater.SeaWaterResponse
@@ -1202,10 +1200,14 @@ interface ApiService {
         @Field("id") id: Int
     ): Call<PostDataResponse>
 
-    @FormUrlEncoded
-    @POST("damkar_pdf")
-    fun damkar_pdf(
-        @Field("id") id: Int): Call<PostDataResponse>
+    @Multipart
+    @POST("damkar_pdf/{id}")
+    fun damkarku_pdf(
+        @Path("id") id :Int?,
+        @Part image: MultipartBody.Part?,
+        @Part("jabatan") jabatan: RequestBody,
+        @Part("nama") nama: RequestBody,
+    ): Call<PostDataResponse>
 
     @GET("damkar")
     fun gethasil_damkar(
@@ -1219,42 +1221,62 @@ interface ApiService {
     @Headers("Content-Type: application/json")
     @POST("update_damkar")
     fun update_damkarku(@Body post: UpdateDamkar): Call<PostDataResponse>
+    //==========================END Schedule DAMKAR =======================
+    //==========================Schedule AMBULANCE =======================
+    @GET("ambulance")
+    fun get_ambulance(
+        @Query("tw") tw: String,
+        @Query("tahun") tahun: String
+    ): Call<AmbulanceResponse>
+
+    //Hapus SeaWater
+    @FormUrlEncoded
+    @POST("hapus_ambulance")
+    fun hapus_ambulance(
+        @Field("id") id: Int
+    ): Call<PostDataResponse>
+    //tambah schedule
+    @FormUrlEncoded
+    @POST("schedule_ambulance")
+    fun schedule_ambulance(
+        @Field("hari") hari: String,
+        @Field("tw") tw: String,
+        @Field("tahun") tahun: String
+    ): Call<PostDataResponse>
 
     @FormUrlEncoded
-    @POST("update_damkar")
-    fun update_damkar(
-        @Field("id") id: Int,
-        @Field("tw") tw: String?,
-        @Field("tahun") tahun: String,
-        @Field("tanggal_pemeriksa") tanggal_pemeriksa: RequestBody,
-        @Field("shift") shift: String,
-        @Field("is_status") is_status: Int,
+    @POST("return_ambulance")
+    fun return_ambulance(
+        @Field("id") id: Int
+    ): Call<PostDataResponse>
 
-        @Field("start") start: String,
-        @Field("stop") stop: String,
-        @Field("air_accu") air_accu: String,
-        @Field("level_air_radiator") level_air_radiator: String,
-        @Field("tempratur_mesin") tempratur_mesin: String,
-        @Field("level_oil") level_oil: String,
-        @Field("filter_solar") filter_solar: String,
-        @Field("level_minyak_rem") level_minyak_rem: String,
-        @Field("suara_mesin") suara_mesin: String,
-        @Field("lampu_depan") lampu_depan: String,
-        @Field("lampu_rem") lampu_rem: String,
-        @Field("lampu_sein_kanan_depan") lampu_sein_kanan_depan: String,
-        @Field("lampu_sein_kanan_depan") lampu_sein_kanan_belakang: String,
-        @Field("lampu_sein_kiri_depan") lampu_sein_kiri_depan: String,
-        @Field("lampu_sein_kiri_belakang") lampu_sein_kiri_belakang: String,
-        @Field("lampu_hazard") lampu_hazard: String,
-        @Field("lampu_sorot") lampu_sorot: String,
-        @Field("lampu_dalam_depan") lampu_dalam_depan: String,
-        @Field("lampu_dalam_tengah") lampu_dalam_tengah: String,
-        @Field("wiper") wiper: String,
-        @Field("spion") spion: String,
-        @Field("sirine") sirine: String,
-        @Field("catatan") catatan: String,
+    @FormUrlEncoded
+    @POST("acc_ambulance")
+    fun acc_ambulance(
+        @Field("id") id: Int
+    ): Call<PostDataResponse>
 
-        ): Call<PostDataResponse>
-    //==========================END Schedule EDGBLOK2 =======================
+    @Multipart
+    @POST("ambulance_pdf/{id}")
+    fun ambulanceku_pdf(
+        @Path("id") id :Int?,
+        @Part image: MultipartBody.Part?,
+        @Part("jabatan") jabatan: RequestBody,
+        @Part("nama") nama: RequestBody,
+    ): Call<PostDataResponse>
+
+    @GET("ambulance")
+    fun gethasil_ambulance(
+        @Query("tw") tw: String,
+        @Query("tahun") tahun: String
+    ): Call<AmbulanceResponse>
+
+    @GET("ambulance_pelaksana")
+    fun ambulance_pelaksana(): Call<AmbulanceResponse>
+
+    @Headers("Content-Type: application/json")
+    @POST("update_ambulance")
+    fun update_ambulanceku(@Body post: UpdateAmbulance): Call<PostDataResponse>
+    //==========================END Schedule DAMKAR =======================
 }
 

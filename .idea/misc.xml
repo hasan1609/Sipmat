@@ -57,12 +57,16 @@
         <entry key="..\:/aku/Sipmat/app/src/main/res/layout/list_scheduleffblok2.xml" value="0.1" />
         <entry key="..\:/aku/Sipmat/app/src/main/res/layout/list_scheduleseawater.xml" value="0.10866261398176291" />
         <entry key="..\:/aku/Sipmat/app/src/main/res/layout/list_seawater_pelaksana.xml" value="0.25" />
+        <entry key="..\:/aku/project sipmat/Sipmat/app/src/main/res/drawable/imginput.xml" value="0.125" />
+        <entry key="..\:/aku/project sipmat/Sipmat/app/src/main/res/layout/activity_cek_apar_kadaluarsa.xml" value="0.25" />
         <entry key="..\:/aku/project sipmat/Sipmat/app/src/main/res/layout/activity_cek_edgblok1.xml" value="0.10866261398176291" />
         <entry key="..\:/aku/project sipmat/Sipmat/app/src/main/res/layout/activity_cek_edgblok12.xml" value="0.10866261398176291" />
         <entry key="..\:/aku/project sipmat/Sipmat/app/src/main/res/layout/activity_cek_edgblok1_admin.xml" value="0.1" />
         <entry key="..\:/aku/project sipmat/Sipmat/app/src/main/res/layout/activity_cek_ffblok2.xml" value="0.1" />
-        <entry key="..\:/aku/project sipmat/Sipmat/app/src/main/res/layout/activity_detail_cek_ambulance.xml" value="0.22" />
+        <entry key="..\:/aku/project sipmat/Sipmat/app/src/main/res/layout/activity_detail_cek_ambulance.xml" value="0.3147590361445783" />
+        <entry key="..\:/aku/project sipmat/Sipmat/app/src/main/res/layout/activity_detail_cek_ambulance_admin.xml" value="0.25" />
         <entry key="..\:/aku/project sipmat/Sipmat/app/src/main/res/layout/activity_detail_cek_damkar.xml" value="0.22" />
+        <entry key="..\:/aku/project sipmat/Sipmat/app/src/main/res/layout/activity_detail_cek_damkar_admin.xml" value="0.22" />
         <entry key="..\:/aku/project sipmat/Sipmat/app/src/main/res/layout/activity_detail_cek_edgblok1.xml" value="0.2310177705977383" />
         <entry key="..\:/aku/project sipmat/Sipmat/app/src/main/res/layout/activity_detail_cek_edgblok2.xml" value="0.22765072765072766" />
         <entry key="..\:/aku/project sipmat/Sipmat/app/src/main/res/layout/activity_detail_cek_edgblok2_admin.xml" value="0.10461956521739131" />
@@ -72,14 +76,26 @@
         <entry key="..\:/aku/project sipmat/Sipmat/app/src/main/res/layout/activity_detail_cek_pencahayaan.xml" value="0.25" />
         <entry key="..\:/aku/project sipmat/Sipmat/app/src/main/res/layout/activity_detail_cek_seawater.xml" value="0.21" />
         <entry key="..\:/aku/project sipmat/Sipmat/app/src/main/res/layout/activity_detail_ffblok.xml" value="0.1" />
+        <entry key="..\:/aku/project sipmat/Sipmat/app/src/main/res/layout/activity_hasil_ambulance.xml" value="0.10104166666666667" />
+        <entry key="..\:/aku/project sipmat/Sipmat/app/src/main/res/layout/activity_hasil_apar.xml" value="0.10866261398176291" />
         <entry key="..\:/aku/project sipmat/Sipmat/app/src/main/res/layout/activity_hasil_damkar.xml" value="0.1" />
         <entry key="..\:/aku/project sipmat/Sipmat/app/src/main/res/layout/activity_hasil_edgblok12.xml" value="0.10866261398176291" />
         <entry key="..\:/aku/project sipmat/Sipmat/app/src/main/res/layout/activity_hasil_edgblok3.xml" value="0.10866261398176291" />
         <entry key="..\:/aku/project sipmat/Sipmat/app/src/main/res/layout/activity_hasil_ffblok2.xml" value="0.1" />
+        <entry key="..\:/aku/project sipmat/Sipmat/app/src/main/res/layout/activity_login.xml" value="0.10371376811594203" />
+        <entry key="..\:/aku/project sipmat/Sipmat/app/src/main/res/layout/activity_login_admin.xml" value="0.16" />
         <entry key="..\:/aku/project sipmat/Sipmat/app/src/main/res/layout/activity_tambah_schedule.xml" value="0.1" />
+        <entry key="..\:/aku/project sipmat/Sipmat/app/src/main/res/layout/activity_tambah_schedule_ambulance.xml" value="0.1" />
         <entry key="..\:/aku/project sipmat/Sipmat/app/src/main/res/layout/activity_tambah_schedule_damkar.xml" value="0.1" />
         <entry key="..\:/aku/project sipmat/Sipmat/app/src/main/res/layout/activity_tambah_schedule_edgblok2.xml" value="0.1" />
         <entry key="..\:/aku/project sipmat/Sipmat/app/src/main/res/layout/activity_tambah_schedule_edgblok3.xml" value="0.1" />
+        <entry key="..\:/aku/project sipmat/Sipmat/app/src/main/res/layout/activity_tes.xml" value="0.25" />
+        <entry key="..\:/aku/project sipmat/Sipmat/app/src/main/res/layout/fragment_pm.xml" value="0.10866261398176291" />
+        <entry key="..\:/aku/project sipmat/Sipmat/app/src/main/res/layout/fragment_sinkron_hasil.xml" value="0.25" />
+        <entry key="..\:/aku/project sipmat/Sipmat/app/src/main/res/layout/fragment_sinkron_hasil2.xml" value="0.14" />
+        <entry key="..\:/aku/project sipmat/Sipmat/app/src/main/res/layout/list_apar_kadaluarsa.xml" value="0.22" />
+        <entry key="..\:/aku/project sipmat/Sipmat/app/src/main/res/layout/list_damkar_pelaksana.xml" value="0.1" />
+        <entry key="..\:/aku/project sipmat/Sipmat/app/src/main/res/layout/list_scheduleambulance.xml" value="0.10866261398176291" />
         <entry key="..\:/aku/project sipmat/Sipmat/app/src/main/res/layout/list_scheduledamkar.xml" value="0.1" />
         <entry key="..\:/aku/project sipmat/Sipmat/app/src/main/res/layout/list_scheduleedgblok3.xml" value="0.1" />
       </map>

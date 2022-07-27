@@ -18,7 +18,7 @@ class ApiClient {
             return if (retrofit ==null){
                 retrofit = Retrofit.Builder().apply {
                     client(opt)
-                    baseUrl("http://192.168.2.103/Sipmat-Grati/public/api/")
+                    baseUrl("http://192.168.2.98/Sipmat-Grati/public/api/")
                     addConverterFactory(GsonConverterFactory.create())
                 }.build()
                 retrofit!!

@@ -1,4 +1,4 @@
-package com.sipmat.sipmat.adapter.damkar
+package com.sipmat.sipmat.adapter.ambulance
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -7,23 +7,24 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.sipmat.sipmat.R
+import com.sipmat.sipmat.model.ambulance.AmbulanceModel
 import com.sipmat.sipmat.model.damkar.DamkarModel
 import com.sipmat.sipmat.model.edgblok1.EdgBlokModel
 import com.sipmat.sipmat.model.ffblok.FFBlokModel
 
 
-class HasilDamkarAdapter(
-    private val notesList: MutableList<DamkarModel>,
+class HasilAmbulanceAdapter(
+    private val notesList: MutableList<AmbulanceModel>,
     private val context: Context,
 
-    ) : RecyclerView.Adapter<HasilDamkarAdapter.ViewHolder>() {
+    ) : RecyclerView.Adapter<HasilAmbulanceAdapter.ViewHolder>() {
 
     //database
     private var dialog: Dialog? = null
 
 
     interface Dialog {
-        fun onClick(position: Int, note : DamkarModel)
+        fun onClick(position: Int, note : AmbulanceModel)
     }
 
     fun setDialog(dialog: Dialog) {
@@ -51,7 +52,7 @@ class HasilDamkarAdapter(
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.list_damkar_pelaksana, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.list_ambulance_pelaksana, parent, false)
 
         return ViewHolder(view)
 

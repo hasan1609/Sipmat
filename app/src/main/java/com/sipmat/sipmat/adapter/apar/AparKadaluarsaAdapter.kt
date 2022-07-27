@@ -34,13 +34,14 @@ class AparKadaluarsaAdapter(
         internal var gedung: TextView
         internal var jenis: TextView
         internal var kadaluarsa: TextView
+        internal var kode: TextView
 
 
         init {
             gedung = view.findViewById(R.id.txtgedung)
             jenis = view.findViewById(R.id.txtjenis)
             kadaluarsa = view.findViewById(R.id.txtkadaluarsa)
-
+            kode = view.findViewById(R.id.txtkode)
         }
     }
 
@@ -57,6 +58,7 @@ class AparKadaluarsaAdapter(
         holder.gedung.text = "Gedung : ${note.lokasi}"
         holder.jenis.text = "Jenis : ${note.jenis}"
         holder.kadaluarsa.text = "Kadaluarsa : ${note.tglKadaluarsa}"
+        holder.kode.text = "Kode Apar : ${note.kode}"
         holder.itemView.setOnClickListener {
             if(dialog != null){
                 dialog!!.onClick(holder.layoutPosition,note)

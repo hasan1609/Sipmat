@@ -10,6 +10,7 @@ import com.sipmat.sipmat.R
 import com.sipmat.sipmat.pelaksana.aparpelaksana.AparPelaksanaActivity
 import com.sipmat.sipmat.pelaksana.apatpelaksana.CekApatActivity
 import com.sipmat.sipmat.databinding.FragmentHomeBinding
+import com.sipmat.sipmat.pelaksana.ambulancepelakasana.CekAmbulanceActivity
 import com.sipmat.sipmat.pelaksana.damkarpelaksana.CekDamkarActivity
 import com.sipmat.sipmat.pelaksana.edgblok1pelaksana.CekEdgblok1Activity
 import com.sipmat.sipmat.pelaksana.edgblok2pelaksana.CekEdgblok2Activity
@@ -78,6 +79,9 @@ class HomeFragment : Fragment() {
         }
         binding.txtmobildamkar.setOnClickListener {
             startActivity<CekDamkarActivity>()
+        }
+        binding.txtmobilambulance.setOnClickListener {
+            startActivity<CekAmbulanceActivity>()
         }
 
         return  binding.root

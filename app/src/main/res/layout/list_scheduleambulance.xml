@@ -16,44 +16,51 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Kode :"
+            android:text="TW :"
             android:textSize="15dp"
             android:textColor="@color/black"
             android:textStyle="bold"
-            android:id="@+id/txtkode"
+            android:id="@+id/txttw"
             />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Gedung :"
+            android:text="Tahun :"
             android:textSize="15dp"
             android:textColor="@color/black"
             android:textStyle="bold"
-            android:id="@+id/txtgedung"
+            android:id="@+id/txttahun"
             />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Jenis :"
+            android:text="Hari :"
             android:textSize="15dp"
             android:textColor="@color/black"
             android:textStyle="bold"
-            android:id="@+id/txtjenis"
+            android:id="@+id/txthari"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yanggal :"
+            android:textSize="15dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:id="@+id/txttanggal"
             />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tanggal Kadaluarsa :"
+            android:text="Status :"
             android:textSize="15dp"
             android:textColor="@color/black"
             android:textStyle="bold"
-            android:id="@+id/txtkadaluarsa"
+            android:id="@+id/txtstatus"
             />
-
-
 
     </LinearLayout>
 

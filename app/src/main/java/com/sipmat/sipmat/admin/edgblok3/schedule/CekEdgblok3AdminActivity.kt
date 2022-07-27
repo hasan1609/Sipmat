@@ -147,8 +147,8 @@ class CekEdgblok3AdminActivity : AppCompatActivity(), AnkoLogger {
         Picasso.get().load("${Constant.foto_url}${cekedgblok1.supervisorTtd}").into(binding.signaturePadSupervisor)
         binding.btnReturn.setOnClickListener {
             val builder = AlertDialog.Builder(this)
-            builder.setTitle("edgblok")
-            builder.setMessage("Return edgblok ? ")
+            builder.setTitle("Edg Blok 3")
+            builder.setMessage("Return Edg Blok 3 ? ")
             builder.setPositiveButton(android.R.string.yes) { dialog, which ->
                 loading(true)
                 api.return_edgblok3(cekedgblok1.id!!).enqueue(object :
@@ -195,8 +195,8 @@ class CekEdgblok3AdminActivity : AppCompatActivity(), AnkoLogger {
 
         binding.btnApprove.setOnClickListener {
             val builder = AlertDialog.Builder(this)
-            builder.setTitle("ffblok")
-            builder.setMessage("ACC ffblok ? ")
+            builder.setTitle("Edg Blok 3")
+            builder.setMessage("ACC Edg Blok 3 ? ")
             builder.setPositiveButton(android.R.string.yes) { dialog, which ->
                 loading(true)
                 api.acc_edgblok3(cekedgblok1.id!!).enqueue(object :

@@ -10,8 +10,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".pelaksana.ambulancepelakasana.DetailCekAmbulanceActivity">
-
+        tools:context=".admin.ambulance.schedule.CekAmbulanceAdminActivity">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -80,7 +79,7 @@
                                 android:textColor="@color/black"
                                 android:textSize="14dp" />
 
-                            <com.google.android.material.textfield.TextInputEditText
+                            <TextView
                                 android:id="@+id/txtto"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
@@ -106,7 +105,7 @@
                                 android:textColor="@color/black"
                                 android:textSize="14dp" />
 
-                            <com.google.android.material.textfield.TextInputEditText
+                            <TextView
                                 android:id="@+id/txtto_t"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
@@ -140,7 +139,7 @@
                                 android:textColor="@color/black"
                                 android:textSize="14dp" />
 
-                            <com.google.android.material.textfield.TextInputEditText
+                            <TextView
                                 android:id="@+id/txta"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
@@ -166,7 +165,7 @@
                                 android:textColor="@color/black"
                                 android:textSize="14dp" />
 
-                            <com.google.android.material.textfield.TextInputEditText
+                            <TextView
                                 android:id="@+id/txta_t"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
@@ -192,7 +191,7 @@
                                 android:textColor="@color/black"
                                 android:textSize="14dp" />
 
-                            <com.google.android.material.textfield.TextInputEditText
+                            <TextView
                                 android:id="@+id/txta_ks"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
@@ -219,7 +218,7 @@
                         android:textColor="@color/black"
                         android:textSize="14dp" />
 
-                    <com.google.android.material.textfield.TextInputEditText
+                    <TextView
                         android:id="@+id/txtci"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
@@ -245,7 +244,7 @@
                         android:textColor="@color/black"
                         android:textSize="14dp" />
 
-                    <com.google.android.material.textfield.TextInputEditText
+                    <TextView
                         android:id="@+id/txtpa"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
@@ -272,7 +271,7 @@
                             android:text="5a. Tandu Dorong (Brangkar)"
                             android:textColor="@color/black"
                             android:textSize="14dp" />
-                        <com.google.android.material.textfield.TextInputEditText
+                        <TextView
                             android:id="@+id/txttd"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
@@ -297,7 +296,7 @@
                             android:textColor="@color/black"
                             android:textSize="14dp" />
 
-                        <com.google.android.material.textfield.TextInputEditText
+                        <TextView
                             android:id="@+id/txttd_k"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
@@ -323,7 +322,7 @@
                             android:textColor="@color/black"
                             android:textSize="14dp" />
 
-                        <com.google.android.material.textfield.TextInputEditText
+                        <TextView
                             android:id="@+id/txttd_r"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
@@ -349,7 +348,7 @@
                             android:textColor="@color/black"
                             android:textSize="14dp" />
 
-                        <com.google.android.material.textfield.TextInputEditText
+                        <TextView
                             android:id="@+id/txttd_sk"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
@@ -376,7 +375,7 @@
                         android:textColor="@color/black"
                         android:textSize="14dp" />
 
-                    <com.google.android.material.textfield.TextInputEditText
+                    <TextView
                         android:id="@+id/txttl"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
@@ -402,7 +401,7 @@
                         android:textColor="@color/black"
                         android:textSize="14dp" />
 
-                    <com.google.android.material.textfield.TextInputEditText
+                    <TextView
                         android:id="@+id/txtaw"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
@@ -428,7 +427,7 @@
                         android:textColor="@color/black"
                         android:textSize="14dp" />
 
-                    <com.google.android.material.textfield.TextInputEditText
+                    <TextView
                         android:id="@+id/txtag"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
@@ -454,7 +453,7 @@
                         android:textColor="@color/black"
                         android:textSize="14dp" />
 
-                    <com.google.android.material.textfield.TextInputEditText
+                    <TextView
                         android:id="@+id/txttk"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
@@ -480,7 +479,7 @@
                         android:textColor="@color/black"
                         android:textSize="14dp" />
 
-                    <com.google.android.material.textfield.TextInputEditText
+                    <TextView
                         android:id="@+id/txto"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
@@ -506,7 +505,7 @@
                         android:textColor="@color/black"
                         android:textSize="14dp" />
 
-                    <com.google.android.material.textfield.TextInputEditText
+                    <TextView
                         android:id="@+id/txttp"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
@@ -533,10 +532,11 @@
                     android:layout_marginTop="5dp"
                     android:gravity="start"
                     android:text="Catatan"
+                    android:textStyle="bold"
                     android:textColor="@color/black"
                     android:textSize="14dp" />
 
-                <com.google.android.material.textfield.TextInputEditText
+                <TextView
                     android:id="@+id/txtcatatan"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -547,15 +547,45 @@
                     android:textSize="14dp" />
 
             </LinearLayout>
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnsubmit"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:text="submit"
-                app:backgroundTint="@color/black" />
+                android:gravity="center"
+                android:orientation="horizontal">
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Aprrove"
+                    android:textColor="@color/white"
+                    android:id="@+id/btn_approve"
+                    android:layout_marginTop="20dp"
+                    app:backgroundTint="@color/black"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Return"
+                    android:visibility="gone"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/btn_return"
+                    android:layout_marginTop="20dp"
+                    app:backgroundTint="@color/black"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Cetak PDF"
+                    android:visibility="gone"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/btncetakpdf"
+                    android:layout_marginTop="20dp"
+                    app:backgroundTint="@color/black"/>
+
+
+            </LinearLayout>
 
 
         </LinearLayout>

@@ -1,4 +1,4 @@
-package com.sipmat.sipmat.pelaksana.damkarpelaksana
+package com.sipmat.sipmat.pelaksana.ambulancepelakasana
 
 import android.app.ProgressDialog
 import android.graphics.Bitmap
@@ -14,11 +14,13 @@ import com.google.gson.Gson
 import com.sipmat.sipmat.R
 import com.sipmat.sipmat.databinding.*
 import com.sipmat.sipmat.model.PostDataResponse
+import com.sipmat.sipmat.model.ambulance.AmbulanceModel
 import com.sipmat.sipmat.model.damkar.DamkarModel
 import com.sipmat.sipmat.model.edgblok2.EdgBlok2Model
 import com.sipmat.sipmat.model.edgblok3.EdgBlok3Model
 import com.sipmat.sipmat.model.ffblok.FFBlokModel
 import com.sipmat.sipmat.model.ffblok2.FFBlok2Model
+import com.sipmat.sipmat.model.postdata.UpdateAmbulance
 import com.sipmat.sipmat.model.postdata.UpdateDamkar
 import com.sipmat.sipmat.pelaksana.ffblok2pelaksana.DetailCekFFblok2Activity
 import com.sipmat.sipmat.session.SessionManager
@@ -38,29 +40,29 @@ import java.io.File
 import java.text.SimpleDateFormat
 import java.util.*
 
-class DetailCekDamkarActivity : AppCompatActivity(), AnkoLogger {
-    lateinit var binding: ActivityDetailCekDamkarBinding
+class DetailCekAmbulanceActivity : AppCompatActivity(), AnkoLogger {
+    lateinit var binding: ActivityDetailCekAmbulanceBinding
     var api = ApiClient.instance()
     lateinit var sessionManager: SessionManager
     lateinit var progressDialog: ProgressDialog
 
     companion object {
-        var damkar: DamkarModel? = null
+        var damkar: AmbulanceModel? = null
     }
 
     var currentDate: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_detail_cek_damkar)
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_detail_cek_ambulance)
         binding.lifecycleOwner = this
         sessionManager = SessionManager(this)
         progressDialog = ProgressDialog(this)
         val gson = Gson()
         damkar =
             gson.fromJson(
-                intent.getStringExtra("cekdamkar"),
-                DamkarModel::class.java
+                intent.getStringExtra("ambulance"),
+                AmbulanceModel::class.java
             )
         val sdf = SimpleDateFormat("yyyy-M-dd ")
 
@@ -69,65 +71,70 @@ class DetailCekDamkarActivity : AppCompatActivity(), AnkoLogger {
         binding.txtshift.text = "Shift : ${sessionManager.getNama()}"
 
         binding.btnsubmit.setOnClickListener {
-            val start = binding.txts.text.toString()
-            val stop = binding.txtst.text.toString()
-            val catatan = binding.txtcatatan.text.toString().trim()
-            val accu = binding.txtac.selectedItem
-            val air_radiator = binding.txtlar.selectedItem
-            val temp_mesin = binding.txttm.selectedItem
-            val lvl_oil = binding.txtlo.selectedItem
-            val filter_solar = binding.txtfs.selectedItem
-            val lvl_minyak_rem = binding.txtlmr.selectedItem
-            val suara_mesin = binding.txtsm.selectedItem
-            val lamp_depan = binding.txtld.selectedItem
-            val lamp_belakang = binding.txtlb.selectedItem
-            val lamp_rem = binding.txtlr.selectedItem
-            val lsknd = binding.txtlsknd.selectedItem
-            val lskrd = binding.txtlskrd.selectedItem
-            val lsknb = binding.txtlsknb.selectedItem
-            val lskrb = binding.txtlskrd.selectedItem
-            val hazard = binding.txtlh.selectedItem
-            val sorot = binding.txtlsr.selectedItem
-            val ldd = binding.txtldp.selectedItem
-            val ldt = binding.txtldt.selectedItem
-            val ldb = binding.txtldb.selectedItem
-            val wiper = binding.txtw.selectedItem
-            val spion = binding.txtsp.selectedItem
-            val sirine = binding.txtsr.selectedItem
-            if (start.isNotEmpty() && stop.isNotEmpty() && catatan.isNotEmpty()) {
+            val txtto = binding.txtto.text.toString()
+            val txttoT = binding.txttoT.text.toString()
+            val txta = binding.txta.text.toString()
+            val txtaT = binding.txtaT.text.toString()
+            val txtaKs = binding.txtaKs.text.toString()
+            val txtci = binding.txtci.text.toString()
+            val txtpa = binding.txtpa.text.toString()
+            val txttd = binding.txttd.text.toString()
+            val txttdK = binding.txttdK.text.toString()
+            val txttdR = binding.txttdR.text.toString()
+            val txttdSk = binding.txttdSk.text.toString()
+            val txttl = binding.txttl.text.toString()
+            val txtaw = binding.txtaw.text.toString()
+            val txtag = binding.txtag.text.toString()
+            val txttk = binding.txttk.text.toString()
+            val txto = binding.txto.text.toString()
+            val txttp = binding.txttp.text.toString()
+            val txtc = binding.txtcatatan.text.toString()
+
+            if (
+                txtto.isNotEmpty() &&
+                txttoT.isNotEmpty() &&
+                txta.isNotEmpty() &&
+                txtaT.isNotEmpty() &&
+                txtaKs.isNotEmpty() &&
+                txtci.isNotEmpty() &&
+                txtpa.isNotEmpty() &&
+                txttd.isNotEmpty() &&
+                txttdK.isNotEmpty() &&
+                txttdR.isNotEmpty() &&
+                txttdSk.isNotEmpty() &&
+                txttl.isNotEmpty() &&
+                txtaw.isNotEmpty() &&
+                txtag.isNotEmpty() &&
+                txttk.isNotEmpty() &&
+                txto.isNotEmpty() &&
+                txttp.isNotEmpty() &&
+                txtc.isNotEmpty()) {
                 loading(true)
-                val updateDamkar = UpdateDamkar(
-                    spion.toString(),
-                    hazard.toString(),
+                val updateAmbulance = UpdateAmbulance(
+                    txttk,
                     currentDate,
                     sessionManager.getNama(),
-                    lamp_rem.toString(),
-                    sorot.toString(),
-                    ldt.toString(),
-                    lvl_minyak_rem.toString(),
+                    txtaKs,
+                    txta,
+                    txttdR,
                     1,
-                    lamp_belakang.toString(),
-                    accu.toString(),
-                    air_radiator.toString(),
-                    lvl_oil.toString(),
+                    txttdSk,
+                    txtto,
                     damkar!!.id,
-                    lskrb.toString(),
-                    suara_mesin.toString(),
-                    lamp_depan.toString(),
-                    start,
-                    catatan,
-                    ldb.toString(),
-                    filter_solar.toString(),
-                    lsknd.toString(),
-                    stop,
-                    lsknb.toString(),
-                    wiper.toString(),
-                    ldd.toString(),
-                    temp_mesin.toString(),
-                    lskrd.toString(),
-                    sirine.toString()
+                    txto,
+                    txtaw,
+                    txttdK,
+                    txtag,
+                    txtc,
+                    txtaT,
+                    txttd,
+                    txttoT,
+                    txttl,
+                    txttp,
+                    txtpa,
+                    txtci
                 )
-                api.update_damkarku(updateDamkar).enqueue(object :
+                api.update_ambulanceku(updateAmbulance).enqueue(object :
                     Callback<PostDataResponse> {
                     override fun onResponse(
                         call: Call<PostDataResponse>,

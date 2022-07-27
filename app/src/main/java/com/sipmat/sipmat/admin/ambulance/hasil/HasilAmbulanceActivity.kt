@@ -1,4 +1,4 @@
-package com.sipmat.sipmat.admin.damkar.hasil
+package com.sipmat.sipmat.admin.ambulance.hasil
 
 import android.Manifest
 import android.app.ProgressDialog
@@ -20,18 +20,19 @@ import com.github.gcacace.signaturepad.views.SignaturePad
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import com.sipmat.sipmat.R
+import com.sipmat.sipmat.adapter.ambulance.HasilAmbulanceAdapter
 import com.sipmat.sipmat.adapter.damkar.HasilDamkarAdapter
 import com.sipmat.sipmat.adapter.edgblok1.HasilEdgblokAdapter
 import com.sipmat.sipmat.adapter.edgblok2.HasilEdgblok2Adapter
+import com.sipmat.sipmat.admin.ambulance.schedule.CekAmbulanceAdminActivity
 import com.sipmat.sipmat.admin.damkar.schedule.CekDamkarAdminActivity
 import com.sipmat.sipmat.admin.edgblok1.schedule.CekEdgblok1AdminActivity
 import com.sipmat.sipmat.admin.edgblok2.schedule.CekEdgblok2AdminActivity
 import com.sipmat.sipmat.admin.ffblok1.schedule.CekFFblokAdminActivity
-import com.sipmat.sipmat.databinding.ActivityHasilDamkarBinding
-import com.sipmat.sipmat.databinding.ActivityHasilEdgblok1Binding
-import com.sipmat.sipmat.databinding.ActivityHasilEdgblok2Binding
-import com.sipmat.sipmat.databinding.FragmentSinkronHasilBinding
+import com.sipmat.sipmat.databinding.*
 import com.sipmat.sipmat.model.PostDataResponse
+import com.sipmat.sipmat.model.ambulance.AmbulanceModel
+import com.sipmat.sipmat.model.ambulance.AmbulanceResponse
 import com.sipmat.sipmat.model.damkar.DamkarModel
 import com.sipmat.sipmat.model.damkar.DamkarResponse
 import com.sipmat.sipmat.model.edgblok1.EdgBlokModel
@@ -53,16 +54,16 @@ import retrofit2.Response
 import java.io.ByteArrayOutputStream
 import java.io.File
 
-class HasilDamkarActivity : AppCompatActivity(), AnkoLogger {
-    private lateinit var mAdapter: HasilDamkarAdapter
+class HasilAmbulanceActivity : AppCompatActivity(), AnkoLogger {
+    private lateinit var mAdapter: HasilAmbulanceAdapter
     lateinit var progressDialog: ProgressDialog
     var api = ApiClient.instance()
     var triwulan: String? = null
-    lateinit var binding: ActivityHasilDamkarBinding
+    lateinit var binding: ActivityHasilAmbulanceBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_hasil_damkar)
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_hasil_ambulance)
         binding.lifecycleOwner = this
         progressDialog = ProgressDialog(this)
 
@@ -86,35 +87,34 @@ class HasilDamkarActivity : AppCompatActivity(), AnkoLogger {
         binding.rvhasilffblok.setHasFixedSize(true)
         (binding.rvhasilffblok.layoutManager as LinearLayoutManager).orientation =
             LinearLayoutManager.VERTICAL
-        api.gethasil_damkar(tw, tahun)
-            .enqueue(object : Callback<DamkarResponse> {
+        api.gethasil_ambulance(tw, tahun)
+            .enqueue(object : Callback<AmbulanceResponse> {
                 override fun onResponse(
-                    call: Call<DamkarResponse>,
-                    response: Response<DamkarResponse>
+                    call: Call<AmbulanceResponse>,
+                    response: Response<AmbulanceResponse>
                 ) {
                     try {
                         if (response.isSuccessful) {
-                            val notesList = mutableListOf<DamkarModel>()
+                            val notesList = mutableListOf<AmbulanceModel>()
                             val data = response.body()
                             if (data!!.data!!.isEmpty()) {
                                 toast("data kosong")
                             } else {
-
                                 for (hasil in data.data!!) {
                                     notesList.add(hasil)
                                     mAdapter =
-                                        HasilDamkarAdapter(notesList, this@HasilDamkarActivity)
+                                        HasilAmbulanceAdapter(notesList, this@HasilAmbulanceActivity)
                                     binding.rvhasilffblok.adapter = mAdapter
-                                    mAdapter.setDialog(object : HasilDamkarAdapter.Dialog {
+                                    mAdapter.setDialog(object : HasilAmbulanceAdapter.Dialog {
 
-                                        override fun onClick(position: Int, note: DamkarModel) {
+                                        override fun onClick(position: Int, note: AmbulanceModel) {
                                             val builder =
-                                                AlertDialog.Builder(this@HasilDamkarActivity)
-                                            builder.setMessage("Cek Mobil Damkar ? ")
-                                            builder.setPositiveButton("Cek Damkar") { dialog, which ->
+                                                AlertDialog.Builder(this@HasilAmbulanceActivity)
+                                            builder.setMessage("Cek Mobil Ambulane ? ")
+                                            builder.setPositiveButton("Cek Ambulance") { dialog, which ->
                                                 val gson = Gson()
                                                 val noteJson = gson.toJson(note)
-                                                startActivity<CekDamkarAdminActivity>("damkar" to noteJson)
+                                                startActivity<CekAmbulanceAdminActivity>("ambulance" to noteJson)
                                             }
 
 
@@ -139,7 +139,7 @@ class HasilDamkarActivity : AppCompatActivity(), AnkoLogger {
                     }
                 }
 
-                override fun onFailure(call: Call<DamkarResponse>, t: Throwable) {
+                override fun onFailure(call: Call<AmbulanceResponse>, t: Throwable) {
                     info { "dinda ${t.message}" }
                 }
 
