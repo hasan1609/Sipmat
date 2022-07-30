@@ -49,7 +49,7 @@ class HasilKebisinganAdapter(
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.list_hasil_hydrant, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.list_hasil_kebisingan, parent, false)
 
         return ViewHolder(view)
 
@@ -59,7 +59,7 @@ class HasilKebisinganAdapter(
 
         val note = notesList[position]
         holder.kode.text = "Kode : ${note.kodeKebisingan}"
-        holder.gedung.text = "Gedung : ${note.kebisingan!!.lokasi}"
+        holder.gedung.text = "Lokasi Pengecekan : ${note.kebisingan!!.lokasi}"
         if (note.isStatus ==1){
             holder.status.text = "Status : Silahkan Approve"
         }else if (note.isStatus ==2){

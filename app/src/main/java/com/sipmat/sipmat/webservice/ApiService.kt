@@ -208,10 +208,10 @@ interface ApiService {
     fun getschedule_apat(
         @Query("tw") tw: String,
         @Query("tahun") tahun: String
-    ): Call<ScheduleApatResponse>
+    ): Call<HasilApatResponse>
 
     @GET("getschedule_pelaksana_apat")
-    fun getschedule_pelaksana_apat(): Call<ScheduleApatPelaksanaResponse>
+    fun getschedule_pelaksana_apat(): Call<HasilApatResponse>
 
     @GET("gethasil_apat")
     fun getapat_hasil(
@@ -284,7 +284,7 @@ interface ApiService {
     fun getschedule_hydrant(
         @Query("tw") tw: String,
         @Query("tahun") tahun: String
-    ): Call<ScheduleHydrantResponse>
+    ): Call<ScheduleHydrantPelaksanaResponse>
 
     //Tambah Schedule
     @FormUrlEncoded
@@ -314,7 +314,7 @@ interface ApiService {
     fun gethasil_hydrant(
         @Query("tw") tw: String,
         @Query("tahun") tahun: String
-    ): Call<HasilHydrantResponse>
+    ): Call<ScheduleHydrantPelaksanaResponse>
 
     @FormUrlEncoded
     @POST("acc_hydrant")

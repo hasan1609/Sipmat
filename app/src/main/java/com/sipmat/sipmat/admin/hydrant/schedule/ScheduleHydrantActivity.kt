@@ -16,6 +16,8 @@ import com.sipmat.sipmat.model.PostDataResponse
 import com.sipmat.sipmat.model.apat.ScheduleApatModel
 import com.sipmat.sipmat.model.apat.ScheduleApatResponse
 import com.sipmat.sipmat.model.hydrant.ScheduleHydrantModel
+import com.sipmat.sipmat.model.hydrant.ScheduleHydrantPelaksanaModel
+import com.sipmat.sipmat.model.hydrant.ScheduleHydrantPelaksanaResponse
 import com.sipmat.sipmat.model.hydrant.ScheduleHydrantResponse
 import com.sipmat.sipmat.webservice.ApiClient
 import org.jetbrains.anko.AnkoLogger
@@ -58,14 +60,14 @@ class ScheduleHydrantActivity : AppCompatActivity(),AnkoLogger {
         (binding.rvschedulehydrant.layoutManager as LinearLayoutManager).orientation =
             LinearLayoutManager.VERTICAL
         api.getschedule_hydrant(tw, tahun)
-            .enqueue(object : Callback<ScheduleHydrantResponse> {
+            .enqueue(object : Callback<ScheduleHydrantPelaksanaResponse> {
                 override fun onResponse(
-                    call: Call<ScheduleHydrantResponse>,
-                    response: Response<ScheduleHydrantResponse>
+                    call: Call<ScheduleHydrantPelaksanaResponse>,
+                    response: Response<ScheduleHydrantPelaksanaResponse>
                 ) {
                     try {
                         if (response.isSuccessful) {
-                            val notesList = mutableListOf<ScheduleHydrantModel>()
+                            val notesList = mutableListOf<ScheduleHydrantPelaksanaModel>()
                             val data = response.body()
                             for (hasil in data!!.data!!) {
                                 notesList.add(hasil)
@@ -74,7 +76,7 @@ class ScheduleHydrantActivity : AppCompatActivity(),AnkoLogger {
                                 mAdapter.setDialog(object : ScheduleHydrantAdapter.Dialog {
 
 
-                                    override fun onClick(position: Int, note: ScheduleHydrantModel) {
+                                    override fun onClick(position: Int, note: ScheduleHydrantPelaksanaModel) {
 
                                         val builder = AlertDialog.Builder(this@ScheduleHydrantActivity)
                                         builder.setMessage("Hapus Schedule ? ")
@@ -136,7 +138,7 @@ class ScheduleHydrantActivity : AppCompatActivity(),AnkoLogger {
                     }
                 }
 
-                override fun onFailure(call: Call<ScheduleHydrantResponse>, t: Throwable) {
+                override fun onFailure(call: Call<ScheduleHydrantPelaksanaResponse>, t: Throwable) {
                     info { "dinda ${t.message}" }
                 }
 

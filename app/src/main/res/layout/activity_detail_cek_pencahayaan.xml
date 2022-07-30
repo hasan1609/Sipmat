@@ -198,57 +198,30 @@
 
 
                 </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="160dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginTop="5dp"
-                        android:gravity="center|start"
-                        android:text="Rata - rata (LUX): "
-                        android:textColor="@color/black"
-                        android:textSize="14dp" />
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="horizontal">-->
+<!--                    <TextView-->
+<!--                        android:layout_width="160dp"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:layout_marginTop="5dp"-->
+<!--                        android:gravity="center|start"-->
+<!--                        android:text="Rata - rata (LUX): "-->
+<!--                        android:textColor="@color/black"-->
+<!--                        android:textSize="14dp" />-->
 
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_marginTop="5dp"
-                        android:gravity="center"
-                        android:id="@+id/txtluxrata2"
-                        android:layout_weight="1"
-                        android:textColor="@color/black"
-                        android:textSize="14dp" />
+<!--                    <com.google.android.material.textfield.TextInputEditText-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:layout_marginTop="5dp"-->
+<!--                        android:gravity="center"-->
+<!--                        android:id="@+id/txtluxrata2"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:textColor="@color/black"-->
+<!--                        android:textSize="14dp" />-->
 
-                </LinearLayout>
-
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="160dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginTop="5dp"
-                        android:text="Nilai Minimum (LUX): "
-                        android:gravity="center|start"
-                        android:textColor="@color/black"
-                        android:textSize="14dp" />
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_marginTop="5dp"
-                        android:gravity="center"
-                        android:id="@+id/txtnilai_minimum_lux"
-                        android:layout_weight="1"
-                        android:textColor="@color/black"
-                        android:textSize="14dp" />
-
-
-                </LinearLayout>
+<!--                </LinearLayout>-->
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -268,6 +241,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="Ketik Manual"
+                        android:entries="@array/sumber_pencahayaan"
                         android:layout_marginLeft="10dp"
                         android:textSize="14dp"
                         android:id="@+id/spnsumberpencahayaan"

@@ -58,9 +58,9 @@ class AparAdapter(
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
         val note = notesList[position]
-        holder.kode.text = "Kode : ${note.kode}"
-        holder.gedung.text = "Gedung : ${note.lokasi}"
-        holder.jenis.text = "Jenis : ${note.jenis}"
+        holder.kode.text = "Kode APAR : ${note.kode}"
+        holder.gedung.text = "Lokasi Penempatan : ${note.lokasi}"
+        holder.jenis.text = "Jenis APAR : ${note.jenis}"
         holder.kadaluarsa.text = "Kadaluarsa : ${note.tglKadaluarsa}"
         holder.itemView.setOnClickListener {
             if(dialog != null){

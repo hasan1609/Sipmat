@@ -92,7 +92,8 @@ class DetailCekHydrantActivity : AppCompatActivity(),AnkoLogger {
                     spnkondisibox.toString(),
                     cekhydrant!!.id,
                     spnflashing.toString(),
-                    spnselang.toString()
+                    spnselang.toString(),
+                    currentDate
                 )
 
                 api.update_schedule_hydrant(updateschedulehydrant).enqueue(object :

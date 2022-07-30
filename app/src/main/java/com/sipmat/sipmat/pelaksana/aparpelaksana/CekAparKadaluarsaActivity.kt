@@ -60,10 +60,11 @@ class CekAparKadaluarsaActivity : AppCompatActivity(), AnkoLogger {
             startActivity<QrCoderCekAparKadaluarsaActivity>()
         }
         binding.btnsubmit.setOnClickListener{
+            val jenis = binding.spnjenis.selectedItem
                 loading(true)
                 api.updatekuapar(
                     QrCoderCekAparKadaluarsaActivity.hasilqrcodekadaluarsa!!,
-                    QrCoderCekAparKadaluarsaActivity.jeniskadaluarsa!!,
+                    jenis.toString(),
                     QrCoderCekAparKadaluarsaActivity.lokasikadaluarsa!!,
                     tanggal_pengisian!!
                 ).enqueue(object : Callback<PostDataResponse> {

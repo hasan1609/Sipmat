@@ -50,5 +50,8 @@ data class UpdateScheduleHydrant(
 	val flushing: String? = null,
 
 	@field:SerializedName("selang")
-	val selang: String? = null
+	val selang: String? = null,
+
+	@field:SerializedName("tanggal_pemeriksa")
+	val tanggalPemeriksa: String? = null,
 )

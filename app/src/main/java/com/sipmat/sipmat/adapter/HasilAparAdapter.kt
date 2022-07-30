@@ -39,9 +39,10 @@ class HasilAparAdapter(
         internal var gedung: TextView
         internal var status: TextView
         internal var jadwal: TextView
-
+        internal var jenis : TextView
 
         init {
+            jenis = view.findViewById(R.id.txtjenis)
             kode = view.findViewById(R.id.txtkode)
             gedung = view.findViewById(R.id.txtgedung)
             status = view.findViewById(R.id.txtstatus)
@@ -60,19 +61,21 @@ class HasilAparAdapter(
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
         val note = notesList[position]
-        holder.kode.text = "Kode : ${note.kodeApar}"
-        holder.gedung.text = "Gedung : ${note.lokasi}"
-        if (note.isStatus ==1){
-            holder.status.text = "Status : Silahkan Approve"
+        holder.kode.text = "Kode APAR : ${note.kodeApar}"
+        holder.gedung.text = "Lokasi Penempatan : ${note.lokasi}"
+        if (note.isStatus ==0){
+            holder.status.text = "Status : Belum di cek"
         }else if (note.isStatus ==2){
-            holder.status.text = "Status : Selesai"
-        }else if (note.isStatus ==0){
-            holder.status.text = "Status : belum di cek"
+            holder.status.text = "Status : Sudah di cek"
         }
-        else if (note.isStatus ==3){
-            holder.status.text = "Status : direturn"
+        else if (note.isStatus ==1){
+            holder.status.text = "Status : proses pengecekan"
+        }
+        else{
+            holder.status.text = "Status : di return "
         }
         holder.jadwal.text = "Jadwal : ${note.tanggalCek}"
+        holder.jenis.text = "Jenis APAR : ${note.jenis}"
         holder.itemView.setOnClickListener {
             if (dialog!=null){
                 dialog!!.onClick(position,note)

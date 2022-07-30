@@ -21,7 +21,15 @@
             android:textStyle="bold"
             android:id="@+id/txtkode"
             />
-
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="no :"
+            android:textSize="15dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:id="@+id/txtnobox"
+            />
 
         <TextView
             android:layout_width="wrap_content"

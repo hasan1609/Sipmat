@@ -57,9 +57,9 @@ class ApatAdapter(
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
         val note = notesList[position]
-        holder.kode.text = "Kode : ${note.kode}"
-        holder.lokasi.text = "Gedung : ${note.lokasi}"
-        holder.no_bak.text = "Jenis : ${note.noBak}"
+        holder.kode.text = "Kode APAT : ${note.kode}"
+        holder.lokasi.text = "Lokasi Penempatan : ${note.lokasi}"
+        holder.no_bak.text = "No.Bak APAT : ${note.noBak}"
         holder.itemView.setOnClickListener {
             if(dialog != null){
                 dialog!!.onClick(holder.layoutPosition,note)

@@ -55,7 +55,6 @@ class CekPencahayaanAdminActivity : AppCompatActivity(), AnkoLogger {
         binding.txtdbx2.text = "${cekpencahayaan.lux2}"
         binding.txtdbx3.text = "${cekpencahayaan.lux3}"
         binding.txtdbrata2.text = "${cekpencahayaan.luxrata2}"
-        binding.txtnilaiMinimumLux.text = "${cekpencahayaan.nilaiMinimumLux}"
         binding.txtsumbercahaya.text = "${cekpencahayaan.sumberPencahayaan}"
         binding.txtketerangan.text = "${cekpencahayaan.keterangan}"
 

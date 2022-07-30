@@ -27,6 +27,8 @@ import com.sipmat.sipmat.databinding.FragmentSinkronHasilBinding
 import com.sipmat.sipmat.model.PostDataResponse
 import com.sipmat.sipmat.model.hydrant.HasilHydrantModel
 import com.sipmat.sipmat.model.hydrant.HasilHydrantResponse
+import com.sipmat.sipmat.model.hydrant.ScheduleHydrantPelaksanaModel
+import com.sipmat.sipmat.model.hydrant.ScheduleHydrantPelaksanaResponse
 import com.sipmat.sipmat.webservice.ApiClient
 import okhttp3.MediaType
 import okhttp3.MultipartBody
@@ -75,14 +77,14 @@ class HasilHydrantActivity : AppCompatActivity(),AnkoLogger {
         (binding.rvhasilhydrant.layoutManager as LinearLayoutManager).orientation =
             LinearLayoutManager.VERTICAL
         api.gethasil_hydrant(tw, tahun)
-            .enqueue(object : Callback<HasilHydrantResponse> {
+            .enqueue(object : Callback<ScheduleHydrantPelaksanaResponse> {
                 override fun onResponse(
-                    call: Call<HasilHydrantResponse>,
-                    response: Response<HasilHydrantResponse>
+                    call: Call<ScheduleHydrantPelaksanaResponse>,
+                    response: Response<ScheduleHydrantPelaksanaResponse>
                 ) {
                     try {
                         if (response.isSuccessful) {
-                            val notesList = mutableListOf<HasilHydrantModel>()
+                            val notesList = mutableListOf<ScheduleHydrantPelaksanaModel>()
                             val data = response.body()
                             if (data!!.data!!.isEmpty()) {
                                 toast("data kosong")
@@ -96,8 +98,7 @@ class HasilHydrantActivity : AppCompatActivity(),AnkoLogger {
                                     mAdapter = HasilHydrantAdapter(notesList, this@HasilHydrantActivity)
                                     binding.rvhasilhydrant.adapter = mAdapter
                                     mAdapter.setDialog(object : HasilHydrantAdapter.Dialog {
-
-                                        override fun onClick(position: Int, note: HasilHydrantModel) {
+                                        override fun onClick(position: Int, note: ScheduleHydrantPelaksanaModel) {
                                             val builder =
                                                 AlertDialog.Builder(this@HasilHydrantActivity)
                                             builder.setMessage("Cek hydrant ? ")
@@ -129,7 +130,7 @@ class HasilHydrantActivity : AppCompatActivity(),AnkoLogger {
                     }
                 }
 
-                override fun onFailure(call: Call<HasilHydrantResponse>, t: Throwable) {
+                override fun onFailure(call: Call<ScheduleHydrantPelaksanaResponse>, t: Throwable) {
                     info { "dinda ${t.message}" }
                 }
 

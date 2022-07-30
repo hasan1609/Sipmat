@@ -41,5 +41,8 @@ data class UpdateScheduleApat(
 	val id: Int? = null,
 
 	@field:SerializedName("sekop")
-	val sekop: String? = null
+	val sekop: String? = null,
+
+	@field:SerializedName("tanggal_pemeriksa")
+	val tanggalPemeriksa: String? = null,
 )

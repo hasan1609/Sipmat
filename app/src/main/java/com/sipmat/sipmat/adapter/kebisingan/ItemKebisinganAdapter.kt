@@ -58,7 +58,7 @@ class ItemKebisinganAdapter(
 
         val note = notesList[position]
         holder.kode.text = "Kode : ${note.kode}"
-        holder.lokasi.text = "Gedung : ${note.lokasi}"
+        holder.lokasi.text = "Lokasi Pengecekan : ${note.lokasi}"
         holder.itemView.setOnClickListener {
             if(dialog != null){
                 dialog!!.onClick(holder.layoutPosition,note)

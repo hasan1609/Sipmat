@@ -19,8 +19,6 @@ data class UpdateSchedulePencahayaan(
 	@field:SerializedName("tanggal_cek")
 	val tanggalCek: String? = null,
 
-	@field:SerializedName("nilai_minimum_lux")
-	val nilaiMinimumLux: Int? = null,
 
 	@field:SerializedName("lux1")
 	val lux1: Int? = null,
@@ -34,12 +32,15 @@ data class UpdateSchedulePencahayaan(
 	@field:SerializedName("lux3")
 	val lux3: Int? = null,
 
-	@field:SerializedName("luxrata2")
-	val luxrata2: Float? = null,
+//	@field:SerializedName("luxrata2")
+//	val luxrata2: Float? = null,
 
 	@field:SerializedName("sumber_pencahayaan")
 	val sumberPencahayaan: String? = null,
 
 	@field:SerializedName("id")
-	val id: Int? = null
+	val id: Int? = null,
+
+	@field:SerializedName("tanggal_pemeriksa")
+val tanggalPemeriksa: String? = null,
 )

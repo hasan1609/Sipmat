@@ -68,20 +68,20 @@ class DetailCekKebisinganActivity : AppCompatActivity(), AnkoLogger {
             val dbx1 = binding.txtdbx1.text.toString().trim()
             val dbx2 = binding.txtdbx2.text.toString().trim()
             val dbx3 = binding.txtdbx3.text.toString().trim()
-            val dbrata2 = binding.txtdbrata2.text.toString().trim()
-            val status = binding.txtstatus.text.toString().trim()
+//            val dbrata2 = binding.txtdbrata2.text.toString().trim()
+            val status = binding.txtstatus.selectedItem.toString()
             if (keterangan.isNotEmpty() && dbx1.isNotEmpty()
-                && dbx2.isNotEmpty() && dbx3.isNotEmpty() && dbrata2.isNotEmpty() && status.isNotEmpty() && QrCodeCekKebisinganActivity . kodekebisingan != null && QrCodeCekKebisinganActivity.lokasi != null) {
+                && dbx2.isNotEmpty() && dbx3.isNotEmpty() && status.isNotEmpty() && QrCodeCekKebisinganActivity . kodekebisingan != null && QrCodeCekKebisinganActivity.lokasi != null) {
             loading(true)
 
             val updateschedulekebisingan = UpdateScheduleKebisingan(
                 keterangan,
                 cekkebisingan!!.tw,
                 cekkebisingan!!.tahun,
-                dbrata2,
+//                dbrata2,
                 sessionManager.getNama().toString(),
                 cekkebisingan!!.tanggalCek,
-                null,
+                currentDate,
                 1,
                 dbx2,
                 dbx3,

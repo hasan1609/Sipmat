@@ -40,9 +40,9 @@ class HydrantPelaksanaAdapter(
         internal var lokasi: TextView
         internal var status: TextView
         internal var jadwal: TextView
-
-
+        lateinit var no : TextView
         init {
+            no = view.findViewById(R.id.txtnobox)
             kode = view.findViewById(R.id.txtkode)
             lokasi = view.findViewById(R.id.txtlokasi)
             status = view.findViewById(R.id.txtstatus)
@@ -75,7 +75,7 @@ class HydrantPelaksanaAdapter(
             holder.status.text = "Status : di return "
         }
         holder.jadwal.text = "Jadwal : ${note.tanggalCek}"
-
+        holder.no.text ="No. Box Hydrant : ${note.hydrant.noBox}"
         holder.itemView.setOnClickListener {
             if (dialog!=null){
                 dialog!!.onClick(position,note)

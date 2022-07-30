@@ -28,8 +28,6 @@ class DetailCekPencahayaanActivity : AppCompatActivity(), AnkoLogger {
     var api = ApiClient.instance()
     lateinit var sessionManager: SessionManager
     lateinit var progressDialog: ProgressDialog
-    var spnsumber : String? = null
-
     companion object {
         var cekpencahayaan: SchedulePencahayaanModel? = null
 
@@ -41,8 +39,6 @@ class DetailCekPencahayaanActivity : AppCompatActivity(), AnkoLogger {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_detail_cek_pencahayaan)
         binding.lifecycleOwner = this
-
-        spnsumberpencahayaan()
         val gson = Gson()
         cekpencahayaan =
             gson.fromJson(
@@ -70,12 +66,11 @@ class DetailCekPencahayaanActivity : AppCompatActivity(), AnkoLogger {
             val lux1 = binding.txtlux1.text.toString().trim()
             val lux2 = binding.txtlux2.text.toString().trim()
             val lux3 = binding.txtlux3.text.toString().trim()
-            val luxrata2 = binding.txtluxrata2.text.toString().trim()
-            val nilai_minimum = binding.txtnilaiMinimumLux.text.toString().trim()
-            val sumber_pencahayaan = binding.txtnilaiMinimumLux.text.toString().trim()
+//            val luxrata2 = binding.txtluxrata2.text.toString().trim()
+            val sumber_pencahayaan = binding.spnsumberpencahayaan.selectedItem.toString()
 
             if (keterangan.isNotEmpty() && lux1.isNotEmpty()
-                && lux2.isNotEmpty() && lux3.isNotEmpty() && luxrata2.isNotEmpty() && nilai_minimum.isNotEmpty() && QrCodeCekPencahayaanActivity . kodepencahayaan != null && QrCodeCekPencahayaanActivity.lokasi != null) {
+                && lux2.isNotEmpty() && lux3.isNotEmpty() && QrCodeCekPencahayaanActivity . kodepencahayaan != null && QrCodeCekPencahayaanActivity.lokasi != null) {
                 loading(true)
 
                 val updateschedulepencahayaan = UpdateSchedulePencahayaan(
@@ -84,15 +79,14 @@ class DetailCekPencahayaanActivity : AppCompatActivity(), AnkoLogger {
                     cekpencahayaan!!.tahun,
                     sessionManager.getNama().toString(),
                     cekpencahayaan!!.tanggalCek,
-                    nilai_minimum.toInt(),
                     lux1.toInt(),
                     1,
                     lux2.toInt(),
                     lux3.toInt(),
-                    luxrata2.toFloat(),
-                    spnsumber,
-                    cekpencahayaan!!.id
-
+//                    luxrata2.toFloat(),
+                    sumber_pencahayaan,
+                    cekpencahayaan!!.id,
+                    currentDate
                 )
 
 
@@ -160,29 +154,6 @@ class DetailCekPencahayaanActivity : AppCompatActivity(), AnkoLogger {
             progressDialog.show()
         } else {
             progressDialog.dismiss()
-        }
-    }
-
-    fun spnsumberpencahayaan(){
-        val datakelamin = arrayOf("A","B")
-        val spinner = find<Spinner>(R.id.spnsumberpencahayaan)
-        if (spinner!=null){
-            val adapter = ArrayAdapter(this,
-                android.R.layout.simple_spinner_item, datakelamin)
-            spinner.adapter = adapter
-
-            spinner.onItemSelectedListener = object :
-                AdapterView.OnItemSelectedListener {
-                override fun onItemSelected(parent: AdapterView<*>,
-                                            view: View, position: Int, id: Long) {
-                    spnsumber = datakelamin[position]
-                }
-
-                override fun onNothingSelected(parent: AdapterView<*>) {
-                    // write code to perform some action
-                }
-            }
-
         }
     }
 

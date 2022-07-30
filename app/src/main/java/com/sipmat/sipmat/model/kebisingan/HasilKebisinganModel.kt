@@ -36,6 +36,9 @@ data class HasilKebisinganModel(
 	@field:SerializedName("updated_at")
 	val updatedAt: String? = null,
 
+	@field:SerializedName("status")
+	val status: String? = null,
+
 	@field:SerializedName("dbx2")
 	val dbx2: String? = null,
 

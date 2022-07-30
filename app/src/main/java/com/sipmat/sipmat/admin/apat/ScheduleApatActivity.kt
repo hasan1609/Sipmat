@@ -14,9 +14,7 @@ import com.sipmat.sipmat.databinding.ActivityScheduleApatBinding
 import com.sipmat.sipmat.model.PostDataResponse
 import com.sipmat.sipmat.model.ScheduleModel
 import com.sipmat.sipmat.model.ScheduleResponse
-import com.sipmat.sipmat.model.apat.ApatPickResponse
-import com.sipmat.sipmat.model.apat.ScheduleApatModel
-import com.sipmat.sipmat.model.apat.ScheduleApatResponse
+import com.sipmat.sipmat.model.apat.*
 import com.sipmat.sipmat.webservice.ApiClient
 import kotlinx.android.synthetic.main.activity_schedule_apar.*
 import org.jetbrains.anko.AnkoLogger
@@ -59,14 +57,14 @@ class ScheduleApatActivity : AppCompatActivity(), AnkoLogger {
         (binding.rvscheduleapat.layoutManager as LinearLayoutManager).orientation =
             LinearLayoutManager.VERTICAL
         api.getschedule_apat(tw, tahun)
-            .enqueue(object : Callback<ScheduleApatResponse> {
+            .enqueue(object : Callback<HasilApatResponse> {
                 override fun onResponse(
-                    call: Call<ScheduleApatResponse>,
-                    response: Response<ScheduleApatResponse>
+                    call: Call<HasilApatResponse>,
+                    response: Response<HasilApatResponse>
                 ) {
                     try {
                         if (response.isSuccessful) {
-                            val notesList = mutableListOf<ScheduleApatModel>()
+                            val notesList = mutableListOf<HasilApatModel>()
                             val data = response.body()
                             for (hasil in data!!.data!!) {
                                 notesList.add(hasil)
@@ -75,7 +73,7 @@ class ScheduleApatActivity : AppCompatActivity(), AnkoLogger {
                                 mAdapter.setDialog(object : ScheduleApatAdapter.Dialog {
 
 
-                                    override fun onClick(position: Int, note: ScheduleApatModel) {
+                                    override fun onClick(position: Int, note: HasilApatModel) {
 
                                         val builder = AlertDialog.Builder(this@ScheduleApatActivity)
                                         builder.setMessage("Hapus Schedule ? ")
@@ -137,7 +135,7 @@ class ScheduleApatActivity : AppCompatActivity(), AnkoLogger {
                     }
                 }
 
-                override fun onFailure(call: Call<ScheduleApatResponse>, t: Throwable) {
+                override fun onFailure(call: Call<HasilApatResponse>, t: Throwable) {
                     info { "dinda ${t.message}" }
                 }
 

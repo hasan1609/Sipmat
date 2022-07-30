@@ -11,6 +11,8 @@ import com.google.gson.Gson
 import com.sipmat.sipmat.R
 import com.sipmat.sipmat.adapter.apat.ApatPelaksanaAdapter
 import com.sipmat.sipmat.databinding.ActivityCekApatBinding
+import com.sipmat.sipmat.model.apat.HasilApatModel
+import com.sipmat.sipmat.model.apat.HasilApatResponse
 import com.sipmat.sipmat.model.apat.ScheduleApatPelaksanaModel
 import com.sipmat.sipmat.model.apat.ScheduleApatPelaksanaResponse
 import com.sipmat.sipmat.webservice.ApiClient
@@ -52,16 +54,16 @@ class CekApatActivity : AppCompatActivity(), AnkoLogger {
             LinearLayoutManager.VERTICAL
         loading(true)
         api.getschedule_pelaksana_apat()
-            .enqueue(object : Callback<ScheduleApatPelaksanaResponse> {
+            .enqueue(object : Callback<HasilApatResponse> {
                 override fun onResponse(
-                    call: Call<ScheduleApatPelaksanaResponse>,
-                    response: Response<ScheduleApatPelaksanaResponse>
+                    call: Call<HasilApatResponse>,
+                    response: Response<HasilApatResponse>
                 ) {
                     try {
                         if (response.isSuccessful) {
                             loading(false)
                             if(response.body()!!.data!!.isNotEmpty()) {
-                                val notesList = mutableListOf<ScheduleApatPelaksanaModel>()
+                                val notesList = mutableListOf<HasilApatModel>()
                                 val data = response.body()
                                 for (hasil in data!!.data!!) {
                                     notesList.add(hasil)
@@ -70,7 +72,7 @@ class CekApatActivity : AppCompatActivity(), AnkoLogger {
                                     mAdapter.setDialog(object : ApatPelaksanaAdapter.Dialog {
                                         override fun onClick(
                                             position: Int,
-                                            note: ScheduleApatPelaksanaModel
+                                            note: HasilApatModel
                                         ) {
                                             val builder = AlertDialog.Builder(this@CekApatActivity)
                                             builder.setMessage("Cek apat ? ")
@@ -105,7 +107,7 @@ class CekApatActivity : AppCompatActivity(), AnkoLogger {
                     }
                 }
 
-                override fun onFailure(call: Call<ScheduleApatPelaksanaResponse>, t: Throwable) {
+                override fun onFailure(call: Call<HasilApatResponse>, t: Throwable) {
                     loading(false)
                     info { "dinda ${t.message}" }
                 }

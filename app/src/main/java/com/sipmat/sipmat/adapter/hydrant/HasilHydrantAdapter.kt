@@ -12,9 +12,10 @@ import com.sipmat.sipmat.model.ScheduleModel
 import com.sipmat.sipmat.model.UsersModel
 import com.sipmat.sipmat.model.apat.HasilApatModel
 import com.sipmat.sipmat.model.hydrant.HasilHydrantModel
+import com.sipmat.sipmat.model.hydrant.ScheduleHydrantPelaksanaModel
 
 class HasilHydrantAdapter(
-    private val notesList: MutableList<HasilHydrantModel>,
+    private val notesList: MutableList<ScheduleHydrantPelaksanaModel>,
     private val context: Context,
 
     ) : RecyclerView.Adapter<HasilHydrantAdapter.ViewHolder>() {
@@ -24,7 +25,7 @@ class HasilHydrantAdapter(
 
 
     interface Dialog {
-        fun onClick(position: Int, note : HasilHydrantModel)
+        fun onClick(position: Int, note : ScheduleHydrantPelaksanaModel)
     }
 
     fun setDialog(dialog: Dialog) {
@@ -40,9 +41,10 @@ class HasilHydrantAdapter(
         internal var gedung: TextView
         internal var status: TextView
         internal var jadwal: TextView
-
+        internal var no: TextView
 
         init {
+            no = view.findViewById(R.id.txtnobak)
             kode = view.findViewById(R.id.txtkode)
             gedung = view.findViewById(R.id.txtlokasi)
             status = view.findViewById(R.id.txtstatus)
@@ -61,8 +63,8 @@ class HasilHydrantAdapter(
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
         val note = notesList[position]
-        holder.kode.text = "Kode : ${note.kodeHydrant}"
-        holder.gedung.text = "Gedung : ${note.hydrant!!.lokasi}"
+        holder.kode.text = "Kode Hydrant  : ${note.kodeHydrant}"
+        holder.gedung.text = "Lokasi Penempatan : ${note.hydrant!!.lokasi}"
         if (note.isStatus ==1){
             holder.status.text = "Status : Silahkan Approve"
         }else if (note.isStatus ==2){
@@ -74,7 +76,7 @@ class HasilHydrantAdapter(
             holder.status.text = "Status : direturn"
         }
         holder.jadwal.text = "Jadwal : ${note.tanggalCek}"
-
+        holder.no.text ="No. Box Hydrant : ${note.hydrant.noBox}"
         holder.itemView.setOnClickListener {
             if (dialog!=null){
                 dialog!!.onClick(position,note)

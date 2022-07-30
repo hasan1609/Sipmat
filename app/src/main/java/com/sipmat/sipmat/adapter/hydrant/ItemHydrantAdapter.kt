@@ -58,9 +58,9 @@ class ItemHydrantAdapter(
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
         val note = notesList[position]
-        holder.kode.text = "Kode : ${note.kode}"
-        holder.lokasi.text = "Gedung : ${note.lokasi}"
-        holder.txtno_box.text = "Jenis : ${note.noBox}"
+        holder.kode.text = "Kode Hydrant : ${note.kode}"
+        holder.lokasi.text = "Lokasi Penempatan : ${note.lokasi}"
+        holder.txtno_box.text = "No. Box Hydrant : ${note.noBox}"
         holder.itemView.setOnClickListener {
             if(dialog != null){
                 dialog!!.onClick(holder.layoutPosition,note)

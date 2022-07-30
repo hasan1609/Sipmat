@@ -51,7 +51,6 @@ class CekAparActivity : AppCompatActivity(), AnkoLogger {
         sessionManager = SessionManager(this)
         progressDialog = ProgressDialog(this)
         binding.txtshift.text = "Shift : ${sessionManager.getNama()}"
-        binding.txl.text = "asdsd: ${cekapar!!.id}"
         binding.btnscan.setOnClickListener {
             startActivity<QrCoderCekAparActivity>()
         }

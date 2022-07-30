@@ -39,9 +39,10 @@ class HasilApatAdapter(
         internal var gedung: TextView
         internal var status: TextView
         internal var jadwal: TextView
-
+        internal var no : TextView
 
         init {
+            no = view.findViewById(R.id.txtno)
             kode = view.findViewById(R.id.txtkode)
             gedung = view.findViewById(R.id.txtlokasi)
             status = view.findViewById(R.id.txtstatus)
@@ -60,8 +61,8 @@ class HasilApatAdapter(
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
         val note = notesList[position]
-        holder.kode.text = "Kode : ${note.kodeApat}"
-        holder.gedung.text = "Gedung : ${note.apat!!.lokasi}"
+        holder.kode.text = "Kode APAT : ${note.kodeApat}"
+        holder.gedung.text = "Lokasi Penempatan : ${note.apat!!.lokasi}"
         if (note.isStatus ==1){
             holder.status.text = "Status : Silahkan Approve"
         }else if (note.isStatus ==2){
@@ -73,6 +74,7 @@ class HasilApatAdapter(
             holder.status.text = "Status : direturn"
         }
         holder.jadwal.text = "Jadwal : ${note.tanggalCek}"
+        holder.no.text = "No. Bak APAT : ${note.apat.noBak}"
 
         holder.itemView.setOnClickListener {
             if (dialog!=null){

@@ -128,12 +128,35 @@
                 android:layout_height="3dp"
                 android:layout_marginTop="5dp"
                 android:background="@color/black"/>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="start"
                 android:layout_marginTop="20dp"
-                android:text="Masukkan Tanggal Kadaluarsa Baru"
+                android:text="Pilih Jenis APAR Baru"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:entries="@array/jenisapar"
+                android:id="@+id/spnjenis"
+                android:text="Scan kode apar"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:background="@drawable/bg_edttext"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="20dp"
+                android:text="Masukkan Tanggal Pengisian Baru"
                 android:textStyle="bold"
                 android:textColor="@color/black"
                 android:textSize="16dp" />

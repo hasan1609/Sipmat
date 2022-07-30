@@ -8,7 +8,6 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.sipmat.sipmat.R
 import com.sipmat.sipmat.model.AparModel
-import com.sipmat.sipmat.model.UsersModel
 
 class AparKadaluarsaAdapter(
     private val notesList: MutableList<AparModel>,
@@ -55,9 +54,9 @@ class AparKadaluarsaAdapter(
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
         val note = notesList[position]
-        holder.gedung.text = "Gedung : ${note.lokasi}"
+        holder.gedung.text = "Lokasi Penempatan : ${note.lokasi}"
         holder.jenis.text = "Jenis : ${note.jenis}"
-        holder.kadaluarsa.text = "Kadaluarsa : ${note.tglKadaluarsa}"
+        holder.kadaluarsa.text = "Tanggal Kadaluarsa : ${note.tglKadaluarsa}"
         holder.kode.text = "Kode Apar : ${note.kode}"
         holder.itemView.setOnClickListener {
             if(dialog != null){

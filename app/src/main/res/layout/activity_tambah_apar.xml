@@ -56,7 +56,7 @@
                 android:textColor="@color/black"
                 android:gravity="center"
                 android:id="@+id/txtkodeapar"
-                android:background="@drawable/imginput"
+                android:background="@drawable/bg_edttext"
                 />
 
         </LinearLayout>

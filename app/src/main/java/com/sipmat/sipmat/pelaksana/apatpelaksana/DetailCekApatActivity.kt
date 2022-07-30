@@ -83,7 +83,8 @@ class DetailCekApatActivity : AppCompatActivity(),AnkoLogger {
                     spnkarung.toString(),
                     spnpasir.toString(),
                     cekapat!!.id,
-                    spnsekop.toString()
+                    spnsekop.toString(),
+                    currentDate
                 )
 
                 api.update_schedule_apat(updatescheduleapat).enqueue(object :

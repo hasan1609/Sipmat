@@ -13,8 +13,8 @@ data class UpdateScheduleKebisingan(
 	@field:SerializedName("tahun")
 	val tahun: String? = null,
 
-	@field:SerializedName("dbrata2")
-	val dbrata2: String? = null,
+//	@field:SerializedName("dbrata2")
+//	val dbrata2: String? = null,
 
 	@field:SerializedName("shift")
 	val shift: String? = null,
@@ -22,8 +22,8 @@ data class UpdateScheduleKebisingan(
 	@field:SerializedName("tanggal_cek")
 	val tanggalCek: String? = null,
 
-	@field:SerializedName("nab_kebisingan")
-	val nabKebisingan: String? = null,
+	@field:SerializedName("tanggal_pemeriksa")
+	val tanggalPemeriksa: String? = null,
 
 	@field:SerializedName("is_status")
 	val isStatus: Int? = null,

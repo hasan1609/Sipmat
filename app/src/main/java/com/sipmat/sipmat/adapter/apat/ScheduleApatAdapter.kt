@@ -10,10 +10,11 @@ import com.sipmat.sipmat.R
 import com.sipmat.sipmat.model.AparModel
 import com.sipmat.sipmat.model.ScheduleModel
 import com.sipmat.sipmat.model.UsersModel
+import com.sipmat.sipmat.model.apat.HasilApatModel
 import com.sipmat.sipmat.model.apat.ScheduleApatModel
 
 class ScheduleApatAdapter(
-    private val notesList: MutableList<ScheduleApatModel>,
+    private val notesList: MutableList<HasilApatModel>,
     private val context: Context,
 
     ) : RecyclerView.Adapter<ScheduleApatAdapter.ViewHolder>() {
@@ -23,7 +24,7 @@ class ScheduleApatAdapter(
 
 
     interface Dialog {
-        fun onClick(position: Int, note : ScheduleApatModel)
+        fun onClick(position: Int, note : HasilApatModel)
     }
 
     fun setDialog(dialog: Dialog) {
@@ -39,9 +40,10 @@ class ScheduleApatAdapter(
         internal var lokasi: TextView
         internal var tanggal: TextView
         internal var status: TextView
-
+        internal var no: TextView
 
         init {
+            no = view.findViewById(R.id.txtno)
             kode = view.findViewById(R.id.txtkode)
             lokasi = view.findViewById(R.id.txtlokasi)
             tanggal = view.findViewById(R.id.txttglcek)
@@ -60,8 +62,8 @@ class ScheduleApatAdapter(
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
         val note = notesList[position]
-        holder.kode.text = "Kode : ${note.kodeApat}"
-        holder.lokasi.text = "Lokasi : ${note.lokasi}"
+        holder.kode.text = "Kode APAT : ${note.kodeApat}"
+        holder.lokasi.text = "Lokasi Penempatan : ${note.apat!!.lokasi}"
         if (note.isStatus ==0){
             holder.status.text = "Status : Belum di cek"
         }else if (note.isStatus ==2){
@@ -74,7 +76,7 @@ class ScheduleApatAdapter(
             holder.status.text = "Status : di return "
         }
         holder.tanggal.text = "Tanggal : ${note.tanggalCek}"
-
+        holder.no.text = "No. Bak APAT : ${note.apat.noBak}"
         holder.itemView.setOnClickListener {
             if (dialog!=null){
                 dialog!!.onClick(position,note)

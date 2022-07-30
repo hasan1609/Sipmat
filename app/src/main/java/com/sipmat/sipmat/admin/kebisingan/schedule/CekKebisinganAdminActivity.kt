@@ -55,7 +55,7 @@ class CekKebisinganAdminActivity : AppCompatActivity(), AnkoLogger {
         binding.txtdbx2.text = "${cekkebisingan.dbx2}"
         binding.txtdbx3.text = "${cekkebisingan.dbx3}"
         binding.txtdbrata2.text = "${cekkebisingan.dbrata2}"
-        binding.txtstatus.text = "${cekkebisingan.isStatus}"
+        binding.txtstatus.text = "${cekkebisingan.status}"
         binding.txtketerangan.text = "${cekkebisingan.keterangan}"
 
         binding.btnReturn.setOnClickListener {
