@@ -7,7 +7,7 @@
 
     </data>
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:orientation="vertical"
         android:layout_height="match_parent"
@@ -15,10 +15,12 @@
         tools:context=".pelaksana.apatpelaksana.CekApatActivity">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/tvapat"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:layout_gravity="center"
-            android:text="Schedule"
+            android:text="Schedule APAT"
             android:textColor="@color/black"
             android:textSize="30dp"
             android:textStyle="bold" />
@@ -27,8 +29,19 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:id="@+id/rvapatpelaksana" />
+            android:id="@+id/rvapatpelaksana"
+            android:layout_below="@+id/tvapat"/>
+        <TextView
+            android:id="@+id/tvkosong"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tvapat"
+            android:text="@string/kosong"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            android:visibility="gone"/>
 
-
-    </LinearLayout>
+    </RelativeLayout>
 </layout>

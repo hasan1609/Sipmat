@@ -1,6 +1,7 @@
 package com.sipmat.sipmat.admin
 
 import android.os.Bundle
+import androidx.appcompat.app.AlertDialog
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
@@ -14,6 +15,7 @@ import com.sipmat.sipmat.admin.ui.PELAKSANA.PelaksanaFragment
 import com.sipmat.sipmat.admin.ui.PM.PMFragment
 import com.sipmat.sipmat.session.SessionManager
 import org.jetbrains.anko.startActivity
+import org.jetbrains.anko.toast
 
 class HomeAdminActivity : AppCompatActivity() {
 
@@ -46,15 +48,24 @@ class HomeAdminActivity : AppCompatActivity() {
                 }
 
                 R.id.navigation_logout -> {
-                    sessionManager.setLoginadmin(false)
-                    sessionManager.setLogin(false)
-                    sessionManager.setToken("")
-                    startActivity<LoginAdminActivity>()
-                    finish()
+                    val builder = AlertDialog.Builder(this)
+                    builder.setMessage("Logout ? ")
+                    builder.setPositiveButton("Ok") { dialog, which ->
+                        sessionManager.setLoginadmin(false)
+                        sessionManager.setLogin(false)
+                        sessionManager.setToken("")
+                        startActivity<LoginAdminActivity>()
+                        toast("Berhasil Logout")
+                        finish()
+                    }
 
+
+                    builder.setNegativeButton("Cancel ?") { dialog, which ->
+
+                    }
+
+                    builder.show()
                 }
-
-
             }
 
             false

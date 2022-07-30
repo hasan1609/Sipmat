@@ -14,6 +14,7 @@ import com.sipmat.sipmat.databinding.ActivityCekAparBinding
 import com.sipmat.sipmat.model.PostDataResponse
 import com.sipmat.sipmat.model.ScheduleAparPelaksanaModel
 import com.sipmat.sipmat.model.postdata.PostScheduleApar
+import com.sipmat.sipmat.pelaksana.apatpelaksana.DetailCekApatActivity
 import com.sipmat.sipmat.session.SessionManager
 import com.sipmat.sipmat.webservice.ApiClient
 import org.jetbrains.anko.AnkoLogger
@@ -50,6 +51,7 @@ class CekAparActivity : AppCompatActivity(), AnkoLogger {
         sessionManager = SessionManager(this)
         progressDialog = ProgressDialog(this)
         binding.txtshift.text = "Shift : ${sessionManager.getNama()}"
+        binding.txl.text = "asdsd: ${cekapar!!.id}"
         binding.btnscan.setOnClickListener {
             startActivity<QrCoderCekAparActivity>()
         }
@@ -95,7 +97,7 @@ class CekAparActivity : AppCompatActivity(), AnkoLogger {
                         spnhandle.toString()
                     )
 
-                api.update_schedule_apar(updatescheduleapar).enqueue(object :Callback<PostDataResponse>{
+                api.update_schedule_apar(cekapar!!.id, updatescheduleapar).enqueue(object :Callback<PostDataResponse>{
                     override fun onResponse(
                         call: Call<PostDataResponse>,
                         response: Response<PostDataResponse>

@@ -37,7 +37,7 @@
                     android:textSize="16dp"
                     android:textColor="@color/black"
                     android:gravity="center"
-                    android:background="@drawable/imginput"
+                    android:background="@drawable/bg_edttext"
                     />
 
                 <TextView
@@ -77,7 +77,7 @@
                     android:textSize="16dp"
                     android:textColor="@color/black"
                     android:gravity="center"
-                    android:background="@drawable/imginput"
+                    android:background="@drawable/bg_edttext"
                     />
 
                 <com.google.android.material.button.MaterialButton
@@ -88,7 +88,7 @@
                     android:id="@+id/btnsynchrone"
                     app:cornerRadius="10dp"
                     android:layout_marginTop="10dp"
-                    app:backgroundTint="#4CAF50"
+                    app:backgroundTint="@color/red"
                     />
 
 

@@ -7,16 +7,16 @@
 
     </data>
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
         android:padding="40dp"
-        android:background="#9DD4FF"
         android:orientation="vertical"
         tools:context=".admin.seawater.MenuSeaWaterActivity">
 
         <TextView
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Menu seawater"
@@ -24,15 +24,20 @@
             android:fontFamily="sans-serif-medium"
             android:textStyle="bold"
             android:textColor="@color/black" />
-
-
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerInParent="true">
         <com.google.android.material.button.MaterialButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Schedule"
             android:id="@+id/btnscheduleseawater"
             android:layout_marginTop="20dp"
-            app:cornerRadius="10dp" />
+            android:backgroundTint="@color/black"
+            android:textSize="25sp"
+            app:cornerRadius="12dp"  />
 
         <com.google.android.material.button.MaterialButton
             android:layout_width="match_parent"
@@ -40,8 +45,9 @@
             android:text="Hasil"
             android:id="@+id/btnhasilseawater"
             android:layout_marginTop="10dp"
-            app:cornerRadius="10dp" />
-
-
-    </LinearLayout>
+            android:backgroundTint="@color/black"
+            android:textSize="25sp"
+            app:cornerRadius="12dp"  />
+        </LinearLayout>
+    </RelativeLayout>
 </layout>

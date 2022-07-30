@@ -61,7 +61,7 @@ class AparPelaksanaAdapter(
 
         val note = notesList[position]
         holder.kode.text = "Kode : ${note.kodeApar}"
-        holder.gedung.text = "Gedung : ${note.lokasi}"
+        holder.gedung.text = "Gedung : ${note.apar!!.lokasi}"
         if (note.isStatus ==0){
             holder.status.text = "Status : Belum di cek"
         }else if (note.isStatus ==2){

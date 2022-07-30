@@ -443,12 +443,12 @@
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btn_approve"
                     android:layout_width="wrap_content"
-                    android:layout_height="35dp"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginTop="20dp"
                     android:text="Aprrove"
-                    android:textColor="@color/black"
-                    app:backgroundTint="@color/green" />
+                    android:textColor="@color/white"
+                    app:backgroundTint="@color/black" />
 
                 <com.google.android.material.button.MaterialButton
                     android:layout_width="wrap_content"
@@ -459,7 +459,7 @@
                     android:layout_marginLeft="10dp"
                     android:id="@+id/btn_return"
                     android:layout_marginTop="20dp"
-                    app:backgroundTint="@color/black"/>
+                    app:backgroundTint="@color/red"/>
 
             </LinearLayout>
 

@@ -54,7 +54,7 @@
                 android:textColor="@color/black"
                 android:gravity="center"
                 android:entries="@array/triwulan"
-                android:background="@drawable/imginput" />
+                android:background="@drawable/bg_edttext" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -75,7 +75,7 @@
                 android:inputType="number"
                 android:textColor="@color/black"
                 android:gravity="center"
-                android:background="@drawable/imginput" />
+                android:background="@drawable/bg_edttext" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -103,7 +103,7 @@
                     android:layout_marginTop="5dp"
                     app:cornerRadius="10dp"
                     android:id="@+id/btnsinkron"
-                    android:backgroundTint="@color/black" />
+                    android:backgroundTint="@color/red" />
             </LinearLayout>
 
             <androidx.recyclerview.widget.RecyclerView

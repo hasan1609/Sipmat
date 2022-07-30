@@ -3,6 +3,7 @@ package com.sipmat.sipmat.pelaksana.seawaterpelaksana
 import android.app.ProgressDialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AlertDialog
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -49,6 +50,7 @@ class CekSeaWaterActivity : AppCompatActivity(), AnkoLogger {
         binding.rvseawaterpelaksana.setHasFixedSize(true)
         (binding.rvseawaterpelaksana.layoutManager as LinearLayoutManager).orientation =
             LinearLayoutManager.VERTICAL
+        loading(true)
         api.seawater_pelaksana()
             .enqueue(object : Callback<HasilSeaWaterResponse> {
                 override fun onResponse(
@@ -57,6 +59,8 @@ class CekSeaWaterActivity : AppCompatActivity(), AnkoLogger {
                 ) {
                     try {
                         if (response.isSuccessful) {
+                            loading(false)
+                            if(response.body()!!.data!!.isNotEmpty()) {
                             val notesList = mutableListOf<SeaWaterModel>()
                             val data = response.body()
                             for (hasil in data!!.data!!) {
@@ -89,15 +93,21 @@ class CekSeaWaterActivity : AppCompatActivity(), AnkoLogger {
                                 })
                                 mAdapter.notifyDataSetChanged()
                             }
+                        }else{
+                            binding.tvkosong.visibility = View.VISIBLE
+                        }
                         } else {
+                            loading(false)
                             toast("gagal mendapatkan response")
                         }
                     } catch (e: Exception) {
+                        loading(false)
                         info { "dinda ${e.message}" }
                     }
                 }
 
                 override fun onFailure(call: Call<HasilSeaWaterResponse>, t: Throwable) {
+                    loading(false)
                     info { "dinda ${t.message}" }
                 }
 
@@ -105,5 +115,13 @@ class CekSeaWaterActivity : AppCompatActivity(), AnkoLogger {
 
 
     }
-
+    fun loading(status : Boolean){
+        if (status){
+            progressDialog.setTitle("Loading...")
+            progressDialog.setCanceledOnTouchOutside(false)
+            progressDialog.show()
+        }else{
+            progressDialog.dismiss()
+        }
+    }
 }

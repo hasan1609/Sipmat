@@ -16,6 +16,7 @@ import com.budiyev.android.codescanner.ScanMode
 import com.sipmat.sipmat.R
 import com.sipmat.sipmat.databinding.ActivityQrCoderCekAparKadaluarsaBinding
 import com.sipmat.sipmat.model.apar.CekAparModel
+import com.sipmat.sipmat.pelaksana.aparpelaksana.CekAparKadaluarsaActivity.Companion.cekapar
 import com.sipmat.sipmat.webservice.ApiClient
 import org.jetbrains.anko.AnkoLogger
 import org.jetbrains.anko.info
@@ -56,35 +57,17 @@ class QrCoderCekAparKadaluarsaActivity : AppCompatActivity(),AnkoLogger {
                 runOnUiThread {
                     loading(true)
                     hasilqrcodekadaluarsa = it.text
-                    api.cekapar(hasilqrcodekadaluarsa!!).enqueue(object :Callback<CekAparModel>{
-                        override fun onResponse(
-                            call: Call<CekAparModel>,
-                            response: Response<CekAparModel>
-                        ) {
-                            if (response.isSuccessful){
-                                if (CekAparKadaluarsaActivity.cekapar!!.kode == response.body()!!.data!!.kode){
-                                    jeniskadaluarsa = response.body()!!.data!!.jenis
-                                    lokasikadaluarsa = response.body()!!.data!!.lokasi
-                                    kadaluarsakadaluarsa = response.body()!!.data!!.tglKadaluarsa
-                                    kodeaparkadaluarsa = response.body()!!.data!!.kode
-                                    finish()
-                                }else{
-                                    toast("kode tidak sama")
-                                    finish()
-                                }
-                            }else{
-                                toast("Kesalahan response")
-                                finish()
-                            }
-                        }
-
-                        override fun onFailure(call: Call<CekAparModel>, t: Throwable) {
-                            loading(true)
-                            toast("Kesalhan jaringan silahkan scan ulang")
-                            finish()
-                        }
-
-                    })
+                    if (CekAparKadaluarsaActivity.cekapar!!.kode == hasilqrcodekadaluarsa){
+                        jeniskadaluarsa = cekapar!!.jenis
+                        lokasikadaluarsa = cekapar!!.lokasi
+                        kadaluarsakadaluarsa = cekapar!!.tglKadaluarsa
+                        kodeaparkadaluarsa = cekapar!!.kode
+                        finish()
+                    }else{
+                        loading(false)
+                        toast("kode tidak sama")
+                        finish()
+                    }
                 }
             }
 

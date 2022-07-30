@@ -7,175 +7,285 @@
 
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".admin.ui.PM.PMFragment">
-        <LinearLayout
+        android:layout_height="match_parent">
+
+        <GridLayout
+            android:layout_marginTop="10dp"
+            android:padding="20dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <TextView
+            android:layout_height="match_parent"
+            android:columnCount="3"
+            tools:context=".admin.ui.PM.PMFragment">
+            <LinearLayout
                 android:id="@+id/txtapar"
-                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="#00BCD4"
-                android:backgroundTint="#00BCD4"
-                android:gravity="center_horizontal"
-                android:text="APAR"
-                android:textColor="#3F51B5"
-                android:textSize="20sp" />
-
-            <TextView
+                android:layout_width="0dp"
+                android:layout_columnWeight="1"
+                android:gravity="center"
+                android:layout_margin="4dp"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:src="@drawable/apar"/>
+                <TextView
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:text="APAR"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
                 android:id="@+id/txtapat"
-                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="#00BCD4"
-                android:backgroundTint="#00BCD4"
-                android:gravity="center_horizontal"
-                android:text="APAT"
-                android:textColor="#3F51B5"
-                android:textSize="20sp" />
-
-            <TextView
+                android:layout_width="0dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="4dp"
+                android:gravity="center"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:src="@drawable/apat"/>
+                <TextView
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:text="APAT"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
                 android:id="@+id/txthydrant"
-                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="#00BCD4"
-                android:backgroundTint="#00BCD4"
-                android:gravity="center_horizontal"
-                android:text="HYDRANT		"
-                android:textColor="#3F51B5"
-                android:textSize="20sp" />
-
-            <TextView
+                android:layout_width="0dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="4dp"
+                android:gravity="center"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:src="@drawable/hydrant"/>
+                <TextView
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:text="HYDRANT"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
                 android:id="@+id/txtkebisingan"
-                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="#00BCD4"
-                android:backgroundTint="#00BCD4"
-                android:gravity="center_horizontal"
-                android:text="KEBISINGAN		"
-                android:textColor="#3F51B5"
-                android:textSize="20sp" />
-
-            <TextView
+                android:layout_width="0dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="4dp"
+                android:gravity="center"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:src="@drawable/kebisingan"/>
+                <TextView
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:text="KEBISINGAN"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
                 android:id="@+id/txtpencahayaan"
-                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="#00BCD4"
-                android:backgroundTint="#00BCD4"
-                android:gravity="center_horizontal"
-                android:text="PENCAHAYAAN"
-                android:textColor="#3F51B5"
-                android:textSize="20sp" />
-
-            <TextView
+                android:layout_width="0dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="4dp"
+                android:gravity="center"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:src="@drawable/pencahayaan"/>
+                <TextView
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:text="PENCAHAYAAN"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
                 android:id="@+id/txtseawater"
-                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="#00BCD4"
-                android:backgroundTint="#00BCD4"
-                android:gravity="center_horizontal"
-                android:text="FIREFIGHTING SEA WATER		"
-                android:textColor="#3F51B5"
-                android:textSize="20sp" />
-
-            <TextView
+                android:layout_width="0dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="4dp"
+                android:gravity="center"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:src="@drawable/ff_seawater"/>
+                <TextView
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:text="FF SEA WATER"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
                 android:id="@+id/txtffblok1"
-                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="#00BCD4"
-                android:backgroundTint="#00BCD4"
-                android:gravity="center_horizontal"
-                android:text="FIREFIGHTING BLOK 1"
-                android:textColor="#3F51B5"
-                android:textSize="20sp" />
-
-            <TextView
+                android:layout_width="0dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="4dp"
+                android:gravity="center"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:src="@drawable/ff_seawater"/>
+                <TextView
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:text="FF BLOK 1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
                 android:id="@+id/txtfirefightingblok2"
-                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="#00BCD4"
-                android:backgroundTint="#00BCD4"
-                android:gravity="center_horizontal"
-                android:text="FIREFIGHTING BLOK 2"
-                android:textColor="#3F51B5"
-                android:textSize="20sp" />
-
-            <TextView
+                android:layout_width="0dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="4dp"
+                android:gravity="center"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:src="@drawable/ff_seawater"/>
+                <TextView
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:text="FF BLOK 2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
                 android:id="@+id/txtedgblok1"
-                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="#00BCD4"
-                android:backgroundTint="#00BCD4"
-                android:gravity="center_horizontal"
-                android:text="EDG BLOK 1		"
-                android:textColor="#3F51B5"
-                android:textSize="20sp" />
-
-            <TextView
+                android:layout_width="0dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="4dp"
+                android:gravity="center"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:src="@drawable/edg"/>
+                <TextView
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:text="EDG BLOK 1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
                 android:id="@+id/txtedgblok2"
-                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="#00BCD4"
-                android:backgroundTint="#00BCD4"
-                android:gravity="center_horizontal"
-                android:text="EDG BLOK 2"
-                android:textColor="#3F51B5"
-                android:textSize="20sp" />
-
-            <TextView
+                android:layout_width="0dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="4dp"
+                android:gravity="center"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:src="@drawable/edg"/>
+                <TextView
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:text="EDG BLOK 2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
                 android:id="@+id/txtedgblok3"
-                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="#00BCD4"
-                android:backgroundTint="#00BCD4"
-                android:gravity="center_horizontal"
-                android:text="EDG BLOK 3"
-                android:textColor="#3F51B5"
-                android:textSize="20sp" />
-
-            <TextView
+                android:layout_width="0dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="4dp"
+                android:gravity="center"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:src="@drawable/edg"/>
+                <TextView
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:text="EDG BLOK 3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
                 android:id="@+id/txtmobildamkar"
-                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="#00BCD4"
-                android:backgroundTint="#00BCD4"
-                android:gravity="center_horizontal"
-                android:text="MOBIL DAMKAR		"
-                android:textColor="#3F51B5"
-                android:textSize="20sp" />
-
-            <TextView
+                android:layout_width="0dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="4dp"
+                android:gravity="center"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:src="@drawable/damkar"/>
+                <TextView
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:text="MOBIL DAMKAR"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="4dp"
+                android:gravity="center"
+                android:orientation="vertical">
+            </LinearLayout>
+            <LinearLayout
                 android:id="@+id/txtmobilambulance"
-                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="#00BCD4"
-                android:backgroundTint="#00BCD4"
-                android:gravity="center_horizontal"
-                android:text="MOBIL AMBULANCE"
-                android:textColor="#3F51B5"
-                android:textSize="20sp" />
-
-        </LinearLayout>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+                android:layout_width="0dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="4dp"
+                android:gravity="center"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:src="@drawable/ambulance"/>
+                <TextView
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:text="MOBIL AMBULANCE"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </GridLayout>
+    </ScrollView>
 </layout>

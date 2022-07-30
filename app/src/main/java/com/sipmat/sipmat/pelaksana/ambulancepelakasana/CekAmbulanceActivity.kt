@@ -3,6 +3,7 @@ package com.sipmat.sipmat.pelaksana.ambulancepelakasana
 import android.app.ProgressDialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AlertDialog
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -56,6 +57,7 @@ class CekAmbulanceActivity : AppCompatActivity(), AnkoLogger {
         binding.rvffblokpelaksana.setHasFixedSize(true)
         (binding.rvffblokpelaksana.layoutManager as LinearLayoutManager).orientation =
             LinearLayoutManager.VERTICAL
+        loading(true)
         api.ambulance_pelaksana()
             .enqueue(object : Callback<AmbulanceResponse> {
                 override fun onResponse(
@@ -64,6 +66,8 @@ class CekAmbulanceActivity : AppCompatActivity(), AnkoLogger {
                 ) {
                     try {
                         if (response.isSuccessful) {
+                            loading(false)
+                            if(response.body()!!.data!!.isNotEmpty()) {
                             val notesList = mutableListOf<AmbulanceModel>()
                             val data = response.body()
                             for (hasil in data!!.data!!) {
@@ -96,15 +100,21 @@ class CekAmbulanceActivity : AppCompatActivity(), AnkoLogger {
                                 })
                                 mAdapter.notifyDataSetChanged()
                             }
+                            }else{
+                                binding.tvkosong.visibility = View.VISIBLE
+                            }
                         } else {
+                            loading(false)
                             toast("gagal mendapatkan response")
                         }
                     } catch (e: Exception) {
+                        loading(false)
                         info { "dinda ${e.message}" }
                     }
                 }
 
                 override fun onFailure(call: Call<AmbulanceResponse>, t: Throwable) {
+                    loading(false)
                     info { "dinda ${t.message}" }
                 }
 
@@ -113,4 +123,13 @@ class CekAmbulanceActivity : AppCompatActivity(), AnkoLogger {
 
     }
 
+    fun loading(status : Boolean){
+        if (status){
+            progressDialog.setTitle("Loading...")
+            progressDialog.setCanceledOnTouchOutside(false)
+            progressDialog.show()
+        }else{
+            progressDialog.dismiss()
+        }
+    }
 }

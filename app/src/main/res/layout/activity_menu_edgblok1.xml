@@ -7,41 +7,51 @@
 
     </data>
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
         android:padding="40dp"
-        android:background="#9DD4FF"
-        android:orientation="vertical"
         tools:context=".admin.edgblok1.MenuEdgBlok1Activity">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Menu EDG BLOK 1"
-            android:textSize="30dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
             android:fontFamily="sans-serif-medium"
-            android:textStyle="bold"
-            android:textColor="@color/black" />
+            android:text="Menu EDG BLOK 1"
+            android:textColor="@color/black"
+            android:textSize="30dp"
+            android:textStyle="bold" />
 
 
-        <com.google.android.material.button.MaterialButton
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Schedule"
-            android:id="@+id/btnscheduleffblok"
-            android:layout_marginTop="20dp"
-            app:cornerRadius="10dp" />
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Schedule"
+                android:textSize="25sp"
+                android:backgroundTint="@color/black"
+                android:id="@+id/btnscheduleffblok"
+                android:layout_marginTop="20dp"
+                app:cornerRadius="12dp" />
 
-        <com.google.android.material.button.MaterialButton
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Hasil"
-            android:id="@+id/btnhasilffblok"
-            android:layout_marginTop="10dp"
-            app:cornerRadius="10dp" />
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hasil"
+                android:textSize="25sp"
+                android:backgroundTint="@color/black"
+
+                android:id="@+id/btnhasilffblok"
+                android:layout_marginTop="10dp"
+                app:cornerRadius="12dp" />
+        </LinearLayout>
 
 
-    </LinearLayout>
+    </RelativeLayout>
 </layout>

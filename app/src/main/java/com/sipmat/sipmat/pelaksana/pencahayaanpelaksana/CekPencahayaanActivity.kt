@@ -3,6 +3,7 @@ package com.sipmat.sipmat.pelaksana.pencahayaanpelaksana
 import android.app.ProgressDialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AlertDialog
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -48,6 +49,7 @@ class CekPencahayaanActivity : AppCompatActivity(), AnkoLogger {
         binding.rvpencahayaanpelaksana.setHasFixedSize(true)
         (binding.rvpencahayaanpelaksana.layoutManager as LinearLayoutManager).orientation =
             LinearLayoutManager.VERTICAL
+        loading(true)
         api.getschedule_pelaksana_pencahayaan()
             .enqueue(object : Callback<SchedulePencahayaanResponse> {
                 override fun onResponse(
@@ -56,6 +58,8 @@ class CekPencahayaanActivity : AppCompatActivity(), AnkoLogger {
                 ) {
                     try {
                         if (response.isSuccessful) {
+                            loading(false)
+                            if(response.body()!!.data!!.isNotEmpty()) {
                             val notesList = mutableListOf<SchedulePencahayaanModel>()
                             val data = response.body()
                             for (hasil in data!!.data!!) {
@@ -90,21 +94,37 @@ class CekPencahayaanActivity : AppCompatActivity(), AnkoLogger {
                                 })
                                 mAdapter.notifyDataSetChanged()
                             }
+                        }else{
+                            binding.tvkosong.visibility = View.VISIBLE
+                        }
                         } else {
+                            loading(false)
                             toast("gagal mendapatkan response")
                         }
                     } catch (e: Exception) {
+                        loading(false)
                         info { "dinda ${e.message}" }
                     }
                 }
 
                 override fun onFailure(call: Call<SchedulePencahayaanResponse>, t: Throwable) {
+                    loading(false)
                     info { "dinda ${t.message}" }
                 }
 
             })
 
 
+    }
+
+    fun loading(status : Boolean){
+        if (status){
+            progressDialog.setTitle("Loading...")
+            progressDialog.setCanceledOnTouchOutside(false)
+            progressDialog.show()
+        }else{
+            progressDialog.dismiss()
+        }
     }
 
 }

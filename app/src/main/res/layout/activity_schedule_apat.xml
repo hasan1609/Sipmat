@@ -31,18 +31,8 @@
             android:id="@+id/btntambah"
             android:textAllCaps="false"
             android:layout_marginTop="20dp"
-            app:cornerRadius="10dp"
+            app:cornerRadius="12dp"
             android:backgroundTint="@color/black" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="Data Schedule"
-            android:textColor="@color/black"
-            android:textSize="20dp"
-            android:layout_marginTop="20dp"
-            android:textStyle="bold" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -65,7 +55,7 @@
             android:textSize="16dp"
             android:textColor="@color/black"
             android:gravity="center"
-            android:background="@drawable/imginput" />
+            android:background="@drawable/bg_edttext" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -86,7 +76,7 @@
             android:textSize="16dp"
             android:textColor="@color/black"
             android:gravity="center"
-            android:background="@drawable/imginput" />
+            android:background="@drawable/bg_edttext" />
 
         <com.google.android.material.button.MaterialButton
             android:layout_width="wrap_content"
@@ -96,7 +86,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
             app:cornerRadius="10dp"
-            android:backgroundTint="#4CAF50" />
+            android:backgroundTint="@color/black" />
 
 
         <androidx.recyclerview.widget.RecyclerView

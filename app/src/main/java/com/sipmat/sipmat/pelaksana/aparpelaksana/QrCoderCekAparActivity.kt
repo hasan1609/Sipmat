@@ -56,37 +56,20 @@ class QrCoderCekAparActivity : AppCompatActivity(),AnkoLogger {
                 runOnUiThread {
                     loading(true)
                     hasilqrcode = it.text
-                    api.cekapar(hasilqrcode!!).enqueue(object :Callback<CekAparModel>{
-                        override fun onResponse(
-                            call: Call<CekAparModel>,
-                            response: Response<CekAparModel>
-                        ) {
-                            if (response.isSuccessful){
-                                if (CekAparActivity.cekapar!!.kodeApar == response.body()!!.data!!.kode){
-                                    jenis = response.body()!!.data!!.jenis
-                                    lokasi = response.body()!!.data!!.lokasi
-                                    kadaluarsa = response.body()!!.data!!.tglKadaluarsa
-                                    kodeapar = response.body()!!.data!!.kode
-                                    finish()
-                                }else{
-                                    toast("kode tidak sama")
-                                    finish()
-                                }
-                            }else{
-                                toast("Kesalahan response")
-                                finish()
-                            }
-                        }
-
-                        override fun onFailure(call: Call<CekAparModel>, t: Throwable) {
-                            loading(true)
-                            toast("Kesalhan jaringan silahkan scan ulang")
-                            finish()
-                        }
-
-                    })
+                    loading(false)
+                    if (CekAparActivity.cekapar!!.kodeApar == hasilqrcode){
+                        jenis = CekAparActivity.cekapar!!.apar!!.jenis
+                        lokasi = CekAparActivity.cekapar!!.apar!!.lokasi
+                        kadaluarsa = CekAparActivity.cekapar!!.apar!!.tglKadaluarsa
+                        kodeapar = CekAparActivity.cekapar!!.apar!!.kode
+                        finish()
+                    }else{
+                        toast("kode tidak sama")
+                        finish()
+                    }
                 }
             }
+
 
             errorCallback = ErrorCallback {
                 runOnUiThread {

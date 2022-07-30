@@ -63,7 +63,7 @@
                     android:textColor="@color/black"
                     android:gravity="center"
                     android:id="@+id/txtkodeapat"
-                    android:background="@drawable/imginput" />
+                    android:background="@drawable/bg_edttext" />
 
             </LinearLayout>
 
@@ -89,7 +89,7 @@
                 android:textSize="16dp"
                 android:textColor="@color/black"
                 android:gravity="center"
-                android:background="@drawable/imginput" />
+                android:background="@drawable/bg_edttext" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -109,7 +109,7 @@
                 android:id="@+id/edtno_bak"
                 android:textColor="@color/black"
                 android:gravity="center"
-                android:background="@drawable/imginput" />
+                android:background="@drawable/bg_edttext" />
 
 
             <com.google.android.material.button.MaterialButton

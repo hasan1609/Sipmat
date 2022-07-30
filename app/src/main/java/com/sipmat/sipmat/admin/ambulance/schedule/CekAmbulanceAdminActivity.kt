@@ -93,8 +93,8 @@ class CekAmbulanceAdminActivity : AppCompatActivity(), AnkoLogger {
 
         binding.btnReturn.setOnClickListener {
             val builder = AlertDialog.Builder(this)
-            builder.setTitle("Mobil Damkar")
-            builder.setMessage("Return Mobil Damkar ? ")
+            builder.setTitle("Mobil Ambulance")
+            builder.setMessage("Return Mobil ambulance ? ")
             builder.setPositiveButton(android.R.string.yes) { dialog, which ->
                 loading(true)
                 api.return_ambulance(cekedgblok1.id!!).enqueue(object :

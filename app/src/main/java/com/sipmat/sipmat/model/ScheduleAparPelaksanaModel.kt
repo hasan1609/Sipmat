@@ -47,9 +47,6 @@ data class ScheduleAparPelaksanaModel(
     @field:SerializedName("updated_at")
     val updatedAt: String? = null,
 
-    @field:SerializedName("lokasi")
-    val lokasi: String? = null,
-
     @field:SerializedName("kode_apar")
     val kodeApar: String? = null,
 
@@ -69,5 +66,30 @@ data class ScheduleAparPelaksanaModel(
     val houskeeping: Any? = null,
 
     @field:SerializedName("selang")
-    val selang: Any? = null
+    val selang: Any? = null,
+
+    @field:SerializedName("apar")
+    val apar: Apar? = null,
+)
+
+data class Apar(
+
+    @field:SerializedName("tgl_pengisian")
+    val tglPengisian: String? = null,
+
+    @field:SerializedName("tgl_kadaluarsa")
+    val tglKadaluarsa: String? = null,
+
+    @field:SerializedName("lokasi")
+    val lokasi: String? = null,
+
+    @field:SerializedName("kode")
+    val kode: String? = null,
+
+    @field:SerializedName("jenis")
+    val jenis: String? = null,
+
+
+    @field:SerializedName("id")
+    val id: Int? = null
 )

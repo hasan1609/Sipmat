@@ -15,17 +15,10 @@
         tools:context=".ui.ProfilFragment">
 
         <TextView
+            android:id="@+id/tvnama"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Nama : "
-            android:textSize="14dp"
-            android:textColor="@color/black"
-            />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="ID : "
             android:textSize="14dp"
             android:textColor="@color/black"
             />

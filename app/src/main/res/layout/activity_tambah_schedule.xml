@@ -41,7 +41,7 @@
         android:textSize="16dp"
         android:textColor="@color/black"
         android:gravity="center"
-        android:background="@drawable/imginput"
+        android:background="@drawable/bg_edttext"
         />
 
     <TextView
@@ -62,7 +62,7 @@
         android:textSize="16dp"
         android:textColor="@color/black"
         android:gravity="center"
-        android:background="@drawable/imginput"
+        android:background="@drawable/bg_edttext"
         />
 
     <TextView
@@ -84,7 +84,7 @@
         android:textSize="16dp"
         android:textColor="@color/black"
         android:gravity="center"
-        android:background="@drawable/imginput"
+        android:background="@drawable/bg_edttext"
         />
 
     <TextView

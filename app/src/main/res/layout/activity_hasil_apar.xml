@@ -45,7 +45,7 @@
             android:textSize="16dp"
             android:textColor="@color/black"
             android:gravity="center"
-            android:background="@drawable/imginput"
+            android:background="@drawable/bg_edttext"
             />
 
         <TextView
@@ -66,7 +66,7 @@
             android:inputType="number"
             android:textColor="@color/black"
             android:gravity="center"
-            android:background="@drawable/imginput"
+            android:background="@drawable/bg_edttext"
             />
 
        <LinearLayout
@@ -78,10 +78,11 @@
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
                android:text="Cari"
+               android:textSize="20dp"
                android:id="@+id/btncari"
                android:layout_gravity="center"
                android:layout_marginTop="5dp"
-               app:cornerRadius="10dp"
+               app:cornerRadius="12dp"
                android:backgroundTint="@color/black"/>
 
            <com.google.android.material.button.MaterialButton
@@ -89,12 +90,13 @@
                android:layout_height="wrap_content"
                android:layout_marginLeft="20dp"
                android:text="SYNCHHRONE"
+               android:textSize="20dp"
                android:visibility="gone"
                android:layout_gravity="center"
                android:layout_marginTop="5dp"
-               app:cornerRadius="10dp"
+               app:cornerRadius="12dp"
                android:id="@+id/btnsinkron"
-               android:backgroundTint="@color/black"/>
+               android:backgroundTint="@color/red"/>
        </LinearLayout>
 
         <androidx.recyclerview.widget.RecyclerView
@@ -104,10 +106,10 @@
             android:id="@+id/rvhasilapar"/>
 
         <LinearLayout
+            android:visibility="gone"
             android:layout_width="match_parent"
             android:id="@+id/lnttd"
             android:layout_marginTop="20dp"
-            android:visibility="gone"
             android:layout_height="wrap_content"
             android:orientation="vertical">
             <TextView
@@ -130,7 +132,7 @@
                 android:textSize="16dp"
                 android:textColor="@color/black"
                 android:gravity="center"
-                android:background="@drawable/imginput"
+                android:background="@drawable/bg_edttext"
                 />
 
             <TextView
@@ -149,7 +151,7 @@
                 android:text="Tanda tangan"
                 android:layout_gravity="center"
                 android:textAllCaps="false"
-                android:backgroundTint="@color/green"
+                android:backgroundTint="@color/abu"
                 app:cornerRadius="10dp"
                 />
 
@@ -174,7 +176,7 @@
                 android:textSize="16dp"
                 android:textColor="@color/black"
                 android:gravity="center"
-                android:background="@drawable/imginput"
+                android:background="@drawable/bg_edttext"
                 />
 
 
@@ -185,8 +187,8 @@
                 android:layout_gravity="center"
                 android:textAllCaps="false"
                 android:layout_marginTop="10dp"
-                android:backgroundTint="@color/black"
-                app:cornerRadius="10dp"
+                android:backgroundTint="@color/red"
+                app:cornerRadius="12dp"
                 android:layout_marginBottom="50dp"
                 />
 

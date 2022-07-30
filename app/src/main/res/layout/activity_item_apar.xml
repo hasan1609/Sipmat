@@ -35,13 +35,15 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btntambah"
+        android:backgroundTint="@color/black"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="24dp"
+        app:cornerRadius="12dp"
+        android:textSize="20sp"
         android:text="Tambahkan Baru"
-        app:backgroundTint="#036C07"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

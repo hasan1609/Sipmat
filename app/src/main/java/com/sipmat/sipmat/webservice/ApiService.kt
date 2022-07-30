@@ -68,6 +68,15 @@ interface ApiService {
     ): Call<PostDataResponse>
 
     @FormUrlEncoded
+    @POST("updatekadaluarsa")
+    fun updatekuapar(
+        @Field("kode") kode: String,
+        @Field("jenis") jenis: String,
+        @Field("lokasi") lokasi: String,
+        @Field("tgl_pengisian") tgl_pengisian: String
+    ): Call<PostDataResponse>
+
+    @FormUrlEncoded
     @POST("deleteapar")
     fun hapusapar(
         @Field("id") id: Int
@@ -118,8 +127,10 @@ interface ApiService {
     fun cekapar(@Query("kode") kode: String): Call<CekAparModel>
 
     @Headers("Content-Type: application/json")
-    @POST("update_schedule_apar")
-    fun update_schedule_apar(@Body post: PostScheduleApar): Call<PostDataResponse>
+    @POST("update_schedule_apar/{id}")
+    fun update_schedule_apar(
+        @Path("id") id :Int?,
+        @Body post: PostScheduleApar): Call<PostDataResponse>
 
     @FormUrlEncoded
     @POST("acc_apar")

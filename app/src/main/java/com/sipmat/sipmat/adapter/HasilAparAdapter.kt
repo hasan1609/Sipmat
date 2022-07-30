@@ -1,6 +1,7 @@
 package com.sipmat.sipmat.adapter
 
 import android.content.Context
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -72,7 +73,6 @@ class HasilAparAdapter(
             holder.status.text = "Status : direturn"
         }
         holder.jadwal.text = "Jadwal : ${note.tanggalCek}"
-
         holder.itemView.setOnClickListener {
             if (dialog!=null){
                 dialog!!.onClick(position,note)

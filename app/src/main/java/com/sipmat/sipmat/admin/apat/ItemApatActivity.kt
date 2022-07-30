@@ -70,7 +70,7 @@ class ItemApatActivity : AppCompatActivity(),AnkoLogger {
                                     override fun onClick(position: Int, note : ApatModel) {
                                         val builder = AlertDialog.Builder(this@ItemApatActivity)
                                         builder.setTitle("Data APAT")
-                                        builder.setMessage("Hapus gaji bulan ini ? ")
+                                        builder.setMessage("Hapus apat bulan ini ? ")
                                         builder.setPositiveButton("Edit APAT") { dialog, which ->
                                             val gson = Gson()
                                             val noteJson = gson.toJson(note)

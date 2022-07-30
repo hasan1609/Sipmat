@@ -3,6 +3,7 @@ package com.sipmat.sipmat.pelaksana.apatpelaksana
 import android.app.ProgressDialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AlertDialog
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -49,6 +50,7 @@ class CekApatActivity : AppCompatActivity(), AnkoLogger {
         binding.rvapatpelaksana.setHasFixedSize(true)
         (binding.rvapatpelaksana.layoutManager as LinearLayoutManager).orientation =
             LinearLayoutManager.VERTICAL
+        loading(true)
         api.getschedule_pelaksana_apat()
             .enqueue(object : Callback<ScheduleApatPelaksanaResponse> {
                 override fun onResponse(
@@ -57,46 +59,54 @@ class CekApatActivity : AppCompatActivity(), AnkoLogger {
                 ) {
                     try {
                         if (response.isSuccessful) {
-                            val notesList = mutableListOf<ScheduleApatPelaksanaModel>()
-                            val data = response.body()
-                            for (hasil in data!!.data!!) {
-                                notesList.add(hasil)
-                                mAdapter = ApatPelaksanaAdapter(notesList, this@CekApatActivity)
-                                binding.rvapatpelaksana.adapter = mAdapter
-                                mAdapter.setDialog(object : ApatPelaksanaAdapter.Dialog {
-                                    override fun onClick(
-                                        position: Int,
-                                        note: ScheduleApatPelaksanaModel
-                                    ) {
-                                        val builder = AlertDialog.Builder(this@CekApatActivity)
-                                        builder.setMessage("Cek apat ? ")
-                                        builder.setPositiveButton("Cek APAT") { dialog, which ->
-                                            val gson = Gson()
-                                            val noteJson = gson.toJson(note)
-                                            startActivity<DetailCekApatActivity>("cekapat" to noteJson)
+                            loading(false)
+                            if(response.body()!!.data!!.isNotEmpty()) {
+                                val notesList = mutableListOf<ScheduleApatPelaksanaModel>()
+                                val data = response.body()
+                                for (hasil in data!!.data!!) {
+                                    notesList.add(hasil)
+                                    mAdapter = ApatPelaksanaAdapter(notesList, this@CekApatActivity)
+                                    binding.rvapatpelaksana.adapter = mAdapter
+                                    mAdapter.setDialog(object : ApatPelaksanaAdapter.Dialog {
+                                        override fun onClick(
+                                            position: Int,
+                                            note: ScheduleApatPelaksanaModel
+                                        ) {
+                                            val builder = AlertDialog.Builder(this@CekApatActivity)
+                                            builder.setMessage("Cek apat ? ")
+                                            builder.setPositiveButton("Cek APAT") { dialog, which ->
+                                                val gson = Gson()
+                                                val noteJson = gson.toJson(note)
+                                                startActivity<DetailCekApatActivity>("cekapat" to noteJson)
+                                            }
+
+
+                                            builder.setNegativeButton("Cancel ?") { dialog, which ->
+
+                                            }
+
+                                            builder.show()
+
                                         }
 
-
-                                        builder.setNegativeButton("Cancel ?") { dialog, which ->
-
-                                        }
-
-                                        builder.show()
-
-                                    }
-
-                                })
-                                mAdapter.notifyDataSetChanged()
+                                    })
+                                    mAdapter.notifyDataSetChanged()
+                                }
+                            }else{
+                                binding.tvkosong.visibility = View.VISIBLE
                             }
                         } else {
+                            loading(false)
                             toast("gagal mendapatkan response")
                         }
                     } catch (e: Exception) {
+                        loading(false)
                         info { "dinda ${e.message}" }
                     }
                 }
 
                 override fun onFailure(call: Call<ScheduleApatPelaksanaResponse>, t: Throwable) {
+                    loading(false)
                     info { "dinda ${t.message}" }
                 }
 
@@ -104,6 +114,14 @@ class CekApatActivity : AppCompatActivity(), AnkoLogger {
 
 
     }
-
+    fun loading(status : Boolean){
+        if (status){
+            progressDialog.setTitle("Loading...")
+            progressDialog.setCanceledOnTouchOutside(false)
+            progressDialog.show()
+        }else{
+            progressDialog.dismiss()
+        }
+    }
 
 }

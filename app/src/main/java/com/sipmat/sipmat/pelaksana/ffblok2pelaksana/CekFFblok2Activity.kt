@@ -3,6 +3,7 @@ package com.sipmat.sipmat.pelaksana.ffblok2pelaksana
 import android.app.ProgressDialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AlertDialog
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -52,6 +53,7 @@ class CekFFblok2Activity : AppCompatActivity(), AnkoLogger {
         binding.rvffblokpelaksana.setHasFixedSize(true)
         (binding.rvffblokpelaksana.layoutManager as LinearLayoutManager).orientation =
             LinearLayoutManager.VERTICAL
+        loading(true)
         api.ffblok2_pelaksana()
             .enqueue(object : Callback<FFBlok2Response> {
                 override fun onResponse(
@@ -60,6 +62,8 @@ class CekFFblok2Activity : AppCompatActivity(), AnkoLogger {
                 ) {
                     try {
                         if (response.isSuccessful) {
+                            loading(false)
+                            if(response.body()!!.data!!.isNotEmpty()) {
                             val notesList = mutableListOf<FFBlok2Model>()
                             val data = response.body()
                             for (hasil in data!!.data!!) {
@@ -92,21 +96,37 @@ class CekFFblok2Activity : AppCompatActivity(), AnkoLogger {
                                 })
                                 mAdapter.notifyDataSetChanged()
                             }
+                            }else{
+                                binding.tvkosong.visibility = View.VISIBLE
+                            }
                         } else {
+                            loading(false)
                             toast("gagal mendapatkan response")
                         }
                     } catch (e: Exception) {
+                        loading(false)
                         info { "dinda ${e.message}" }
                     }
                 }
 
                 override fun onFailure(call: Call<FFBlok2Response>, t: Throwable) {
+                    loading(false)
                     info { "dinda ${t.message}" }
                 }
 
             })
 
 
+    }
+
+    fun loading(status : Boolean){
+        if (status){
+            progressDialog.setTitle("Loading...")
+            progressDialog.setCanceledOnTouchOutside(false)
+            progressDialog.show()
+        }else{
+            progressDialog.dismiss()
+        }
     }
 
 }

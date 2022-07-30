@@ -55,6 +55,7 @@ class CekAparFragment : Fragment(), AnkoLogger {
         binding.rvaparpelaksana.setHasFixedSize(true)
         (binding.rvaparpelaksana.layoutManager as LinearLayoutManager).orientation =
             LinearLayoutManager.VERTICAL
+        loading(true)
         api.getschedule_pelaksana()
             .enqueue(object : Callback<ScheduleAparPelaksanaResponse> {
                 override fun onResponse(
@@ -63,43 +64,51 @@ class CekAparFragment : Fragment(), AnkoLogger {
                 ) {
                     try {
                         if (response.isSuccessful) {
-                            val notesList = mutableListOf<ScheduleAparPelaksanaModel>()
-                            val data = response.body()
-                            for (hasil in data!!.data!!) {
-                                notesList.add(hasil)
-                                mAdapter = AparPelaksanaAdapter(notesList, requireContext())
-                                binding.rvaparpelaksana.adapter = mAdapter
-                                mAdapter.setDialog(object : AparPelaksanaAdapter.Dialog {
-                                    override fun onClick(
-                                        position: Int,
-                                        note: ScheduleAparPelaksanaModel
-                                    ) {
-                                        val builder = AlertDialog.Builder(requireActivity())
-                                        builder.setMessage("Cek apar ? ")
-                                        builder.setPositiveButton("Cek APAR") { dialog, which ->
-                                            val gson = Gson()
-                                            val noteJson = gson.toJson(note)
-                                            startActivity<CekAparActivity>("cekapar" to noteJson)
+                            loading(false)
+                            if (response.body()!!.data!!.isNotEmpty()) {
+                                val notesList = mutableListOf<ScheduleAparPelaksanaModel>()
+                                val data = response.body()
+                                for (hasil in data!!.data!!) {
+                                    notesList.add(hasil)
+                                    mAdapter = AparPelaksanaAdapter(notesList, requireContext())
+                                    binding.rvaparpelaksana.adapter = mAdapter
+                                    mAdapter.setDialog(object : AparPelaksanaAdapter.Dialog {
+                                        override fun onClick(
+                                            position: Int,
+                                            note: ScheduleAparPelaksanaModel
+                                        ) {
+                                            val builder = AlertDialog.Builder(requireActivity())
+                                            builder.setMessage("Cek apar ? ")
+                                            builder.setPositiveButton("Cek APAR") { dialog, which ->
+                                                val gson = Gson()
+                                                val noteJson = gson.toJson(note)
+                                                startActivity<CekAparActivity>("cekapar" to noteJson)
+                                            }
+                                            builder.setNegativeButton("Cancel ?") { dialog, which ->
+                                            }
+
+                                            builder.show()
+
                                         }
-                                        builder.setNegativeButton("Cancel ?") { dialog, which ->
-                                        }
 
-                                        builder.show()
-
-                                    }
-
-                                })
-                                mAdapter.notifyDataSetChanged()
+                                    })
+                                    mAdapter.notifyDataSetChanged()
+                                }
+                                }else{
+                                binding.tvkosong.visibility = View.VISIBLE
                             }
                         } else {
+                            loading(false)
                             toast("gagal mendapatkan response")
                         }
                     } catch (e: Exception) {
+                        loading(false)
                         info { "dinda ${e.message}" }
                     }
                 }
 
                 override fun onFailure(call: Call<ScheduleAparPelaksanaResponse>, t: Throwable) {
+                    loading(false)
                     info { "dinda ${t.message}" }
                 }
 
@@ -107,6 +116,14 @@ class CekAparFragment : Fragment(), AnkoLogger {
 
 
     }
-
+    fun loading(status : Boolean){
+        if (status){
+            progressDialog.setTitle("Loading...")
+            progressDialog.setCanceledOnTouchOutside(false)
+            progressDialog.show()
+        }else{
+            progressDialog.dismiss()
+        }
+    }
 
 }

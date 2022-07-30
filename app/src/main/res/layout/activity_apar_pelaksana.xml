@@ -13,15 +13,15 @@
         android:layout_height="match_parent"
         tools:context=".pelaksana.aparpelaksana.AparPelaksanaActivity">
 
-            <com.google.android.material.tabs.TabLayout
-                android:id="@+id/tab_pesanan"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:tabIndicatorColor="#FFF"
-                app:tabIndicatorHeight="3dp"
-                app:tabTextColor="@color/white"
-                android:background="@color/black"
-                app:tabMode="fixed" />
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_pesanan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/red"
+            app:tabIndicatorColor="#FFF"
+            app:tabIndicatorHeight="3dp"
+            app:tabMode="fixed"
+            app:tabTextColor="@color/white" />
 
             <androidx.viewpager.widget.ViewPager
                 android:id="@+id/view_pesanan"

@@ -26,6 +26,7 @@ class ProfilFragment : Fragment() {
         binding.lifecycleOwner = this
         sessionManager = SessionManager(requireContext().applicationContext)
 
+        binding.tvnama.text = "Nama : ${sessionManager.getNama()}"
         binding.btnlogout.setOnClickListener {
             sessionManager.setLoginadmin(false)
             sessionManager.setLogin(false)

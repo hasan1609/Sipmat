@@ -19,6 +19,8 @@
         android:background="@color/white"
         app:menu="@menu/bottom_nav_menu_pelaksana"
         android:layout_alignParentBottom="true"
+        app:itemIconTint="@color/navigation_color"
+        app:itemTextColor="@color/navigation_color"
         app:labelVisibilityMode="labeled"
 
         />

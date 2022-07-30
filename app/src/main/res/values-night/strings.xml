@@ -20,4 +20,16 @@
         <item>Close</item>
     </string-array>
 
+    <string-array name="damkar1">
+        <item>Normal</item>
+        <item>Upnormal</item>
+    </string-array>
+
+    <string-array name="damkar2">
+        <item>Baik</item>
+        <item>Kurang baik</item>
+        <item>Rusak</item>
+        <item>Tidak ada</item>
+    </string-array>
+
 </resources>

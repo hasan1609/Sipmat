@@ -3,6 +3,7 @@ package com.sipmat.sipmat.pelaksana.hydrantpelaksana
 import android.app.ProgressDialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AlertDialog
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -53,6 +54,7 @@ class CekHydrantActivity : AppCompatActivity(), AnkoLogger {
         binding.rvhydrantpelaksana.setHasFixedSize(true)
         (binding.rvhydrantpelaksana.layoutManager as LinearLayoutManager).orientation =
             LinearLayoutManager.VERTICAL
+        loading(true)
         api.getschedule_pelaksana_hydrant()
             .enqueue(object : Callback<ScheduleHydrantPelaksanaResponse> {
                 override fun onResponse(
@@ -61,6 +63,8 @@ class CekHydrantActivity : AppCompatActivity(), AnkoLogger {
                 ) {
                     try {
                         if (response.isSuccessful) {
+                            loading(false)
+                            if(response.body()!!.data!!.isNotEmpty()) {
                             val notesList = mutableListOf<ScheduleHydrantPelaksanaModel>()
                             val data = response.body()
                             for (hasil in data!!.data!!) {
@@ -91,15 +95,21 @@ class CekHydrantActivity : AppCompatActivity(), AnkoLogger {
                                 })
                                 mAdapter.notifyDataSetChanged()
                             }
+                        }else{
+                            binding.tvkosong.visibility = View.VISIBLE
+                        }
                         } else {
+                            loading(false)
                             toast("gagal mendapatkan response")
                         }
                     } catch (e: Exception) {
+                        loading(false)
                         info { "dinda ${e.message}" }
                     }
                 }
 
                 override fun onFailure(call: Call<ScheduleHydrantPelaksanaResponse>, t: Throwable) {
+                    loading(false)
                     info { "dinda ${t.message}" }
                 }
 
@@ -107,5 +117,13 @@ class CekHydrantActivity : AppCompatActivity(), AnkoLogger {
 
 
     }
-
+    fun loading(status : Boolean){
+        if (status){
+            progressDialog.setTitle("Loading...")
+            progressDialog.setCanceledOnTouchOutside(false)
+            progressDialog.show()
+        }else{
+            progressDialog.dismiss()
+        }
+    }
 }
