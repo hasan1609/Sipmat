@@ -44,7 +44,7 @@ class HasilFFblok2Adapter(
             tw = view.findViewById(R.id.txttw)
             tahun = view.findViewById(R.id.txttahun)
             status = view.findViewById(R.id.txtstatus)
-            jadwal = view.findViewById(R.id.txtjadwalcek)
+            jadwal = view.findViewById(R.id.txthari)
 
         }
     }

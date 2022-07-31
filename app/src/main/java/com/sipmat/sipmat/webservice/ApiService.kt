@@ -520,7 +520,7 @@ interface ApiService {
     @POST("seawater")
     fun schedule_seawater(@Body post: PostSeaWaterSchedule): Call<PostDataResponse>
 
-    @GET("seawater")
+    @GET("hasil_seawater")
     fun gethasil_seawater(
         @Query("tw") tw: String,
         @Query("tahun") tahun: String
@@ -655,7 +655,7 @@ interface ApiService {
     fun ffblok_pdf(
         @Field("id") id: Int): Call<PostDataResponse>
 
-    @GET("ffblok")
+    @GET("hasil_ffblok1")
     fun gethasil_ffblok(
         @Query("tw") tw: String,
         @Query("tahun") tahun: String
@@ -769,7 +769,7 @@ interface ApiService {
     fun ffblok2_pdf(
         @Field("id") id: Int): Call<PostDataResponse>
 
-    @GET("ffblok2")
+    @GET("hasil_ffblok2")
     fun gethasil_ffblok2(
         @Query("tw") tw: String,
         @Query("tahun") tahun: String
@@ -884,7 +884,7 @@ interface ApiService {
     fun edgblok1_pdf(
         @Field("id") id: Int): Call<PostDataResponse>
 
-    @GET("edgblok1")
+    @GET("hasil_edgblok1")
     fun gethasil_edgblok1(
         @Query("tw") tw: String,
         @Query("tahun") tahun: String
@@ -994,7 +994,7 @@ interface ApiService {
     fun edgblok2_pdf(
         @Field("id") id: Int): Call<PostDataResponse>
 
-    @GET("edgblok2")
+    @GET("hasil_edgblok2")
     fun gethasil_edgblok2(
         @Query("tw") tw: String,
         @Query("tahun") tahun: String
@@ -1100,7 +1100,7 @@ interface ApiService {
     fun edgblok3_pdf(
         @Field("id") id: Int): Call<PostDataResponse>
 
-    @GET("edgblok3")
+    @GET("hasil_edgblok3")
     fun gethasil_edgblok3(
         @Query("tw") tw: String,
         @Query("tahun") tahun: String
@@ -1220,7 +1220,7 @@ interface ApiService {
         @Part("nama") nama: RequestBody,
     ): Call<PostDataResponse>
 
-    @GET("damkar")
+    @GET("hasil_damkar")
     fun gethasil_damkar(
         @Query("tw") tw: String,
         @Query("tahun") tahun: String
@@ -1276,7 +1276,7 @@ interface ApiService {
         @Part("nama") nama: RequestBody,
     ): Call<PostDataResponse>
 
-    @GET("ambulance")
+    @GET("hasil_ambulance")
     fun gethasil_ambulance(
         @Query("tw") tw: String,
         @Query("tahun") tahun: String
