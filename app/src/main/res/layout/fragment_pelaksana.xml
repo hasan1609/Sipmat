@@ -31,7 +31,7 @@
             android:layout_gravity="center"
             android:id="@+id/edtid"
             android:textSize="16dp"
-            android:hint="Masukkan ID"
+            android:hint="Masukkan USERNAME"
             />
 
         <EditText
@@ -61,6 +61,7 @@
             android:id="@+id/btncreate"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
+            android:backgroundTint="@color/black"
             />
 
 
