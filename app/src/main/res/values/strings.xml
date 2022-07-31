@@ -20,7 +20,7 @@
 
     <string-array name="status_kebisingan">
         <item>dibawah NAB</item>
-        <item>dibawah NAB</item>
+        <item>diatas NAB</item>
     </string-array>
 
     <string-array name="sumber_pencahayaan">

@@ -8,6 +8,7 @@ import com.google.gson.Gson
 import com.sipmat.sipmat.R
 import com.sipmat.sipmat.databinding.ActivityDetailCekApatBinding
 import com.sipmat.sipmat.model.PostDataResponse
+import com.sipmat.sipmat.model.apat.HasilApatModel
 import com.sipmat.sipmat.model.apat.ScheduleApatPelaksanaModel
 import com.sipmat.sipmat.model.postdata.UpdateScheduleApat
 import com.sipmat.sipmat.session.SessionManager
@@ -29,7 +30,7 @@ class DetailCekApatActivity : AppCompatActivity(),AnkoLogger {
     lateinit var progressDialog: ProgressDialog
 
     companion object {
-        var cekapat: ScheduleApatPelaksanaModel? = null
+        var cekapat: HasilApatModel? = null
 
     }
 
@@ -42,7 +43,7 @@ class DetailCekApatActivity : AppCompatActivity(),AnkoLogger {
 
         val gson = Gson()
         cekapat =
-            gson.fromJson(intent.getStringExtra("cekapat"), ScheduleApatPelaksanaModel::class.java)
+            gson.fromJson(intent.getStringExtra("cekapat"), HasilApatModel::class.java)
 
         val sdf = SimpleDateFormat("yyyy-M-dd")
         currentDate = sdf.format(Date())

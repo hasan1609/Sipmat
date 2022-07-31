@@ -53,9 +53,9 @@ class QrCodeCekApatActivity : AppCompatActivity(), AnkoLogger {
                     loading(true)
                     hasilqrcode = it.text
                     if (DetailCekApatActivity.cekapat!!.kodeApat == hasilqrcode){
-                        no_bak = DetailCekApatActivity.cekapat!!.kodeApat
-                        lokasi = DetailCekApatActivity.cekapat!!.lokasi
-                        kodeapat = DetailCekApatActivity.cekapat!!.kode
+                        no_bak = DetailCekApatActivity.cekapat!!.apat!!.noBak
+                        lokasi = DetailCekApatActivity.cekapat!!.apat!!.lokasi
+                        kodeapat = DetailCekApatActivity.cekapat!!.apat!!.kode
                         finish()
 
                     }else{
