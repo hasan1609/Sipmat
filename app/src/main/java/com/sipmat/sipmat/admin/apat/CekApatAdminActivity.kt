@@ -51,6 +51,7 @@ class CekApatAdminActivity : AppCompatActivity(),AnkoLogger {
         binding.txltglPemeriksa.text = "Tgl Pemeriksa : ${cekapat.tanggalCek.toString()}"
         binding.txtkodeapat.text = "Kode apat : ${cekapat.kodeApat.toString()}"
         binding.txtlokasi.text = "Lokasi apat : ${cekapat.apat!!.lokasi.toString()}"
+        binding.txtnobak.text = "No. Bak apat : ${cekapat.apat!!.noBak.toString()}"
 
         binding.txtbak.text = cekapat.bak
         binding.txtpasir.text = cekapat.pasir
